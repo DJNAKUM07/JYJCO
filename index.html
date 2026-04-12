@@ -958,137 +958,181 @@
     </section>
 
     <!-- Industry Expertise Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-navy-950 rounded-full opacity-5 blur-3xl"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
+            <div class="text-center mb-20 reveal">
                 <h2 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Deep Sector Knowledge</h2>
-                <h3 class="text-3xl md:text-5xl font-bold text-navy-950">Industries We Specialize In</h3>
-                <p class="text-gray-600 mt-4 text-lg max-w-3xl mx-auto">Providing world-class financial architectural
-                    and strategic advisory services to diverse global industries, specializing in manufacturing, metal,
-                    gold, diamond, and jewelry sectors</p>
+                <h3 class="text-3xl md:text-5xl font-bold text-navy-950 mb-6">Industries We Specialize In</h3>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    Providing world-class financial architectural and strategic advisory services to diverse global
+                    industries, specializing in manufacturing, metal, gold, diamond, and jewelry sectors
+                </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Manufacturing -->
-                <div class="reveal text-center group">
+                <div class="reveal group">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-industry text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-industry text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Manufacturing</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">General & Specialized Production
+                        </p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Manufacturing</h4>
-                    <p class="text-xs text-gray-600 mt-2">General & Specialized Production</p>
                 </div>
 
                 <!-- Metal & Alloys -->
-                <div class="reveal text-center group" style="transition-delay: 100ms;">
+                <div class="reveal group" style="transition-delay: 100ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-cube text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-cubes text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Metal & Alloys</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Steel, Brass, Copper Processing</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Metal & Alloys</h4>
-                    <p class="text-xs text-gray-600 mt-2">Steel, Brass, Copper Processing</p>
                 </div>
 
-                <!-- Gold & Precious Metals -->
-                <div class="reveal text-center group" style="transition-delay: 200ms;">
+                <!-- Gold & Jewelry -->
+                <div class="reveal group" style="transition-delay: 200ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-gem text-2xl text-yellow-500"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-ring text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Gold & Jewelry</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Precious Metal Manufacturing</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Gold & Jewelry</h4>
-                    <p class="text-xs text-gray-600 mt-2">Precious Metal Manufacturing</p>
                 </div>
 
-                <!-- Diamond & Gemstones -->
-                <div class="reveal text-center group" style="transition-delay: 300ms;">
+                <!-- Diamond & Gems -->
+                <div class="reveal group" style="transition-delay: 300ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-diamond text-2xl text-blue-400"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-gem text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Diamond & Gems</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Cutting, Polishing & Trading</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Diamond & Gems</h4>
-                    <p class="text-xs text-gray-600 mt-2">Cutting, Polishing & Trading</p>
                 </div>
 
                 <!-- Textile & Fabrics -->
-                <div class="reveal text-center group" style="transition-delay: 400ms;">
+                <div class="reveal group" style="transition-delay: 400ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-shirt text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-shirt text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Textile & Fabrics</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Weaving & Apparel Manufacturing</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Textile & Fabrics</h4>
-                    <p class="text-xs text-gray-600 mt-2">Weaving & Apparel Manufacturing</p>
                 </div>
 
                 <!-- IT & SaaS -->
-                <div class="reveal text-center group" style="transition-delay: 500ms;">
+                <div class="reveal group" style="transition-delay: 500ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-laptop-code text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">IT & SaaS</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Software & Tech Services</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">IT & SaaS</h4>
-                    <p class="text-xs text-gray-600 mt-2">Software & Tech Services</p>
                 </div>
 
                 <!-- Real Estate -->
-                <div class="reveal text-center group" style="transition-delay: 600ms;">
+                <div class="reveal group" style="transition-delay: 600ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-building text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-building text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Real Estate</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Developers & Property Management
+                        </p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Real Estate</h4>
-                    <p class="text-xs text-gray-600 mt-2">Developers & Property Management</p>
                 </div>
 
                 <!-- Healthcare -->
-                <div class="reveal text-center group" style="transition-delay: 700ms;">
+                <div class="reveal group" style="transition-delay: 700ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-stethoscope text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-stethoscope text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Healthcare</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Clinics, Hospitals & Practitioners
+                        </p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Healthcare</h4>
-                    <p class="text-xs text-gray-600 mt-2">Clinics, Hospitals & Practitioners</p>
                 </div>
 
                 <!-- Retail & E-Commerce -->
-                <div class="reveal text-center group" style="transition-delay: 800ms;">
+                <div class="reveal group" style="transition-delay: 800ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Retail & E-Commerce</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Stores & Online Businesses</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Retail & E-Commerce</h4>
-                    <p class="text-xs text-gray-600 mt-2">Stores & Online Businesses</p>
                 </div>
 
-                <!-- Hospitality & Tourism -->
-                <div class="reveal text-center group" style="transition-delay: 900ms;">
+                <!-- Hospitality -->
+                <div class="reveal group" style="transition-delay: 900ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-hotel text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-hotel text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Hospitality</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Hotels, Restaurants & Travel</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Hospitality</h4>
-                    <p class="text-xs text-gray-600 mt-2">Hotels, Restaurants & Travel</p>
                 </div>
 
                 <!-- Import & Export -->
-                <div class="reveal text-center group" style="transition-delay: 1000ms;">
+                <div class="reveal group" style="transition-delay: 1000ms;">
                     <div
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-ship text-2xl"></i>
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-ship text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Import & Export</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">International Trade & Logistics</p>
                     </div>
-                    <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Import & Export</h4>
-                    <p class="text-xs text-gray-600 mt-2">International Trade & Logistics</p>
                 </div>
 
                 <!-- Education -->
-                <div class="reveal text-center group" style="transition-delay: 1100ms;">
-                    <divD
-                        class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-navy-950 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div class="reveal group" style="transition-delay: 1100ms;">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-t-4 border-gold-500 hover:border-navy-950">
+                        <div
+                            class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-500/10 to-navy-950/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold-500 group-hover:to-navy-950 transition-all duration-300">
+                            <i class="fa-solid fa-graduation-cap text-3xl text-gold-600 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-950 text-center mb-2">Education</h4>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">Schools, Colleges & Coaching</p>
+                    </div>
                 </div>
-                <h4 class="text-xs font-bold uppercase tracking-wide text-gray-800">Education</h4>
-                <p class="text-xs text-gray-600 mt-2">Schools, Colleges & Coaching</p>
             </div>
-        </div>
         </div>
     </section>
 
@@ -1790,14 +1834,14 @@
                                 <p class="text-gray-400">office.jyjco@gmail.com</p>
                                 <p class="text-gray-400 mt-4 font-bold mb-2">Call Experts:</p>
                                 <a href="tel:+918758792708"
-                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm">+91 87587
-                                    92708</a>
+                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm"><span
+                                        class="font-semibold">CA Jaimin:</span> +91 87587 92708</a>
                                 <a href="tel:+917600359457"
-                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm">+91 76003
-                                    59457</a>
+                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm mt-1"><span
+                                        class="font-semibold">CA Jaykishan:</span> +91 76003 59457</a>
                                 <a href="tel:+918980692738"
-                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm">+91 89806
-                                    92738</a>
+                                    class="text-gray-400 hover:text-gold-500 transition-colors block text-sm mt-1"><span
+                                        class="font-semibold">CA Yash Ramani:</span> +91 89806 92738</a>
                             </div>
                         </div>
                     </div>
