@@ -263,6 +263,21 @@
             z-index: 1001;
             padding: 3rem;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
         }
 
         .modal-open .modal-backdrop,
@@ -282,6 +297,11 @@
 
         .close-modal:hover {
             color: #f6921e;
+        }
+
+        .service-details-text {
+            white-space: pre-line;
+            line-height: 1.8;
         }
     </style>
 
@@ -732,84 +752,120 @@
                 </div>
 
                 <!-- Compliance & Regulatory -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('Compliance & Regulatory Services', 'Ensure your business stays ahead of legislative changes with our comprehensive compliance solutions. We handle regulatory requirements including statutory filings, corporate governance, and ongoing compliance management.\n\n✓ Statutory compliance and filings\n✓ Corporate governance structuring\n✓ Regulatory advisory and updates\n✓ Compliance calendar management\n✓ Risk mitigation strategies')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-gavel text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">Compliance & Regulatory</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">Compliance & Regulatory</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Staying ahead of legislative changes and ensuring your business is
                         always compliant.</p>
                 </div>
 
                 <!-- Internal Controls & Risk Management -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('Internal Controls & Risk Management', 'Strengthen your organizational structure with robust internal control frameworks designed to mitigate risks and prevent fraud. We provide risk assessments and control optimization strategies.\n\n✓ Internal control frameworks\n✓ Risk assessment and mapping\n✓ Fraud prevention strategies\n✓ Control testing and monitoring\n✓ Process optimization')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-shield-halved text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">Internal Controls</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">Internal Controls</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Strengthening your organizational structure to mitigate risks and
                         fraud.</p>
                 </div>
 
                 <!-- NBFC Consultancy -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('NBFC Consultancy Services', 'Specialized consulting tailored for Non-Banking Financial Companies. We provide regulatory compliance, licensing support, and operational guidance for NBFC operations.\n\n✓ NBFC licensing and registration\n✓ Regulatory compliance and filings\n✓ Portfolio management advisory\n✓ Credit risk assessment\n✓ RBI and regulatory updates')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-building-columns text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">NBFC Consultancy</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">NBFC Consultancy</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Specialized consulting for Non-Banking Financial Companies and
                         their regulations.</p>
                 </div>
 
                 <!-- ICA Certification -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('ICA Certification Assistance', 'Expert guidance for professional certifications including ISO, quality standards, and industry-specific requirements. We help navigate certification processes seamlessly.\n\n✓ ISO certification assistance\n✓ Quality management systems\n✓ Industry-specific certifications\n✓ Documentation and compliance\n✓ Training and implementation support')">
                     <div
-                        class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-100 transition-colors">
-                        <i class="fa-solid fa-certificate text-3xl text-navy-950 transition-colors"></i>
+                        class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
+                        <i
+                            class="fa-solid fa-certificate text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">ICA Certification</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">ICA Certification</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Assisting with professional certifications and requirements for
                         various industries.</p>
                 </div>
 
                 <!-- NRI Tax Advisory -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group border-b-4 border-emerald-500">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group border-b-4 border-emerald-500 cursor-pointer"
+                    onclick="openModal('NRI Tax Advisory Services', 'Comprehensive tax solutions for Non-Resident Indians globally. We specialize in ITR filing, TDS compliance, foreign income reporting, and cross-border tax planning.\n\n✓ ITR filing and compliance\n✓ TDS on foreign income\n✓ FATCA and FBAR advisory\n✓ NRE/NRO account guidance\n✓ Cross-border tax planning')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-earth-americas text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">NRI Tax Advisory</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">NRI Tax Advisory</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Specialized tax solutions and planning for Non-Resident Indians
                         globally.</p>
                 </div>
 
-                <!-- Management & Cost Consultancy -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <!-- Cost Consultancy -->
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('Cost Consultancy & Management', 'Strategic cost optimization services to maximize profitability. We analyze operational expenses and identify efficiency opportunities across your business.\n\n✓ Cost analysis and reduction\n✓ Process efficiency improvement\n✓ Expense optimization strategies\n✓ Profitability enhancement\n✓ Operational benchmarking')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-hand-holding-dollar text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">Cost Consultancy</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">Cost Consultancy</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Optimizing expenditure and operational costs for better profit
                         margins.</p>
                 </div>
 
                 <!-- Appeals & Litigations -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group">
+                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    onclick="openModal('Appeals & Litigations Support', 'Expert representation and advisory in complex financial and tax disputes. We handle appeals, litigation support, and represent clients before tax authorities and courts.\n\n✓ Tax appeal preparation\n✓ Litigation support services\n✓ Representation before authorities\n✓ Documentation and evidence compilation\n✓ Settlement negotiations')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
                         <i
                             class="fa-solid fa-scale-unbalanced text-3xl text-navy-950 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navy-950 mb-3">Appeals & Litigations</h4>
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold text-navy-950 mb-3">Appeals & Litigations</h4>
+                        <i
+                            class="fa-solid fa-circle-plus text-gold-500 text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <p class="text-gray-600 text-sm">Professional representation and advisory in complex legal financial
                         disputes.</p>
                 </div>
@@ -1024,7 +1080,7 @@
         <div class="text-gold-600 text-sm font-bold uppercase tracking-widest mb-4">Service Details</div>
         <h2 class="text-2xl font-bold text-navy-950 mb-6" id="serviceTitle"></h2>
         <div class="h-1 bg-gold-500 w-16 mb-8"></div>
-        <p class="text-gray-600 leading-relaxed mb-8" id="serviceDetails"></p>
+        <p class="text-gray-600 leading-relaxed mb-8 service-details-text whitespace-pre-wrap" id="serviceDetails"></p>
         <a href="https://wa.me/918758792708" target="_blank"
             class="inline-block bg-navy-950 text-white px-8 py-3 rounded-xl font-bold hover:bg-gold-500 transition-all">
             Inquire Now
@@ -1163,9 +1219,20 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding & Social -->
                 <div>
-                    <div class="mb-8">
-                        <div class="bg-white inline-block p-1.5 rounded-lg shadow-2xl">
-                            <img src="ca_logo.png" alt="Chartered Accountant India Logo" class="h-10 w-auto">
+                    <div class="mb-8 flex justify-start">
+                        <div class="relative group inline-block">
+
+                            <!-- Logo -->
+                            <img src="ca_logo.png" alt="Chartered Accountant India Logo"
+                                class="h-10 w-auto rounded-md cursor-pointer">
+
+                            <!-- Tooltip -->
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                                    hidden group-hover:block 
+                                    bg-gray-800 text-white text-sm px-3 py-1 rounded-md shadow-lg whitespace-nowrap">
+                                Chartered Accountant India
+                            </div>
+
                         </div>
                     </div>
                     <p class="text-gray-400 mb-8 leading-relaxed">
