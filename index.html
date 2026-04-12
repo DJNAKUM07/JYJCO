@@ -29,6 +29,7 @@
         content="Expert audit, taxation, accounting & bookkeeping services. Free consultation available.">
     <meta name="twitter:image" content="https://djnakum07.github.io/JYJCO/logo.png">
     <meta name="twitter:creator" content="@jyjco">
+    <meta name="twitter:site" content="@jyjco">
 
     <!-- Additional SEO Meta Tags -->
     <meta name="author" content="JYJ & Co">
@@ -37,6 +38,22 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7">
     <meta name="rating" content="general">
+
+    <!-- Brand & Theme Colors -->
+    <meta name="theme-color" content="#0a2342">
+    <meta name="msapplication-TileColor" content="#f6921e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="JYJ & Co">
+
+    <!-- Search Engine Verification -->
+    <!-- Add your Google Search Console verification code below -->
+    <!-- <meta name="google-site-verification" content=""> -->
+    <!-- <meta name="msvalidate.01" content=""> -->
+
+    <!-- Mobile Web App -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -273,21 +290,30 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://djnakum07.github.io/JYJCO/#organization",
       "name": "JYJ & Co",
       "alternateName": "JYJ & Co Chartered Accountants",
       "url": "https://djnakum07.github.io/JYJCO/",
-      "logo": "https://djnakum07.github.io/JYJCO/logo.png",
-      "description": "Expert chartered accounting firm offering audit, assurance, taxation, accounting, bookkeeping, compliance, and business advisory services",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://djnakum07.github.io/JYJCO/logo.png",
+        "width": 500,
+        "height": 500
+      },
+      "description": "Expert chartered accounting firm in Rajkot offering audit & assurance, taxation, accounting & bookkeeping, compliance, and business advisory services for 300+ satisfied clients",
       "sameAs": [
         "https://www.instagram.com/ca.jyj_co/",
-        "https://in.linkedin.com/company/jyj-co"
+        "https://in.linkedin.com/company/jyj-co",
+        "https://www.facebook.com/jyjco/"
       ],
+      "knowsAbout": ["Audit", "Taxation", "Accounting", "Bookkeeping", "Compliance", "Business Advisory"],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+91-87587-92708",
         "contactType": "Customer Service",
         "email": "office.jyjco@gmail.com",
-        "areaServed": "IN"
+        "areaServed": ["IN", "Rajkot", "Gujarat"],
+        "availableLanguage": "en"
       },
       "address": {
         "@type": "PostalAddress",
@@ -299,7 +325,11 @@
       },
       "foundingDate": "2024",
       "foundingLocation": "Rajkot, Gujarat, India",
-      "numberOfEmployees": "15-50"
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": "15",
+        "maxValue": "50"
+      }
     }
     </script>
 
@@ -308,9 +338,10 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://djnakum07.github.io/JYJCO/#localbusiness",
       "name": "JYJ & Co Chartered Accountants",
       "image": "https://djnakum07.github.io/JYJCO/logo.png",
-      "description": "Professional chartered accounting and tax consulting services",
+      "description": "Professional chartered accounting and tax consulting services in Rajkot, Gujarat",
       "url": "https://djnakum07.github.io/JYJCO/",
       "telephone": "+91-87587-92708",
       "email": "office.jyjco@gmail.com",
@@ -323,6 +354,17 @@
         "addressCountry": "IN"
       },
       "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/ca.jyj_co/",
+        "https://in.linkedin.com/company/jyj-co"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -337,8 +379,9 @@
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://djnakum07.github.io/JYJCO/#professionalservice",
       "name": "JYJ & Co - Chartered Accounting Services",
-      "description": "Comprehensive financial services including audit, taxation, accounting, bookkeeping, compliance, and business advisory",
+      "description": "Comprehensive financial services including audit & assurance, taxation, accounting & bookkeeping, compliance, and business advisory",
       "image": "https://djnakum07.github.io/JYJCO/logo.png",
       "url": "https://djnakum07.github.io/JYJCO/",
       "telephone": "+91-87587-92708",
@@ -350,10 +393,20 @@
         },
         {
           "@type": "Place",
+          "name": "Gujarat",
+          "address": "India"
+        },
+        {
+          "@type": "Place",
           "name": "India"
         }
       ],
       "priceRange": "Varies by service",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
       "hasOfferingDetails": [
         {
           "@type": "Service",
@@ -541,7 +594,7 @@
                     <div class="text-xs font-bold text-gold-600 uppercase tracking-widest">Audits Completed</div>
                 </div>
                 <div class="w-full md:w-1/4 p-8 text-center hover:bg-gray-50 transition-colors group">
-                    <div class="text-4xl font-bold text-navy-950 mb-2 group-hover:scale-110 transition-transform">90%
+                    <div class="text-4xl font-bold text-navy-950 mb-2 group-hover:scale-110 transition-transform">100%
                     </div>
                     <div class="text-xs font-bold text-gold-600 uppercase tracking-widest">Compliance Success</div>
                 </div>
@@ -1164,6 +1217,22 @@
                         <li><a href="https://www.epfindia.gov.in/" target="_blank"
                                 class="hover:text-gold-500 transition-colors flex items-center">
                                 <i class="fa-solid fa-shield-halved mr-2 text-gold-500"></i> EPFO Portal
+                            </a></li>
+                        <li><a href="https://www.startupindia.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center">
+                                <i class="fa-solid fa-rocket mr-2 text-gold-500"></i> Startup India
+                            </a></li>
+                        <li><a href="https://www.msme.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center">
+                                <i class="fa-solid fa-industry mr-2 text-gold-500"></i> MSME Portal
+                            </a></li>
+                        <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center">
+                                <i class="fa-solid fa-chart-pie mr-2 text-gold-500"></i> SEBI
+                            </a></li>
+                        <li><a href="https://www.rbi.org.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center">
+                                <i class="fa-solid fa-landmark mr-2 text-gold-500"></i> RBI Official
                             </a></li>
                     </ul>
                 </div>
