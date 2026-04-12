@@ -1,0 +1,34 @@
+# Robots.txt for JYJ & Co - GitHub Pages
+# Last Updated: December 12, 2024
+
+# Allow all robots
+User-agent: *
+Allow: /
+
+# Disallow nothing (everything is public)
+Disallow: 
+
+# Sitemap location
+Sitemap: https://djnakum07.github.io/JYJCO/sitemap.xml
+
+# Crawl delay (optional - helps reduce server load)
+Crawl-delay: 1
+
+# Cache settings
+# Tell search engines to update cache every week
+Cache-Control: public, max-age=604800
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots (optional)
+# Uncomment to block specific bots
+# User-agent: MJ12bot
+# Disallow: /
