@@ -4,47 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>JYJ & CO | Chartered Accountants | Audit, Taxation & Accounting Services in Rajkot</title>
+    <title>JYJ & CO. Chartered Accountant | Trusted CA in Rajkot</title>
     <meta name="description"
-        content="JYJ & CO - Expert CA services in Rajkot offering audit & assurance, taxation, accounting & bookkeeping, compliance, and business advisory for 250+ satisfied clients.">
+        content="Expert services by JYJ & CO. Chartered Accountant in Rajkot. Audit, Taxation & Accounting designed to help you focus on your business. Book a consultation.">
     <meta name="keywords"
-        content="chartered accountant, JYJCO, audit assurance, taxation, accounting bookkeeping, compliance, CA Rajkot, financial advisory, audit services, tax planning, business accounting">
+        content="Chartered Accountant in Rajkot, CA firm Rajkot, Income Tax Consultant Rajkot, GST Advisory Rajkot, Audit and Assurance Services Rajkot, JYJ & CO., Business Accounting Rajkot">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="canonical" href="https://jyjco.in/">
 
+    <!-- Geo-Targeting for Rajkot -->
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Rajkot">
+    <meta name="geo.position" content="22.282786;70.796826">
+    <meta name="ICBM" content="22.282786, 70.796826">
+
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="JYJ & CO | Chartered Accountants | Audit, Taxation & Accounting">
+    <meta property="og:title" content="JYJ & CO. Chartered Accountant | Trusted Audit & Taxation">
     <meta property="og:description"
-        content="Expert CA services offering audit & assurance, taxation, accounting & bookkeeping, compliance, and business advisory. Serving 250+ satisfied clients in Rajkot.">
+        content="Expert services by JYJ & CO. Chartered Accountant in Rajkot. Audit, Taxation & Accounting designed to help you focus on your business.">
     <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://jyjco.in/">
     <meta property="og:image" content="https://jyjco.in/logo.png">
-    <meta property="og:site_name" content="JYJ & CO Chartered Accountants">
+    <meta property="og:site_name" content="JYJ & CO. Chartered Accountant">
     <meta property="og:locale" content="en_IN">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JYJ & CO | Chartered Accountants in Rajkot">
+    <meta name="twitter:title" content="JYJ & CO. Chartered Accountant | Expert CA in Rajkot">
     <meta name="twitter:description"
-        content="Expert audit, taxation, accounting & bookkeeping services. Free consultation available.">
+        content="Audit, Taxation & Accounting services designed to let you focus on your business. Free consultation available.">
     <meta name="twitter:image" content="https://jyjco.in/logo.png">
-    <meta name="twitter:creator" content="@jyjco">
-    <meta name="twitter:site" content="@jyjco">
 
-    <!-- Additional SEO Meta Tags -->
-    <meta name="author" content="JYJ & CO">
-    <meta name="publisher" content="JYJ & CO">
-    <meta name="copyright" content="JYJ & CO 2024-2026">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7">
-    <meta name="rating" content="general">
+    <!-- JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "JYJ & CO. Chartered Accountant",
+      "image": "https://jyjco.in/logo.png",
+      "@id": "https://jyjco.in/#organization",
+      "url": "https://jyjco.in",
+      "telephone": "+91-8758792708",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "309, 3rd Floor, Nakshatra VI, Opp. Pinevinta hotel, Gondal Road",
+        "addressLocality": "Rajkot",
+        "postalCode": "360002",
+        "addressRegion": "GJ",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.282786,
+        "longitude": 70.796826
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/jyjco",
+        "https://twitter.com/jyjco"
+      ]
+    }
+    </script>
 
     <!-- Brand & Theme Colors -->
     <meta name="theme-color" content="#0a2342">
     <meta name="msapplication-TileColor" content="#f6921e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="JYJ & CO">
+    <meta name="apple-mobile-web-app-title" content="JYJ & CO.">
 
     <!-- Search Engine Verification -->
     <!-- Add your Google Search Console verification code below -->
@@ -386,6 +425,63 @@
             white-space: pre-line;
             line-height: 1.8;
         }
+
+        /* Hide scrollbar for reviews container */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Hybrid Marquee Logic */
+        /* Infinite Marquee Animations */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-track,
+        .marquee-track-reverse {
+            display: flex;
+            width: max-content;
+        }
+
+        .animate-marquee {
+            animation: marquee 60s linear infinite;
+            /* Scrolling Right to Left */
+        }
+
+        .animate-marquee-reverse {
+            animation: marquee 55s linear infinite;
+            /* Scrolling Right to Left */
+        }
+
+
+        .glass-card {
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(184, 150, 70, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(184, 150, 70, 0.15);
+        }
+
+        .gold-glow:hover {
+            box-shadow: 0 0 35px rgba(184, 150, 70, 0.3);
+            border-color: rgba(184, 150, 70, 0.8);
+        }
     </style>
 
     <!-- JSON-LD Structured Data for Organization -->
@@ -394,8 +490,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://jyjco.in/#organization",
-      "name": "JYJ & CO",
-      "alternateName": "JYJ & CO Chartered Accountants",
+      "name": "JYJ & CO. Chartered Accountant",
+      "alternateName": "JYJ & CO. CA",
       "url": "https://jyjco.in/",
       "logo": {
         "@type": "ImageObject",
@@ -442,7 +538,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://jyjco.in/#localbusiness",
-      "name": "JYJ & CO Chartered Accountants",
+      "name": "JYJ & CO. Chartered Accountant",
       "image": "https://jyjco.in/logo.png",
       "description": "Professional chartered accounting and tax consulting services in Rajkot, Gujarat",
       "url": "https://jyjco.in/",
@@ -483,7 +579,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "@id": "https://jyjco.in/#professionalservice",
-      "name": "JYJ & CO - Chartered Accounting Services",
+      "name": "JYJ & CO. Chartered Accountant Services",
       "description": "Comprehensive financial services including audit & assurance, taxation, accounting & bookkeeping, compliance, and business advisory",
       "image": "https://jyjco.in/logo.png",
       "url": "https://jyjco.in/",
@@ -540,8 +636,8 @@
     }
     </script>
 
-    
-   
+
+
     <!-- JSON-LD Breadcrumb Navigation -->
     <script type="application/ld+json">
     {
@@ -586,7 +682,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center logo-shimmer">
-                    <img src="logo.png" alt="JYJ & CO - Chartered Accountants Logo"
+                    <img src="logo.png" alt="JYJ & CO. Chartered Accountant Logo"
                         class="h-16 w-auto mix-blend-multiply">
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8">
@@ -638,8 +734,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 hero-heading">
-                    JYJ & CO. - Your Trusted <span class="gold-animate">Chartered Accountant for Audit, Taxation &
-                        Accounting</span>
+                    <span class="gold-animate">JYJ & CO. Chartered Accountant</span> - Your Trusted Partner for Audit,
+                    Taxation & Accounting
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed hero-text">
                     Expert chartered accounting services designed to let you focus on your business while we handle the
@@ -697,7 +793,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="hero_bg.jpg"
+                        <img src="hero_bg.jpg" alt="JYJ & CO. Chartered Accountants Office Background"
                             alt="JYJ & CO - Chartered Accountants team providing audit and accounting services"
                             class="w-full h-[500px] object-cover">
                     </div>
@@ -738,7 +834,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Audit & Assurance -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                <div id="service-audit"
+                    class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
                     onclick="openModal('Audit & Assurance', 'We offer statutory audits, internal audits, and risk-based assurance services to ensure financial accuracy, compliance with regulations, and process improvement.', '918758792708')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
@@ -755,7 +852,8 @@
                 </div>
 
                 <!-- Taxation -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group border-b-4 border-gold-500 cursor-pointer"
+                <div id="service-tax"
+                    class="bg-white p-8 rounded-2xl service-card transition-all group border-b-4 border-gold-500 cursor-pointer"
                     onclick="openModal('Taxation', 'Expert planning for both Direct and Indirect taxes (GST). We handle compliance, litigation, and strategic advisory to optimize your tax structure.', '917600359457')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
@@ -772,7 +870,8 @@
                 </div>
 
                 <!-- Accounting & Bookkeeping -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                <div id="service-accounting"
+                    class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
                     onclick="openModal('Accounting & Bookkeeping', 'Precise financial record-keeping, payroll management, and financial statement preparation to maintain the pulse of your business operations.', '918758792708')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
@@ -788,7 +887,8 @@
                 </div>
 
                 <!-- Business Advisory -->
-                <div class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                <div id="service-advisory"
+                    class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
                     onclick="openModal('Business Advisory', 'Empowering businesses with growth strategies, financial modeling, valuation, and M&A advisory to navigate complex market environments.', '918980692738')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
@@ -1173,7 +1273,8 @@
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
                             <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
-                                <img src="jaykishan.png"
+                                <img src="jaykishan.webp"
+                                    alt="CA Jaykishan Sondarva - Partner at JYJ & CO. Chartered Accountant"
                                     alt="CA Jaykishan Jagad - Partner at JYJ & CO, Expert in Business Valuation and IPO Advisory"
                                     class="w-full h-full object-cover">
                             </div>
@@ -1206,7 +1307,7 @@
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
                             <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
-                                <img src="jaimin.png"
+                                <img src="jaimin.webp" alt="CA Jaimin Kanzariya - Partner at JYJ & CO."
                                     alt="CA Jaimin Gajera - Partner at JYJ & CO, Specialist in Audit and Taxation"
                                     class="w-full h-full object-cover">
                             </div>
@@ -1240,7 +1341,7 @@
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
                             <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
-                                <img src="yash.png"
+                                <img src="yash.webp" alt="CA Yash Vaghadia - Partner at JYJ & CO."
                                     alt="CA Yash Ramani - Partner at JYJ & CO, Expert in Compliance and ROC Advisory"
                                     class="w-full h-full object-cover">
                             </div>
@@ -1273,7 +1374,614 @@
         </div>
     </section>
 
-    <!-- Presence & Location Section -->
+    <!-- Client Testimonials Section -->
+    <section id="reviews" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Testimonials</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-navy-950 mb-4">What Our Clients Say</h3>
+                <div class="flex items-center justify-center space-x-2">
+                    <div class="flex text-gold-500">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="text-navy-950 font-bold">4.9/5</span>
+                    <span class="text-gray-500">(27 Google Reviews)</span>
+                </div>
+            </div>
+
+            <!-- ROW 1: Google Reviews (Scrolling Left) -->
+            <div class="marquee-container overflow-hidden scrollbar-hide group/container mb-12">
+                <div class="flex items-center space-x-6 mb-10 px-4">
+                    <div class="h-px bg-navy-100 flex-grow"></div>
+                    <span
+                        class="bg-white text-navy-950 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-gray-200 shadow-sm flex items-center">
+                        <i class="fa-brands fa-google text-gold-500 mr-3 text-sm"></i> Verified Client Feedback
+                    </span>
+                    <div class="h-px bg-navy-100 flex-grow"></div>
+                </div>
+                <div id="google-track" class="marquee-track animate-marquee">
+                    <!-- Set 1 -->
+                    <div class="flex">
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"C.A with having best expertise and knowledge
+                                getting the work done by the time n upto the mark 👍"</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    S</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Soyam Shekh</h5>
+                                    <p class="text-[9px] text-gray-400">Google Local Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Your commitment to professional services is
+                                exceptional and inspires everyone."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    R</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Rutvik Poshiya</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Knowledgeable Staff. Excellent services at
+                                affordable rates."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    Y</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Yash Shah</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Well organised and structured way of
+                                work...appreciate it!!"</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    U</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Uttam Chovatiya</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for wrap -->
+                    <div class="flex">
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"C.A with having best expertise and knowledge
+                                getting the work done by the time n upto the mark 👍"</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    S</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Soyam Shekh</h5>
+                                    <p class="text-[9px] text-gray-400">Google Local Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Your commitment to professional services is
+                                exceptional and inspires everyone."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    R</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Rutvik Poshiya</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Knowledgeable Staff. Excellent services at
+                                affordable rates."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    Y</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Yash Shah</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[350px] bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm mr-6">
+                            <div class="flex text-gold-500 mb-4 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-700 italic mb-6 text-sm">"Well organised and structured way of
+                                work...appreciate it!!"</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-8 h-8 bg-navy-950 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
+                                    U</div>
+                                <div>
+                                    <h5 class="font-bold text-navy-950 text-xs">Uttam Chovatiya</h5>
+                                    <p class="text-[9px] text-gray-400">Verified Client</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2: Corporate Endorsements (Scrolling Right) -->
+            <div class="marquee-container overflow-hidden scrollbar-hide group/container">
+                <div class="flex items-center space-x-6 mb-10 px-4">
+                    <div class="h-px bg-gold-500/30 flex-grow"></div>
+                    <span
+                        class="bg-navy-950 text-gold-500 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-gold-500/40 shadow-[0_0_20px_rgba(184,150,70,0.2)] flex items-center">
+                        <i class="fa-solid fa-award mr-3 text-sm"></i> Corporate Endorsements
+                    </span>
+                    <div class="h-px bg-gold-500/30 flex-grow"></div>
+                </div>
+            </div>
+            <div id="industry-track" class="marquee-track-reverse animate-marquee-reverse">
+                <!-- Set 1 -->
+                <div class="flex">
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"JYJ & CO's approach to IPO
+                            advisory and business valuation exceeded our expectations. Their strategic vision and
+                            attention to regulatory nuances made a complex transition seamless."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                DF</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Director of Finance</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Leading Tech
+                                    Conglomerate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"The level of precision in
+                            their statutory audits and internal controls is benchmark-worthy. Truly a partner that
+                            prioritizes corporate integrity above all else."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                CF</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">CFO - Manufacturing Group</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">
+                                    Multi-National Enterprise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Their deep understanding of
+                            RERA compliance and sophisticated tax planning for large-scale development projects has
+                            been invaluable to our growth."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                MD</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Managing Director</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Premium
+                                    Reality Group</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Precision and accountability
+                            are critical in healthcare. JYJ & CO's internal audit systems provided us with the
+                            financial transparency required to scale safely."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                OH</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Operations Head</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">
+                                    Multi-Specialty Hospital Chain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"During our recent debt
+                            restructuring, the firm's advisory team delivered results that directly impacted our
+                            bottom line. Highly recommended for complex advisory."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                CE</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">CEO</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Global
+                                    Logistics Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Managing trust accounts
+                            requires specialized knowledge. Their expertise in educational foundation audits ensured
+                            our compliance was both efficient and airtight."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                FC</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Financial Controller</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Intl.
+                                    Educational Trust</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"The cost optimization
+                            strategies implemented after their internal audit saved us significantly in overheads.
+                            They don't just find errors; they find opportunities."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                DR</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Director</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Precision
+                                    Engineering Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for wrap -->
+                <div class="flex">
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"JYJ & CO's approach to IPO
+                            advisory and business valuation exceeded our expectations. Their strategic vision and
+                            attention to regulatory nuances made a complex transition seamless."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                DF</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Director of Finance</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Leading Tech
+                                    Conglomerate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"The level of precision in
+                            their statutory audits and internal controls is benchmark-worthy. Truly a partner that
+                            prioritizes corporate integrity above all else."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                CF</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">CFO - Manufacturing Group</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">
+                                    Multi-National Enterprise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Their deep understanding of
+                            RERA compliance and sophisticated tax planning for large-scale development projects has
+                            been invaluable to our growth."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                MD</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Managing Director</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Premium
+                                    Reality Group</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Precision and accountability
+                            are critical in healthcare. JYJ & CO's internal audit systems provided us with the
+                            financial transparency required to scale safely."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                OH</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Operations Head</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">
+                                    Multi-Specialty Hospital Chain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"During our recent debt
+                            restructuring, the firm's advisory team delivered results that directly impacted our
+                            bottom line. Highly recommended for complex advisory."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                CE</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">CEO</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Global
+                                    Logistics Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"Managing trust accounts
+                            requires specialized knowledge. Their expertise in educational foundation audits ensured
+                            our compliance was both efficient and airtight."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                FC</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Financial Controller</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Intl.
+                                    Educational Trust</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[450px] glass-card gold-glow p-8 rounded-3xl flex flex-col transition-all duration-500 group mr-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex text-gold-500 text-xs"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <i
+                                class="fa-solid fa-quote-right text-gold-500/20 text-3xl group-hover:text-gold-500 transition-colors"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 text-sm leading-relaxed">"The cost optimization
+                            strategies implemented after their internal audit saved us significantly in overheads.
+                            They don't just find errors; they find opportunities."</p>
+                        <div class="flex items-center mt-auto border-t border-white/10 pt-6">
+                            <div
+                                class="w-10 h-10 bg-gold-500 text-navy-950 font-bold rounded-lg flex items-center justify-center mr-3">
+                                DR</div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Director</h5>
+                                <p class="text-[9px] text-gold-500 uppercase tracking-widest font-bold">Precision
+                                    Engineering Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Improved Action Button -->
+        <div class="text-center mt-12 bg-gray-50 py-10 rounded-3xl border border-gray-100 shadow-inner">
+            <h4 class="text-xl font-bold text-navy-950 mb-2">Share Your Experience</h4>
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto text-sm">Your feedback helps us continuously improve our
+                professional standard. Submit a review directly or cross-post to Google.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button onclick="openReviewModal()"
+                    class="bg-navy-950 text-white hover:bg-gold-500 px-8 py-4 rounded-full font-bold inline-flex items-center transition-all shadow-xl hover:-translate-y-1">
+                    Submit a Website Review <i class="fa-solid fa-pen-to-square ml-2"></i>
+                </button>
+                <a href="https://www.google.com/maps/place/JYJ+%26+CO.+Chartered+Accountants/@22.2827864,70.7968264,17z/data=!4m8!3m7!1s0x3959cb1f69e4585f:0xa2b5f12ed3676e68!8m2!3d22.2827864!4d70.7968264!9m1!1b1!16s%2Fg%2F11w6nd2gh5"
+                    target="_blank"
+                    class="bg-white text-navy-950 border-2 border-navy-950 hover:bg-navy-50 px-8 py-4 rounded-full font-bold inline-flex items-center transition-all shadow-lg hover:-translate-y-1">
+                    Review on Google <i class="fa-brands fa-google ml-2"></i>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Review Submission Modal -->
+    <div id="reviewModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-navy-950/40 backdrop-blur-md" onclick="closeReviewModal()"></div>
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-xl relative z-10 overflow-hidden transform transition-all duration-300 scale-95 opacity-0"
+            id="reviewModalContent">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-navy-950">Submit Your Feedback</h2>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest font-bold">Client Success Story
+                        </p>
+                    </div>
+                    <button onclick="closeReviewModal()"
+                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-navy-950 hover:text-white transition-all"><i
+                            class="fa-solid fa-xmark text-lg"></i></button>
+                </div>
+
+                <form onsubmit="submitReview(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-navy-950 mb-2">Full Name</label>
+                            <input type="text" required
+                                class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all"
+                                placeholder="e.g. John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-navy-950 mb-2">Company / Role</label>
+                            <input type="text"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all"
+                                placeholder="e.g. CEO - Tech Corp">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-navy-950 mb-2">Service Rated</label>
+                        <select
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-gold-500 outline-none transition-all">
+                            <option>Audit & Assurance</option>
+                            <option>Taxation Advisory</option>
+                            <option>Corporate Advisory</option>
+                            <option>Valuation Services</option>
+                            <option>Other Services</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-navy-950 mb-2">Rating</label>
+                        <div class="flex space-x-2 text-2xl text-gray-300" id="starRating">
+                            <i class="fa-solid fa-star cursor-pointer hover:text-gold-500 transition-colors"
+                                onclick="setRating(1)"></i>
+                            <i class="fa-solid fa-star cursor-pointer hover:text-gold-500 transition-colors"
+                                onclick="setRating(2)"></i>
+                            <i class="fa-solid fa-star cursor-pointer hover:text-gold-500 transition-colors"
+                                onclick="setRating(3)"></i>
+                            <i class="fa-solid fa-star cursor-pointer hover:text-gold-500 transition-colors"
+                                onclick="setRating(4)"></i>
+                            <i class="fa-solid fa-star cursor-pointer hover:text-gold-500 transition-colors"
+                                onclick="setRating(5)"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-navy-950 mb-2">Your Testimonial</label>
+                        <textarea required rows="4"
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all"
+                            placeholder="Share your experience working with JYJ & CO..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-navy-950 text-white font-bold py-4 rounded-xl hover:bg-gold-500 transition-all shadow-xl">
+                        Submit Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section id="location" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -1285,7 +1993,10 @@
                 <div
                     class="absolute inset-0 bg-navy-950/20 group-hover:bg-transparent transition-all duration-500 z-10 pointer-events-none">
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8733639038774!2d70.7968263755231!3d22.282786379699175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb1f69e4585f%3A0xa2b5f12ed3676e68!2sJYJ%20%26%20CO.%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1776054651514!5m2!1sen!2sin" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="relative z-0"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8733639038774!2d70.7968263755231!3d22.282786379699175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb1f69e4585f%3A0xa2b5f12ed3676e68!2sJYJ%20%26%20CO.%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1776054651514!5m2!1sen!2sin"
+                    width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="relative z-0"></iframe>
 
 
                 <div class="absolute bottom-10 left-10 z-20">
@@ -1307,7 +2018,8 @@
         <div class="text-gold-600 text-sm font-bold uppercase tracking-widest mb-4">Service Details</div>
         <h2 class="text-2xl font-bold text-navy-950 mb-6" id="serviceTitle"></h2>
         <div class="h-1 bg-gold-500 w-16 mb-8"></div>
-        <p class="text-gray-600 leading-relaxed mb-8 service-details-text whitespace-pre-wrap" id="serviceDetails"></p>
+        <p class="text-gray-600 leading-relaxed mb-8 service-details-text whitespace-pre-wrap" id="serviceDetails">
+        </p>
         <a href="https://wa.me/918758792708" target="_blank"
             class="inline-block bg-navy-950 text-white px-8 py-3 rounded-xl font-bold hover:bg-gold-500 transition-all">
             Inquire Now
@@ -1331,9 +2043,11 @@
                         <i class="fa-solid fa-chevron-down text-gold-600 group-hover:text-gold-700"></i>
                     </div>
                     <p class="text-gray-600 mt-3 faq-answer-1 hidden">JYJ & CO provides comprehensive chartered
-                        accounting services including audit & assurance, taxation (direct and indirect tax planning, GST
+                        accounting services including audit & assurance, taxation (direct and indirect tax planning,
+                        GST
                         compliance), accounting & bookkeeping, compliance services, business advisory, corporate
-                        finance, internal controls, NBFC consultancy, NRI tax advisory, cost consultancy, and appeals &
+                        finance, internal controls, NBFC consultancy, NRI tax advisory, cost consultancy, and
+                        appeals &
                         litigation support.</p>
                 </div>
 
@@ -1344,9 +2058,12 @@
                         <h4 class="text-lg font-bold text-navy-950">Why choose JYJ & CO. for audit services?</h4>
                         <i class="fa-solid fa-chevron-down text-gold-600 group-hover:text-gold-700"></i>
                     </div>
-                    <p class="text-gray-600 mt-3 faq-answer-2 hidden">Our statutory, internal, and risk-based assurance
-                        services ensure absolute financial accuracy. With 200+ audits completed and a 100% compliance
-                        success rate, we provide established expertise across global sectors including manufacturing,
+                    <p class="text-gray-600 mt-3 faq-answer-2 hidden">Our statutory, internal, and risk-based
+                        assurance
+                        services ensure absolute financial accuracy. With 200+ audits completed and a 100%
+                        compliance
+                        success rate, we provide established expertise across global sectors including
+                        manufacturing,
                         IT, real estate, and international trade.</p>
                 </div>
 
@@ -1380,13 +2097,16 @@
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 group cursor-pointer hover:border-gold-500 transition-all"
                     onclick="this.querySelector('.faq-answer-5').classList.toggle('hidden')">
                     <div class="flex justify-between items-start">
-                        <h4 class="text-lg font-bold text-navy-950">Are you located in Rajkot? Do you serve other areas?
+                        <h4 class="text-lg font-bold text-navy-950">Are you located in Rajkot? Do you serve other
+                            areas?
                         </h4>
                         <i class="fa-solid fa-chevron-down text-gold-600 group-hover:text-gold-700"></i>
                     </div>
                     <p class="text-gray-600 mt-3 faq-answer-5 hidden">Yes, our office is located at 309, 3rd Floor,
-                        Nakshatra VI, Opp. Pinevinta hotel, Gondal Road, Rajkot, Gujarat 360002. While based in Rajkot,
-                        we serve clients across India and provide specialized services for NRI tax advisory globally.
+                        Nakshatra VI, Opp. Pinevinta hotel, Gondal Road, Rajkot, Gujarat 360002. While based in
+                        Rajkot,
+                        we serve clients across India and provide specialized services for NRI tax advisory
+                        globally.
                     </p>
                 </div>
 
@@ -1397,7 +2117,8 @@
                         <h4 class="text-lg font-bold text-navy-950">How can I book a free consultation?</h4>
                         <i class="fa-solid fa-chevron-down text-gold-600 group-hover:text-gold-700"></i>
                     </div>
-                    <p class="text-gray-600 mt-3 faq-answer-6 hidden">You can book a free consultation by clicking the
+                    <p class="text-gray-600 mt-3 faq-answer-6 hidden">You can book a free consultation by clicking
+                        the
                         "Free Consultation" button, sending us an email at office.jyjco@gmail.com, or calling us at
                         +91-87587-92708. You can also message us via WhatsApp for quick response.</p>
                 </div>
@@ -1453,29 +2174,35 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">1. Information We Collect</h3>
-                    <p>JYJ & CO. collects information you provide directly, including your name, email address, phone
+                    <p>JYJ & CO. collects information you provide directly, including your name, email address,
+                        phone
                         number, business details, and any documents shared during consultations. We also collect
-                        information automatically through website analytics and cookies to improve your experience.</p>
+                        information automatically through website analytics and cookies to improve your experience.
+                    </p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">2. How We Use Your Information</h3>
                     <p>We use your information to provide professional accounting services, communicate about your
-                        account, send updates and newsletters, comply with legal requirements, and improve our services.
-                        Your data is never shared with third parties without your consent, except where required by law.
+                        account, send updates and newsletters, comply with legal requirements, and improve our
+                        services.
+                        Your data is never shared with third parties without your consent, except where required by
+                        law.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">3. Data Security</h3>
-                    <p>We implement industry-standard security measures including encryption, secure servers, and access
+                    <p>We implement industry-standard security measures including encryption, secure servers, and
+                        access
                         controls to protect your personal and financial information. All sensitive data is stored
                         securely and accessed only by authorized personnel.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">4. Cookies and Tracking</h3>
-                    <p>Our website uses cookies to enhance functionality and analyze site performance. You can control
+                    <p>Our website uses cookies to enhance functionality and analyze site performance. You can
+                        control
                         cookie settings through your browser preferences. We use Google Analytics to understand user
                         behavior and improve our website.</p>
                 </section>
@@ -1489,7 +2216,8 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">6. Third-Party Links</h3>
-                    <p>Our website contains links to external websites and government portals. We are not responsible
+                    <p>Our website contains links to external websites and government portals. We are not
+                        responsible
                         for the privacy practices of these third-party sites. Please review their privacy policies
                         separately.</p>
                 </section>
@@ -1520,20 +2248,23 @@
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">1. Agreement to Terms</h3>
                     <p>By accessing and using this website and services, you agree to be bound by these Terms of
-                        Service. If you disagree with any part, please do not use our services. JYJ & CO. reserves the
+                        Service. If you disagree with any part, please do not use our services. JYJ & CO. reserves
+                        the
                         right to modify these terms at any time.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">2. Services Description</h3>
                     <p>JYJ & CO. provides professional chartered accounting services including audit & assurance,
-                        taxation, accounting, ISO certification, and IPO/FPO advisory. Services are provided based on
+                        taxation, accounting, ISO certification, and IPO/FPO advisory. Services are provided based
+                        on
                         engagement letters and mutually agreed terms.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">3. Professional Standards</h3>
-                    <p>All services are provided in accordance with Chartered Accountants Act, 1949, and professional
+                    <p>All services are provided in accordance with Chartered Accountants Act, 1949, and
+                        professional
                         standards issued by ICAI (Institute of Chartered Accountants of India). We follow applicable
                         laws and regulations of India.</p>
                 </section>
@@ -1548,20 +2279,23 @@
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">5. Limitation of Liability</h3>
                     <p>JYJ & CO. shall not be liable for any indirect, incidental, special, or consequential damages
-                        arising from your use or inability to use our services. Our total liability is limited to the
+                        arising from your use or inability to use our services. Our total liability is limited to
+                        the
                         fees paid for the specific service in question.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">6. Client Responsibilities</h3>
                     <p>Clients must provide accurate, complete information and maintain organized financial records.
-                        Clients are responsible for the accuracy of information provided and compliance with applicable
+                        Clients are responsible for the accuracy of information provided and compliance with
+                        applicable
                         laws and regulations.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">7. Fees and Payment</h3>
-                    <p>Service fees are as quoted in the engagement letter. Payment terms are 30 days from invoice date
+                    <p>Service fees are as quoted in the engagement letter. Payment terms are 30 days from invoice
+                        date
                         unless otherwise agreed. Late payments may incur interest charges as per engagement letter
                         provisions.</p>
                 </section>
@@ -1569,7 +2303,8 @@
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">8. Dispute Resolution</h3>
                     <p>Any disputes shall be governed by the laws of India. Disputes will be resolved through
-                        negotiation, and if necessary, through arbitration under the Arbitration and Conciliation Act,
+                        negotiation, and if necessary, through arbitration under the Arbitration and Conciliation
+                        Act,
                         1996.</p>
                 </section>
             </div>
@@ -1589,13 +2324,15 @@
                 <p class="text-sm text-gray-500"><strong>Last Updated:</strong> April 2026</p>
 
                 <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                    <p class="font-bold text-yellow-800">IMPORTANT: This website is for informational purposes only and
+                    <p class="font-bold text-yellow-800">IMPORTANT: This website is for informational purposes only
+                        and
                         does not constitute professional advice.</p>
                 </div>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">1. Acceptance of Terms & Access Agreement</h3>
-                    <p class="font-semibold mb-2">Your access to this website constitutes your agreement to be bound by
+                    <p class="font-semibold mb-2">Your access to this website constitutes your agreement to be bound
+                        by
                         all terms and conditions listed herein. If you do not agree to this, you may not access or
                         otherwise use the website.</p>
                     <p>By visiting, accessing, or using this website, you confirm your acceptance of these terms and
@@ -1621,7 +2358,8 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">3. Right to Terminate or Modify</h3>
-                    <p class="font-semibold mb-2">JYJ & CO. reserves the right, for any reason, in its sole discretion,
+                    <p class="font-semibold mb-2">JYJ & CO. reserves the right, for any reason, in its sole
+                        discretion,
                         to terminate, change or suspend any aspect of this website, including, but not limited to,
                         content or features.</p>
                     <p>We may terminate, suspend, or restrict your access to any part of the website at any time,
@@ -1631,10 +2369,13 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">4. Information Accuracy & Completeness</h3>
-                    <p class="font-semibold mb-2">All reasonable efforts shall be made to ensure that the information
+                    <p class="font-semibold mb-2">All reasonable efforts shall be made to ensure that the
+                        information
                         contained on this website is updated, accurate and complete.</p>
-                    <p>However, no representations or warranties are made (express or implied) as to the reliability,
-                        accuracy or completeness of such information. Information may contain technical inaccuracies or
+                    <p>However, no representations or warranties are made (express or implied) as to the
+                        reliability,
+                        accuracy or completeness of such information. Information may contain technical inaccuracies
+                        or
                         typographical errors. JYJ & CO. assumes no responsibility for:</p>
                     <ul class="list-disc pl-6 space-y-2 mt-2">
                         <li>Errors or omissions in website content</li>
@@ -1646,12 +2387,16 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">5. Third-Party Links & External Resources</h3>
-                    <p class="font-semibold mb-2">The site provides links to websites or resources operated by others
+                    <p class="font-semibold mb-2">The site provides links to websites or resources operated by
+                        others
                         over which we do not have any control.</p>
-                    <p>We do not undertake any responsibility for the availability of such external resources. We shall
+                    <p>We do not undertake any responsibility for the availability of such external resources. We
+                        shall
                         not be liable for any content, advertising, products, services or other materials on or
-                        available from such sites or resources. The inclusion of hyperlinks to such sites does not imply
-                        any endorsement of the material on such websites or any association with their operators.</p>
+                        available from such sites or resources. The inclusion of hyperlinks to such sites does not
+                        imply
+                        any endorsement of the material on such websites or any association with their operators.
+                    </p>
                     <p class="mt-3">We shall not be responsible or liable, directly or indirectly, for any damage or
                         loss caused or alleged to be caused by or in connection with use of or reliance on any such
                         content or service available on or through any such site or resource.</p>
@@ -1660,7 +2405,8 @@
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">6. "AS-IS" Basis & No Warranties</h3>
                     <p class="font-semibold mb-2">The site, including all content, functions, and information made
-                        available on or accessed through the site, is provided on an "AS-IS" and "AS-AVAILABLE" basis
+                        available on or accessed through the site, is provided on an "AS-IS" and "AS-AVAILABLE"
+                        basis
                         without representations or warranties of any kind whatsoever, express or implied.</p>
                     <p>This includes but is not limited to:</p>
                     <ul class="list-disc pl-6 space-y-2 mt-2">
@@ -1670,15 +2416,19 @@
                         <li>Compatibility with your system</li>
                         <li>Freedom from viruses or harmful code</li>
                     </ul>
-                    <p class="mt-3 font-semibold">JYJ & CO. does not warrant that the site or the functions, features or
-                        content contained therein will be timely, secure, uninterrupted or error-free, or that defects
-                        will be corrected. No advice or information, whether oral or written, obtained by you from us or
+                    <p class="mt-3 font-semibold">JYJ & CO. does not warrant that the site or the functions,
+                        features or
+                        content contained therein will be timely, secure, uninterrupted or error-free, or that
+                        defects
+                        will be corrected. No advice or information, whether oral or written, obtained by you from
+                        us or
                         through this website shall create any warranty not expressly made herein.</p>
                 </section>
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">7. Limitation of Liability & Damages</h3>
-                    <p class="font-semibold mb-2">IN NO EVENT SHALL JYJ & CO. BE LIABLE FOR ANY SPECIAL, INCIDENTAL OR
+                    <p class="font-semibold mb-2">IN NO EVENT SHALL JYJ & CO. BE LIABLE FOR ANY SPECIAL, INCIDENTAL
+                        OR
                         CONSEQUENTIAL DAMAGES that are directly or indirectly related to:</p>
                     <ul class="list-disc pl-6 space-y-2 mt-2">
                         <li>The use of, or the inability to use this website</li>
@@ -1690,7 +2440,8 @@
                         <li>Any other claim arising from use of the website or services</li>
                     </ul>
                     <p class="mt-3">This limitation applies even if JYJ & CO. has been advised of the possibility of
-                        such damages. The liability of JYJ & CO. shall not exceed the fees paid by you for the services
+                        such damages. The liability of JYJ & CO. shall not exceed the fees paid by you for the
+                        services
                         in question.</p>
                 </section>
 
@@ -1698,7 +2449,8 @@
                     <h3 class="text-xl font-bold text-navy-950 mb-3">8. Indemnification</h3>
                     <p>You agree to defend, indemnify, and hold harmless JYJ & CO., its partners, employees, and
                         associates from any and all claims, damages, liabilities, costs, and expenses (including
-                        reasonable attorneys' fees) arising from your use of this website, violation of these terms, or
+                        reasonable attorneys' fees) arising from your use of this website, violation of these terms,
+                        or
                         infringement of any laws or third-party rights.</p>
                 </section>
 
@@ -1721,7 +2473,8 @@
                         content, please contact:</p>
                     <div class="bg-gray-100 p-4 rounded-lg mt-2">
                         <p><strong>JYJ & CO. - Chartered Accountants</strong></p>
-                        <p>309, 3rd Floor, Nakshatra VI, Opp. Pinevinta Hotel,<br>Gondal Road, Rajkot, Gujarat 360002,
+                        <p>309, 3rd Floor, Nakshatra VI, Opp. Pinevinta Hotel,<br>Gondal Road, Rajkot, Gujarat
+                            360002,
                             India</p>
                         <p class="mt-2"><strong>Email:</strong> office.jyjco@gmail.com</p>
                         <p><strong>Phone:</strong> +91 87587 92708</p>
@@ -1730,10 +2483,12 @@
 
                 <section>
                     <h3 class="text-xl font-bold text-navy-950 mb-3">10. Contact for Clarifications</h3>
-                    <p>If you require personalized professional advice for your specific situation, contact us at:<br>
+                    <p>If you require personalized professional advice for your specific situation, contact us
+                        at:<br>
                         <strong>Email:</strong> office.jyjco@gmail.com<br>
                         <strong>Phone:</strong> +91 87587 92708<br>
-                        We are available for professional consultations on all accounting, tax, and financial matters.
+                        We are available for professional consultations on all accounting, tax, and financial
+                        matters.
                     </p>
                 </section>
             </div>
@@ -1741,166 +2496,180 @@
     </div>
 
     <!-- Footer Section -->
-    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900">
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Branding & Social -->
-                <div>
-                    <div class="mb-8 flex justify-start">
-                        <div class="relative group inline-block">
+            <!-- Main Grid: 3 Specialized Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
 
-                            <!-- Logo -->
-                            <img src="ca_logo.png" alt="Chartered Accountant India Logo"
-                                class="h-10 w-auto rounded-md cursor-pointer">
-
-                            <!-- Tooltip -->
-                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
-                                    hidden group-hover:block 
-                                    bg-gray-800 text-white text-sm px-3 py-1 rounded-md shadow-lg whitespace-nowrap">
-                                Chartered Accountant India
-                            </div>
-
-                        </div>
+                <!-- Col 1: Identity & Brand (Span 3) -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div>
+                        <h4 class="text-2xl font-bold tracking-tight text-white mb-2">JYJ & CO.</h4>
+                        <p class="text-gold-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-6">Chartered
+                            Accountant</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Excellence in financial management through integrity, expertise, and innovation. Established
+                            2024.
+                        </p>
                     </div>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        Excellence in financial management through integrity, expertise, and innovation. Established in
-                        2024.
-                    </p>
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-5">
                         <a href="https://www.instagram.com/ca.jyj_co/" target="_blank"
-                            class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center hover:bg-gold-500 transition-colors">
-                            <i class="fa-brands fa-instagram text-xl"></i>
-                        </a>
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
                         <a href="https://in.linkedin.com/company/jyj-co" target="_blank"
-                            class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center hover:bg-gold-500 transition-colors">
-                            <i class="fa-brands fa-linkedin-in text-xl"></i>
-                        </a>
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-linkedin-in text-lg"></i></a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-xl font-bold mb-8 border-b border-navy-800 pb-4">Quick Links</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="#home" class="hover:text-gold-500 transition-colors">Home</a></li>
-                        <li><a href="#services" class="hover:text-gold-500 transition-colors">Services</a></li>
-                        <li><a href="#about" class="hover:text-gold-500 transition-colors">About Us</a></li>
-                        <li><a href="#leadership" class="hover:text-gold-500 transition-colors">Leadership</a></li>
-                        <li><a href="https://wa.me/918758792708?text=Hi%20JYJ%20%26%20CO%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
-                                target="_blank" class="hover:text-gold-500 transition-colors">Free Consultation</a></li>
-                    </ul>
-
-                    <h4 class="text-xl font-bold mt-12 mb-8 border-b border-navy-800 pb-4">Government Portals</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="https://www.incometax.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-landmark mr-2 text-gold-500"></i> Income Tax Dept
-                            </a></li>
-                        <li><a href="https://www.gst.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-receipt mr-2 text-gold-500"></i> GST Portal
-                            </a></li>
-                        <li><a href="https://www.mca.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-building-columns mr-2 text-gold-500"></i> MCA (Company)
-                            </a></li>
-                        <li><a href="https://www.icai.org/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-user-tie mr-2 text-gold-500"></i> ICAI Official
-                            </a></li>
-                        <li><a href="https://www.epfindia.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-shield-halved mr-2 text-gold-500"></i> EPFO Portal
-                            </a></li>
-                        <li><a href="https://www.startupindia.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-rocket mr-2 text-gold-500"></i> Startup India
-                            </a></li>
-                        <li><a href="https://www.msme.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-industry mr-2 text-gold-500"></i> MSME Portal
-                            </a></li>
-                        <li><a href="https://www.sebi.gov.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-chart-pie mr-2 text-gold-500"></i> SEBI
-                            </a></li>
-                        <li><a href="https://www.rbi.org.in/" target="_blank"
-                                class="hover:text-gold-500 transition-colors flex items-center">
-                                <i class="fa-solid fa-landmark mr-2 text-gold-500"></i> RBI Official
-                            </a></li>
-                    </ul>
+                <!-- Col 2: Navigation & Portals (Span 4) -->
+                <div class="lg:col-span-4 grid grid-cols-1 gap-12">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white">
+                            Quick Links</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="#home" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="#services" class="hover:text-gold-500 transition-colors">Services</a></li>
+                            <li><a href="#about" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                            <li><a href="#leadership" class="hover:text-gold-500 transition-colors">Leadership</a></li>
+                            <li><a href="https://wa.me/918758792708" target="_blank"
+                                    class="hover:text-gold-500 transition-colors">Free Consultation</a></li>
+                        </ul>
+                    </div>
+                    <!-- Government Portals -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white">
+                            Government Portals</h4>
+                        <ul class="grid grid-cols-1 gap-y-4 text-gray-400 text-sm">
+                            <li><a href="https://www.incometax.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-landmark mr-3 text-gold-500/80 w-5"></i>Income Tax Dept</a>
+                            </li>
+                            <li><a href="https://www.gst.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-file-invoice mr-3 text-gold-500/80 w-5"></i>GST Portal</a>
+                            </li>
+                            <li><a href="https://www.mca.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>MCA
+                                    (Company)</a></li>
+                            <li><a href="https://www.icai.org/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-user-graduate mr-3 text-gold-500/80 w-5"></i>ICAI
+                                    Official</a></li>
+                            <li><a href="https://www.epfindia.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-shield-halved mr-3 text-gold-500/80 w-5"></i>EPFO Portal</a>
+                            </li>
+                            <li><a href="https://www.startupindia.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-rocket mr-3 text-gold-500/80 w-5"></i>Startup India</a></li>
+                            <li><a href="https://udyamregistration.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-industry mr-3 text-gold-500/80 w-5"></i>MSME Portal</a></li>
+                            <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-chart-line mr-3 text-gold-500/80 w-5"></i>SEBI</a></li>
+                            <li><a href="https://www.rbi.org.in/" target="_blank"
+                                    class="hover:text-gold-500 transition-colors flex items-center"><i
+                                        class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>RBI
+                                    Official</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="lg:col-span-2">
-                    <h4 class="text-xl font-bold mb-8 border-b border-navy-800 pb-4">Our Presence</h4>
-                    <div class="flex flex-col md:flex-row gap-8">
-                        <div class="flex items-start flex-grow">
-                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-xl"></i>
+
+                <!-- Col 3: Presence & Call Experts (Span 5) -->
+                <div class="lg:col-span-5">
+                    <h4 class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white">Our Presence</h4>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <!-- Left: Address + Digital Contact Card -->
+                        <div class="space-y-8 md:w-[55%]">
+                            <!-- Office Address -->
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div class="text-sm text-gray-400">
+                                    <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">Office Address:</p>
+                                    <p class="leading-relaxed text-[13px]">309, 3rd Floor, Nakshatra VI,<br>Opp. Pinevinta hotel, Gondal Road,<br>Rajkot, Gujarat 360002, IN.</p>
+                                </div>
+                            </div>
+                            <!-- Digital Contact Card -->
+                            <div class="bg-navy-900/50 p-6 rounded-2xl border border-navy-800/80 flex flex-col items-center">
+                                <h5 class="text-[10px] font-bold text-gold-500 mb-5 uppercase tracking-[0.25em] text-center">Digital Contact Card</h5>
+                                <div class="bg-white p-2.5 rounded-xl mb-4 shadow-lg relative group">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AJYJ%20%26%20CO.%0AORG%3AJYJ%20%26%20CO.%20Chartered%20Accountants%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918758792708%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B917600359457%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918980692738%0AEMAIL%3Aoffice.jyjco%40gmail.com%0AADR%3BTYPE%3DWORK%3A%3B%3B309%2C%203rd%20Floor%2C%20Nakshatra%20VI%2C%20Opp.%20Pinevinta%20hotel%2C%20Gondal%20Road%2C%20Rajkot%3BRajkot%3BGujarat%3B360002%3BIndia%0AEND%3AVCARD"
+                                        alt="QR Code - Save JYJ & CO. Contact" class="w-24 h-24 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                                </div>
+                                <p class="text-[8px] text-gray-500 uppercase tracking-[0.15em] leading-relaxed text-center">Scan to save all contacts<br>directly to your phone</p>
+                            </div>
+                        </div>
+                        <!-- Right: General Inquiries + Call Experts -->
+                        <div class="space-y-8 md:w-[45%]">
+                            <!-- General Inquiries -->
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div class="text-sm text-gray-400">
+                                    <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">General Inquiries:</p>
+                                    <a href="mailto:office.jyjco@gmail.com" class="hover:text-gold-500 transition-colors text-[13px]">office.jyjco@gmail.com</a>
+                                </div>
+                            </div>
+                            <!-- Call Experts -->
                             <div>
-                                <p class="text-gray-400 leading-relaxed font-bold mb-2">Office Address:</p>
-                                <p class="text-gray-400 leading-relaxed text-sm">
-                                    309, 3rd Floor, Nakshatra VI,<br>
-                                    Opp. Pinevinta hotel, Gondal Road,<br>
-                                    Rajkot, Gujarat 360002, IN.
-                                </p>
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-4">Call Experts:</p>
+                                <ul class="space-y-4 text-[13px] text-gray-400">
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-phone text-gold-500/70 flex-shrink-0 text-sm"></i>
+                                        <span>CA Jaimin Gajera:</span>
+                                        <span class="text-gray-300 whitespace-nowrap">+91 87587 92708</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-phone text-gold-500/70 flex-shrink-0 text-sm"></i>
+                                        <span>CA Jaykishan Jagad:</span>
+                                        <span class="text-gray-300 whitespace-nowrap">+91 76003 59457</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-phone text-gold-500/70 flex-shrink-0 text-sm"></i>
+                                        <span>CA Yash Ramani:</span>
+                                        <span class="text-gray-300 whitespace-nowrap">+91 89806 92738</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="flex items-start flex-grow">
-                            <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-xl flex-shrink-0"></i>
-                            <div class="w-full">
-                                <div class="mb-6">
-                                    <p class="text-gray-400 font-bold text-sm mb-2">General Inquiries:</p>
-                                    <a href="mailto:office.jyjco@gmail.com"
-                                        class="text-gray-400 hover:text-gold-500 transition-colors text-xs break-all">office.jyjco@gmail.com</a>
-                                </div>
-                                <div>
-                                    <p class="text-gray-400 font-bold text-sm mb-3">Call Experts:</p>
-                                    <div class="space-y-2">
-                                        <a href="tel:+918758792708"
-                                            class="text-gray-400 hover:text-gold-500 transition-colors flex items-center text-xs">
-                                            <i class="fa-solid fa-phone text-gold-500 mr-2 flex-shrink-0"></i>
-                                            <span class="font-semibold">CA Jaimin Gajera:</span>
-                                            <span class="ml-1 whitespace-nowrap">+91 87587 92708</span>
-                                        </a>
-                                        <a href="tel:+917600359457"
-                                            class="text-gray-400 hover:text-gold-500 transition-colors flex items-center text-xs">
-                                            <i class="fa-solid fa-phone text-gold-500 mr-2 flex-shrink-0"></i>
-                                            <span class="font-semibold">CA Jaykishan Jagad:</span>
-                                            <span class="ml-1 whitespace-nowrap">+91 76003 59457</span>
-                                        </a>
-                                        <a href="tel:+918980692738"
-                                            class="text-gray-400 hover:text-gold-500 transition-colors flex items-center text-xs">
-                                            <i class="fa-solid fa-phone text-gold-500 mr-2 flex-shrink-0"></i>
-                                            <span class="font-semibold">CA Yash Ramani:</span>
-                                            <span class="ml-1 whitespace-nowrap">+91 89806 92738</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Digital Contact QR -->
-                    <div class="mt-8 bg-navy-950 p-8 rounded-3xl shadow-2xl text-white text-center group reveal">
-                        <h4 class="text-lg font-bold text-gold-500 mb-4">Digital Contact Card</h4>
-                        <div class="bg-white p-4 rounded-2xl inline-block mb-4 shadow-xl">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AJYJ%20%26%20CO.%0AORG%3AJYJ%20%26%20CO.%20Chartered%20Accountants%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918758792708%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B917600359457%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918980692738%0AEMAIL%3Aoffice.jyjco%40gmail.com%0AADR%3BTYPE%3DWORK%3A%3B%3B309%2C%203rd%20Floor%2C%20Nakshatra%20VI%2C%20Opp.%20Pinevinta%20hotel%2C%20Gondal%20Road%2C%20Rajkot%3BRajkot%3BGujarat%3B360002%3BIndia%0AEND%3AVCARD"
-                                alt="JYJ & CO Contact QR" class="w-32 h-32">
-                        </div>
-                        <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">Scan to Save All
-                            Contacts<br>Directly to Your Phone</p>
                     </div>
                 </div>
-            </div>
+\n                            <div>
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-4">Call Experts:
+                                </p>
+                                <ul class="space-y-3 text-xs text-gray-400">
+                                    <li class="flex items-center"><i
+                                            class="fa-solid fa-phone text-gold-500/70 mr-3 w-4"></i>CA Jaimin Gajera:
+                                        <span class="text-gray-300 ml-1">+91 87587 92708</span></li>
+                                    <li class="flex items-center"><i
+                                            class="fa-solid fa-phone text-gold-500/70 mr-3 w-4"></i>CA Jaykishan Jagad:
+                                        <span class="text-gray-300 ml-1">+91 76003 59457</span></li>
+                                    <li class="flex items-center"><i
+                                            class="fa-solid fa-phone text-gold-500/70 mr-3 w-4"></i>CA Yash Ramani:
+                                        <span class="text-gray-300 ml-1">+91 89806 92738</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+
+                <!-- Bottom Legal Bar -->
+            </div>
             <div
-                class="border-t border-navy-900 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p>&copy; 2026 JYJ & CO. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                class="border-t border-navy-900 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+                <p>&copy; 2026 JYJ & CO. Chartered Accountant. All Rights Reserved.</p>
+                <div class="flex space-x-10 mt-6 md:mt-0">
                     <button onclick="document.getElementById('privacyPolicyModal').classList.remove('hidden')"
-                        class="hover:text-white transition-colors">Privacy Policy</button>
+                        class="hover:text-white transition-colors">Privacy</button>
                     <button onclick="document.getElementById('termsModal').classList.remove('hidden')"
-                        class="hover:text-white transition-colors">Terms of Service</button>
+                        class="hover:text-white transition-colors">Terms</button>
                     <button onclick="document.getElementById('disclaimerModal').classList.remove('hidden')"
                         class="hover:text-white transition-colors">Disclaimer</button>
                 </div>
@@ -2077,7 +2846,87 @@
             document.getElementById("myBar").style.width = scrolled + "%";
         }
 
-        reveal();
+        // Review Modal Logic
+        function openReviewModal() {
+            const modal = document.getElementById('reviewModal');
+            const content = document.getElementById('reviewModalContent');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeReviewModal() {
+            const modal = document.getElementById('reviewModal');
+            const content = document.getElementById('reviewModalContent');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        let currentRating = 0;
+        function setRating(val) {
+            currentRating = val;
+            const stars = document.getElementById('starRating').children;
+            for (let i = 0; i < stars.length; i++) {
+                if (i < val) {
+                    stars[i].classList.add('text-gold-500');
+                    stars[i].classList.remove('text-gray-300');
+                } else {
+                    stars[i].classList.remove('text-gold-500');
+                    stars[i].classList.add('text-gray-300');
+                }
+            }
+        }
+
+        function submitReview(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const name = form.querySelector('input[placeholder*="John Doe"]').value;
+            const role = form.querySelector('input[placeholder*="CEO"]').value || "Verified Client";
+            const text = form.querySelector('textarea').value;
+            const initial = name.charAt(0).toUpperCase();
+
+            // Create a new card structure
+            const newCard = `
+                <div class="w-[350px] bg-white p-8 rounded-3xl border border-gold-100 shadow-xl mr-6 transform scale-105 border-2 border-gold-500 transition-all duration-500">
+                    <div class="flex text-gold-500 mb-4 text-xs">
+                        ${Array(currentRating || 5).fill('<i class="fa-solid fa-star"></i>').join('')}
+                    </div>
+                    <p class="text-gray-700 italic mb-6 text-sm">"${text}"</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center text-navy-950 font-bold text-xs mr-3">
+                            ${initial}
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-navy-950 text-xs">${name}</h5>
+                            <p class="text-[9px] text-gray-400">${role}</p>
+                        </div>
+                        <span class="ml-auto bg-gold-100 text-gold-700 text-[8px] font-bold px-2 py-1 rounded">JUST NOW</span>
+                    </div>
+                </div>
+            `;
+
+            // Append to both sets for seamless loop
+            const track = document.getElementById('google-track');
+            const sets = track.querySelectorAll('.flex');
+            if (sets.length >= 2) {
+                sets[0].insertAdjacentHTML('afterbegin', newCard);
+                sets[1].insertAdjacentHTML('afterbegin', newCard);
+            }
+
+            alert(`Success! Thank you, ${name}.\n\nYour review has been added to the website for this session. \n\nNOTE: Since this is a professional static site, our team will verify and permanently add your review to the code soon. For instant permanent visibility, please also use the "Review on Google" button!`);
+
+            form.reset();
+            setRating(0);
+            closeReviewModal();
+        }
+
+        revea
     </script>
 </body>
 
