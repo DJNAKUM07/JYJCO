@@ -37,14 +37,14 @@
         content="Audit, Taxation & Accounting services designed to let you focus on your business. Free consultation available.">
     <meta name="twitter:image" content="https://jyjco.in/logo.png">
 
-    <!-- JSON-LD Structured Data for Local Business -->
+    <!-- JSON-LD Structured Data for Financial Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "AccountingService",
+      "@type": "FinancialService",
       "name": "JYJ & CO. Chartered Accountant",
       "image": "https://jyjco.in/logo.png",
-      "@id": "https://jyjco.in/#organization",
+      "@id": "https://jyjco.in/#financialservice",
       "url": "https://jyjco.in",
       "telephone": "+91-8758792708",
       "address": {
@@ -74,9 +74,38 @@
         "closes": "19:00"
       },
       "sameAs": [
-        "https://www.linkedin.com/company/jyjco",
-        "https://twitter.com/jyjco"
-      ]
+        "https://www.instagram.com/ca.jyj_co/",
+        "https://in.linkedin.com/company/jyj-co"
+      ],
+      "priceRange": "$$",
+      "feesAndCommissionsSpecification": "https://jyjco.in/#contact",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Financial & Advisory Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Statutory & Internal Audit"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tax Planning & Compliance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "GST Advisory"
+            }
+          }
+        ]
+      }
     }
     </script>
 
@@ -2164,18 +2193,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What services does JYJ & CO offer?",
+          "name": "What services does JYJ & CO. offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "JYJ & CO provides comprehensive chartered accounting services including audit & assurance, taxation, accounting & bookkeeping, compliance services, business advisory, corporate finance, and more."
+            "text": "JYJ & CO. provides comprehensive chartered accounting services including audit & assurance, taxation (direct and indirect tax planning, GST compliance), accounting & bookkeeping, compliance services, business advisory, corporate finance, internal controls, NBFC consultancy, NRI tax advisory, cost consultancy, and appeals & litigation support."
           }
         },
         {
           "@type": "Question",
-          "name": "Why choose JYJ & CO for audit services?",
+          "name": "Why choose JYJ & CO. for audit services?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our statutory audit, internal audit, and risk-based assurance services ensure financial accuracy and regulatory compliance with 200+ audits completed."
+            "text": "Our statutory, internal, and risk-based assurance services ensure absolute financial accuracy. With 200+ audits completed and a 100% compliance success rate, we provide established expertise across global sectors including manufacturing, IT, real estate, and international trade."
           }
         },
         {
@@ -2183,7 +2212,31 @@
           "name": "Do you handle taxation and tax planning?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we provide expert taxation services covering both direct and indirect taxes with strategic tax planning and compliance."
+            "text": "Yes, our expert taxation services cover both direct and indirect taxes (GST). We provide strategic tax planning, compliance filing, litigation support, and advisory to optimize your tax structure and ensure full adherence to regulations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in accounting and bookkeeping services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our accounting & bookkeeping services include precise financial record-keeping, payroll management, financial statement preparation, and virtual CFO services to help you maintain the pulse of your business operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you located in Rajkot? Do you serve other areas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our office is located at 309, 3rd Floor, Nakshatra VI, Opp. Pinevinta hotel, Gondal Road, Rajkot, Gujarat 360002. While based in Rajkot, we serve clients across India and provide specialized services for NRI tax advisory globally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a free consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can book a free consultation by clicking the 'Free Consultation' button, sending us an email at office.jyjco@gmail.com, or calling us at +91-87587-92708. You can also message us via WhatsApp for quick response."
           }
         }
       ]
