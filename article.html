@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Article | JYJ & CO. Chartered Accountants</title>
+    <meta name="description"
+        content="In-depth financial knowledge articles by JYJ & CO. Chartered Accountants, Rajkot." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f6f7fb;
+            color: #1a2340;
+            min-height: 100vh;
+        }
+
+        .article-hero {
+            background: linear-gradient(135deg, #0a1628 0%, #14254a 100%);
+            padding: 5rem 1.5rem 3rem;
+        }
+
+        .article-hero .badge {
+            display: inline-block;
+            background: #c9932a;
+            color: #0a1628;
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding: 0.4rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero .read-time {
+            color: #9ca3af;
+            font-size: 0.78rem;
+            margin-left: 1rem;
+        }
+
+        .article-hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .article-hero .intro {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .article-body {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-body p {
+            color: #374151;
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 0.97rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0a1628;
+            margin: 2rem 0 0.85rem;
+            border-left: 4px solid #c9932a;
+            padding-left: 0.85rem;
+        }
+
+        .article-body ul.point-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+
+        .article-body ul.point-list li {
+            display: flex;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 0.9rem 1rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .article-body ul.point-list li .arrow {
+            color: #c9932a;
+            font-weight: 900;
+            font-size: 0.85rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .article-body ul.point-list li span strong {
+            color: #0a1628;
+        }
+
+        .article-body ul.point-list li span {
+            color: #4b5563;
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        .article-footer {
+            background: #0a1628;
+            padding: 2rem 1.5rem;
+        }
+
+        .article-footer .inner {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .article-footer .author {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .article-footer .avatar {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            background: #14254a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid #c9932a;
+        }
+
+        .article-footer .author-name {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .article-footer .author-sub {
+            color: #9ca3af;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .cta-btn {
+            background: #c9932a;
+            color: #0a1628;
+            padding: 0.75rem 1.75rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #c9932a;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+        }
+
+        #not-found {
+            text-align: center;
+            padding: 5rem 1rem;
+            color: #6b7280;
+        }
+
+        /* Nav */
+        nav.site-nav {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        nav.site-nav .logo {
+            font-size: 1rem;
+            font-weight: 900;
+            color: #0a1628;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        nav.site-nav .logo span {
+            color: #c9932a;
+        }
+
+        nav.site-nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav.site-nav .nav-links a {
+            color: #374151;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav.site-nav .nav-links a:hover {
+            color: #c9932a;
+        }
+
+        nav.site-nav .nav-cta {
+            background: #0a1628;
+            color: #fff;
+            padding: 0.55rem 1.25rem;
+            border-radius: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        nav.site-nav .nav-cta:hover {
+            background: #c9932a;
+        }
+
+        @media(max-width:640px) {
+            nav.site-nav .nav-links {
+                display: none;
+            }
+
+            .article-footer .inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <a href="index.html" class="logo">JYJ <span>&</span> CO.</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="knowledge.html">Knowledge Center</a>
+            <a href="careers.html">Careers</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <a href="index.html#contact" class="nav-cta">Free Consultation</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="article-hero" id="article-hero">
+        <div style="max-width:820px;margin:0 auto;">
+            <a href="knowledge.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Knowledge
+                Center</a>
+            <div>
+                <span class="badge" id="art-badge">Loading…</span>
+                <span class="read-time" id="art-time"></span>
+            </div>
+            <h1 id="art-title">Loading article…</h1>
+            <p class="intro" id="art-intro"></p>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body" id="art-body">
+        <p style="color:#9ca3af;">Loading content…</p>
+    </div>
+
+    <!-- Not found -->
+    <div id="not-found" style="display:none;">
+        <i class="fa-solid fa-circle-exclamation" style="font-size:3rem;color:#e5e7eb;margin-bottom:1rem;"></i>
+        <h2 style="font-size:1.5rem;font-weight:700;color:#0a1628;margin-bottom:0.5rem;">Article Not Found</h2>
+        <p>The article you are looking for does not exist.</p>
+        <a href="knowledge.html"
+            style="display:inline-block;margin-top:1.5rem;background:#0a1628;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:700;font-size:0.85rem;text-decoration:none;">←
+            Back to Knowledge Center</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="article-footer" id="article-footer">
+        <div class="inner">
+            <div class="author">
+                <div class="avatar">JY</div>
+                <div>
+                    <p class="author-name">JYJ & CO. Editorial Team</p>
+                    <p class="author-sub">Chartered Accountants · Rajkot, Gujarat</p>
+                </div>
+            </div>
+            <a href="index.html#contact" class="cta-btn">Enquire Now <i class="fa-solid fa-arrow-right"
+                    style="margin-left:0.4rem;"></i></a>
+        </div>
+    </div>
+
+    <script>
+        const articles = {
+            taxation: {
+                badge: 'Taxation & Tax Planning',
+                readTime: '10 Min Read',
+                title: 'Taxation & Tax Planning: Minimise Liability, Maximise Compliance',
+                intro: 'Effective tax planning is not about evasion — it is about using the law intelligently. Both Direct Taxes (Income Tax) and Indirect Taxes (GST) require strategic planning at every stage of a business lifecycle.',
+                sections: [
+                    { type: 'p', text: "India's tax regime is layered and dynamic. For individuals, the choice between the old regime (with deductions) and the new regime (lower slabs, fewer deductions) must be evaluated annually. For businesses, the structure — whether a proprietorship, partnership, LLP, or private limited company — determines the applicable tax rate and compliance burden." },
+                    { type: 'h4', text: 'Key Areas of Tax Planning' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Advance Tax', text: 'Pay in four instalments (June 15, Sept 15, Dec 15, March 15) to avoid interest under Section 234B & 234C. Even salaried individuals with capital gains must pay advance tax.' },
+                            { title: 'GST Reconciliation', text: 'Match GSTR-2B with your purchase register monthly. Unclaimed ITC lapses. Set up automated reconciliation to capture every rupee of credit.' },
+                            { title: 'Salary Structuring', text: 'Split CTC into HRA (exempt up to 50% of basic in metro cities), LTA (twice in 4-year block), NPS employer contribution (12% of salary, tax-free), and meal allowance (₹50/meal × 2 × 22 days).' },
+                            { title: 'Capital Gains Planning', text: 'Hold equity investments for 12+ months to qualify for LTCG at 10% (above ₹1 lakh). Use tax-loss harvesting before March 31 each year to offset capital gains.' },
+                            { title: 'Business Deductions', text: 'Every genuine business expense that produces income is deductible under Section 37(1). Maintain proper documentation — invoices, payment proof, and business purpose notes.' }
+                        ]
+                    },
+                    { type: 'h4', text: 'Common Mistakes to Avoid' },
+                    { type: 'p', text: 'Missing advance tax deadlines, failing to reconcile ITC, not declaring freelance income, and ignoring TDS on rent payments are the four most common mistakes that trigger tax notices. A CA-driven tax plan eliminates all of these risks proactively.' }
+                ]
+            },
+            audit: {
+                badge: 'Audit & Assurance',
+                readTime: '8 Min Read',
+                title: 'Preparing for Your Statutory Audit: The Complete Checklist',
+                intro: 'A statutory audit is mandated by the Companies Act, 2013 for every private limited company. It is not just a regulatory checkbox — it is a financial health report for your business.',
+                sections: [
+                    { type: 'p', text: 'An unprepared company faces extended audit timelines, potential qualifications in the audit report, and strained relationships with auditors. The goal is to arrive audit-ready, so the process is smooth, fast, and free of surprises.' },
+                    { type: 'h4', text: 'Pre-Audit Preparation Checklist' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Books of Account', text: 'Ensure all ledgers are closed, bank statements reconciled, and the trial balance is finalized. Every entry should have a supporting voucher.' },
+                            { title: 'Fixed Asset Register', text: 'Update with additions, disposals, depreciation rates (Companies Act Schedule II), and current WDV for each asset.' },
+                            { title: 'Balance Confirmations', text: 'Obtain signed confirmation letters from all debtors and creditors for their outstanding balances as at year-end.' },
+                            { title: 'Statutory Registers', text: "Members' register, minutes books (Board & General meetings), share allotment register, and contracts register must be up to date." },
+                            { title: 'GST & TDS Reconciliation', text: 'Reconcile GST returns (GSTR-1, GSTR-3B) with books. Ensure all TDS deducted is deposited and returns filed (24Q, 26Q).' }
+                        ]
+                    },
+                    { type: 'p', text: 'The auditor will verify these documents against the financial statements. The cleaner your records, the faster and less costly the audit process becomes.' }
+                ]
+            },
+            accounting: {
+                badge: 'Accounting & Bookkeeping',
+                readTime: '7 Min Read',
+                title: 'Automating Your Bookkeeping in the Cloud: A Practical Guide',
+                intro: 'Modern businesses that still rely on manual bookkeeping in spreadsheets or desktop software are leaving money on the table. Cloud accounting is faster, safer, and gives you real-time financial intelligence.',
+                sections: [
+                    { type: 'p', text: "India's leading cloud accounting platforms — Tally Prime (with connected mode), Zoho Books, and QuickBooks — integrate directly with banks, GST portals, and payroll systems. The result: a self-reconciling, always-up-to-date financial record." },
+                    { type: 'h4', text: 'Core Automation Benefits' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Bank Feed Reconciliation', text: 'Bank transactions import automatically and are matched to entries. No more manual statement matching at month-end.' },
+                            { title: 'GST-Ready Invoicing', text: 'Generate GST-compliant invoices with automatic tax calculation. E-invoicing (IRP portal) and e-way bill generation can be done directly from the software.' },
+                            { title: 'Payroll & TDS', text: 'Calculate payroll, generate payslips, compute TDS on salaries (Form 16), and file 24Q returns seamlessly.' },
+                            { title: 'Real-Time P&L', text: 'See your profit and loss account updated in real time. Track expenses by category, department, or project. Make informed decisions without waiting for month-end reports.' }
+                        ]
+                    },
+                    { type: 'h4', text: 'Migration Steps' },
+                    { type: 'p', text: 'Migrating from manual to cloud accounting requires: (1) Opening balances entry, (2) Chart of accounts setup, (3) GST configuration, (4) Bank integration, (5) Team training. JYJ & CO. manages the entire migration with zero data loss.' }
+                ]
+            },
+            advisory: {
+                badge: 'Business Advisory',
+                readTime: '9 Min Read',
+                title: 'Scaling Your Business: A Strategic Financial Roadmap',
+                intro: 'Scaling is the process of growing revenue faster than costs. Financially, it requires precise planning, clear KPIs, and a CA who can build the financial infrastructure your growth needs.',
+                sections: [
+                    { type: 'p', text: 'Many businesses grow their top line aggressively but find their cash flow deteriorating. This is the scaling paradox — higher revenue but lower liquidity. A CA-driven advisory practice helps you avoid this by building a robust financial model before scaling begins.' },
+                    { type: 'h4', text: 'Key Advisory Services' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Financial Modelling', text: 'Build a 3-year financial model with sensitivity analysis across best/base/worst case scenarios. This becomes the foundation for funding conversations and board decisions.' },
+                            { title: 'Working Capital Optimisation', text: 'Analyse debtor days, creditor days, and inventory turnover. Reduce the cash conversion cycle to free up working capital without additional borrowing.' },
+                            { title: 'Business Valuation', text: 'Whether for ESOP plans, investor rounds, or M&A transactions, a robust valuation (DCF, comparable companies, asset-based) is essential.' },
+                            { title: 'Virtual CFO Services', text: 'For businesses that need CFO-level financial oversight without a full-time hire, our Virtual CFO service provides MIS reports, board presentations, and strategic guidance monthly.' }
+                        ]
+                    }
+                ]
+            },
+            corporate_finance: {
+                badge: 'Corporate Finance',
+                readTime: '8 Min Read',
+                title: 'Raising Capital: Understanding Debt vs. Equity for Indian Businesses',
+                intro: 'Every business needs capital to grow. The decision between raising debt (bank loans, NCDs) and equity (angel, VC, PE) depends on your stage, risk appetite, and long-term goals.',
+                sections: [
+                    { type: 'p', text: 'In India, the most common capital-raising paths for SMEs and startups are: working capital loans from banks, term loans, NBFCs, angel networks, and venture capital. Each comes with a different cost, structure, and expectation.' },
+                    { type: 'h4', text: 'Debt vs. Equity: Key Differences' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Bank Debt', text: 'Requires CMA data (Credit Monitoring Arrangement), collateral, and a proven track record. Interest is tax-deductible. Best for asset-heavy businesses with predictable cash flows.' },
+                            { title: 'Equity (Angel/VC)', text: 'No repayment obligation but dilutes ownership. Investors expect 10x returns. You must prepare a detailed financial model, use-of-funds statement, and growth roadmap.' },
+                            { title: 'CMA Data Preparation', text: "Banks require CMA data showing last 2 years' audited financials, projected financials for 3-5 years, DSCR (≥1.25x), and collateral coverage ratio." },
+                            { title: 'Government Schemes', text: 'MSME businesses can access MUDRA loans, CGTMSE credit guarantee, and SIDBI schemes at subsidised interest rates with minimal collateral.' }
+                        ]
+                    },
+                    { type: 'p', text: 'JYJ & CO. prepares your entire capital-raising documentation — from CMA data for banks to pitch decks for investors — ensuring you enter funding conversations fully prepared.' }
+                ]
+            },
+            compliance: {
+                badge: 'Financial Compliance',
+                readTime: '10 Min Read',
+                title: 'ROC & MCA Compliance: The Annual Checklist for Private Companies',
+                intro: 'Every private limited company must file multiple forms with the Ministry of Corporate Affairs (MCA) annually. Missing deadlines attracts compounding penalties and can disqualify directors.',
+                sections: [
+                    { type: 'p', text: 'The Companies Act, 2013 mandates a comprehensive annual compliance calendar. The most critical filings for a private limited company are:' },
+                    { type: 'h4', text: 'Mandatory Annual Filings' },
+                    {
+                        type: 'points', items: [
+                            { title: 'MGT-7A / MGT-7 (Annual Return)', text: 'Due within 60 days of the AGM (typically by November 29). Contains details of shareholders, directors, and key managerial personnel.' },
+                            { title: 'AOC-4 (Financial Statements)', text: "Due within 30 days of the AGM. Attach audited financials, Board's Report, and auditor's report." },
+                            { title: 'ADT-1 (Auditor Appointment)', text: 'File within 15 days of the first Board meeting where the auditor is appointed.' },
+                            { title: 'DIR-3 KYC (Director KYC)', text: 'Every director must file their KYC annually before September 30. Failure results in director DIN deactivation.' },
+                            { title: 'DPT-3 (Return of Deposits)', text: 'File by June 30 each year declaring all outstanding loans received from directors, shareholders, or members.' }
+                        ]
+                    },
+                    { type: 'h4', text: 'Penalty for Non-Compliance' },
+                    { type: 'p', text: 'Late filing attracts additional fees of ₹100 per day per form (no maximum limit). Persistent non-compliance can lead to company strike-off and director disqualification under Section 164(2).' }
+                ]
+            },
+            internal_audit: {
+                badge: 'Internal Audit & Controls',
+                readTime: '8 Min Read',
+                title: 'Building a Fraud-Proof Internal Control System',
+                intro: 'The Association of Certified Fraud Examiners reports that businesses lose 5% of revenue annually to fraud. The primary cause? Weak internal controls — not external threats.',
+                sections: [
+                    { type: 'p', text: 'An internal control system is a set of policies, procedures, and checks that ensure financial accuracy, prevent fraud, and ensure regulatory compliance. Unlike a statutory audit (which looks backward), internal audit is forward-looking and preventive.' },
+                    { type: 'h4', text: 'Core Control Principles (COSO Framework)' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Segregation of Duties', text: 'No single person should control all steps of a transaction. The person who raises a purchase order should not be the same person who receives goods or approves payment.' },
+                            { title: 'Authorization Limits', text: 'Define clear monetary approval limits (e.g., expenses > ₹50,000 require CFO approval; > ₹5 lakh require MD approval).' },
+                            { title: 'Physical Controls', text: 'Restrict access to cash, inventory, and sensitive assets. Conduct surprise physical counts of cash and high-value inventory.' },
+                            { title: 'IT Controls', text: 'Use role-based access in accounting software. Every user should have unique credentials with appropriate permissions only.' },
+                            { title: 'Vendor Due Diligence', text: 'Verify all new vendors independently before first payment. Maintain a vendor master and flag changes to bank details immediately.' }
+                        ]
+                    }
+                ]
+            },
+            nbfc: {
+                badge: 'NBFC Consultancy',
+                readTime: '9 Min Read',
+                title: 'NBFC Registration & RBI Compliance: A Complete Guide',
+                intro: 'Non-Banking Financial Companies (NBFCs) are regulated by the Reserve Bank of India under the RBI Act, 1934. The compliance requirements are rigorous and non-negotiable.',
+                sections: [
+                    { type: 'p', text: 'Starting an NBFC requires a license from the RBI. The minimum Net Owned Fund (NOF) requirement is ₹10 crore for a deposit-taking NBFC and ₹2 crore for a non-deposit NBFC. Post-registration, the compliance burden is heavy and ongoing.' },
+                    { type: 'h4', text: 'Registration Requirements & Ongoing Compliance' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Minimum NOF', text: '₹10 crore (deposit-taking) or ₹2 crore (non-deposit). Must be maintained at all times, verified by the auditor annually.' },
+                            { title: 'CRAR', text: 'Capital-to-Risk-Weighted Assets Ratio must be maintained at 15% minimum. Quarterly monitoring is mandatory.' },
+                            { title: 'NPA Classification', text: 'Loans overdue by 90+ days must be classified as Non-Performing Assets. Provision of 10–100% required depending on age of NPA.' },
+                            { title: 'Quarterly Returns', text: 'NBS-1 (quarterly P&L), NBS-2 (quarterly balance sheet), NBS-3 (ALM return) must be filed with RBI without fail.' },
+                            { title: 'DPT-3 Return of Deposits', text: 'Due by June 30. Declares all amounts received as deposits or loans. Failure to file can lead to severe ROC penalties.' }
+                        ]
+                    }
+                ]
+            },
+            gst: {
+                badge: 'GST & Indirect Tax',
+                readTime: '12 Min Read',
+                title: 'GST Filing & Compliance: A Comprehensive Guide for Businesses',
+                intro: 'Goods and Services Tax (GST) is a transaction-based tax that requires meticulous record-keeping and timely filing. From registration to annual returns, staying compliant is key to business continuity.',
+                sections: [
+                    { type: 'p', text: 'Since its implementation in 2017, GST has revolutionized the Indian indirect tax landscape. However, the frequent changes in rules, ITC restrictions, and rigorous audit requirements mean businesses must be more vigilant than ever.' },
+                    { type: 'h4', text: 'Core GST Filing Requirements' },
+                    {
+                        type: 'points', items: [
+                            { title: 'GSTR-1 (Sales Statement)', text: 'Monthly or Quarterly (QRMP) filing of outward supplies. This determines the tax liability and ensures your customers can claim ITC.' },
+                            { title: 'GSTR-3B (Summary Return)', text: 'Monthly summary return for reporting turnover, ITC, and payment of tax. Due on the 20th, 22nd, or 24th depending on state/turnover.' },
+                            { title: 'GSTR-9 & 9C (Annual Return/Audit)', text: 'Annual consolidation of all monthly filings. If turnover exceeds ₹5 Crores, reconciliation (9C) is mandatory.' },
+                            { title: 'HSN/SAC Coding', text: 'Accurate classification of goods and services is critical. Mismatch in HSN codes can lead to tax slab differences and penalties.' }
+                        ]
+                    },
+                    { type: 'h4', text: 'Smart GST Strategies' },
+                    {
+                        type: 'points', items: [
+                            { title: 'ITC Reconciliation', text: 'Match your books with GSTR-2B every month. Under Rule 36(4), you cannot claim ITC if your supplier has not uploaded the invoice.' },
+                            { title: 'E-Invoicing Compliance', text: 'Mandatory for businesses with turnover > ₹5 Cr. Real-time reporting of B2B invoices to the IRP portal.' },
+                            { title: 'Refund Filing', text: 'Efficiently claim refunds for inverted duty structures or zero-rated (exports) supplies to improve cash flow.' }
+                        ]
+                    }
+                ]
+            },
+            nri: {
+                badge: 'NRI Tax Advisory',
+                readTime: '10 Min Read',
+                title: 'NRI Tax Obligations in India: A Complete Guide for 2026',
+                intro: "An NRI's Indian tax obligations depend entirely on their residential status and the nature of their Indian income. Understanding this is the first step to proper compliance.",
+                sections: [
+                    { type: 'p', text: 'Under the Income Tax Act, your tax liability in India depends on whether you are a Resident, Non-Resident (NRI), or Resident but Not Ordinarily Resident (RNOR). Residential status is determined based on the number of days spent in India during the financial year (April 1 – March 31).' },
+                    { type: 'h4', text: 'Taxable Incomes for NRIs in India' },
+                    {
+                        type: 'points', items: [
+                            { title: 'NRO Account Interest', text: 'Fully taxable at 30% + surcharge + cess. Banks deduct TDS at 30%. You can claim treaty benefit (DTAA) to reduce the rate.' },
+                            { title: 'Rental Income', text: 'Taxable in India. 30% standard deduction is allowed. Municipal taxes paid are also deductible. TDS by tenant at 31.2% if annual rent exceeds ₹2.4 lakh.' },
+                            { title: 'Capital Gains on Property', text: 'The buyer must deduct TDS at 20% on sale proceeds (Section 195). You must file an ITR to claim the refund if actual tax is lower.' },
+                            { title: 'DTAA Benefits', text: 'India has tax treaties with 90+ countries. The DTAA prevents double taxation — tax paid abroad can be credited against Indian tax liability. A Tax Residency Certificate (TRC) is required.' },
+                            { title: 'NRE Account', text: 'Interest on NRE accounts is fully exempt from Indian tax. Repatriation of funds is freely allowed.' }
+                        ]
+                    }
+                ]
+            },
+            iso: {
+                badge: 'ISO Certification',
+                readTime: '7 Min Read',
+                title: 'ISO Certification: Unlocking Global Credibility for Your Business',
+                intro: 'ISO certification signals to customers, partners, and regulators that your business meets internationally recognised standards. It is increasingly mandatory for government tenders, export contracts, and corporate supply chains.',
+                sections: [
+                    { type: 'p', text: 'The International Organisation for Standardisation (ISO) has published over 24,000 standards. For most Indian businesses, the most relevant certifications are ISO 9001 (Quality), ISO 14001 (Environment), ISO 45001 (Occupational Health & Safety), and ISO 27001 (Information Security).' },
+                    { type: 'h4', text: 'Most Sought-After ISO Certifications' },
+                    {
+                        type: 'points', items: [
+                            { title: 'ISO 9001:2015 (QMS)', text: "The world's most popular quality management standard. Required by most government tenders and MNCs for vendor approval. Demonstrates consistent product/service quality." },
+                            { title: 'ISO 14001:2015 (EMS)', text: 'Environmental Management System. Essential for manufacturing units and export-oriented businesses dealing with EU/US clients who have ESG requirements.' },
+                            { title: 'ISO 27001:2022 (ISMS)', text: 'Information Security Management. Mandatory for IT companies, BPOs, and any business handling sensitive client data. Required by BFSI sector clients.' },
+                            { title: 'Certification Process', text: 'Gap analysis → Documentation → Internal audit → Management review → External audit (Stage 1 & 2) → Certificate issued. Typically takes 3–6 months.' }
+                        ]
+                    }
+                ]
+            },
+            cost: {
+                badge: 'Cost Consultancy',
+                readTime: '8 Min Read',
+                title: 'Cost Reduction Without Cutting Quality: A Business Guide',
+                intro: 'Profitability is not just about growing revenue — it is about controlling the cost of that revenue. Systematic cost management can improve EBITDA margins by 5–15% without reducing business quality.',
+                sections: [
+                    { type: 'p', text: 'Cost consultancy goes beyond simple cost-cutting. It involves identifying value-adding and non-value-adding activities, optimising resource utilisation, and building a cost-conscious culture across the organisation.' },
+                    { type: 'h4', text: 'Core Cost Management Techniques' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Activity-Based Costing (ABC)', text: 'Allocate overhead costs to products/services based on actual activity drivers, not arbitrary percentages. This reveals which products are truly profitable.' },
+                            { title: 'Break-Even Analysis', text: 'Know exactly how much revenue you need to cover all fixed costs. Any revenue above this is contribution to profit. Use this to price products correctly.' },
+                            { title: 'Variance Analysis', text: 'Compare actual costs against budgeted costs monthly. Investigate all material variances (>5%) immediately to identify root causes and corrective actions.' },
+                            { title: 'Zero-Based Budgeting', text: "Instead of incrementally adjusting last year's budget, rebuild it from zero each year. Every cost must be justified against current business needs." }
+                        ]
+                    }
+                ]
+            },
+            appeals: {
+                badge: 'Appeals & Litigations',
+                readTime: '10 Min Read',
+                title: 'Responding to Income Tax & GST Notices: A Step-by-Step Guide',
+                intro: 'Receiving a tax notice is stressful but manageable. Most Income Tax notices under Section 143(1) are automated system-generated notices that can be resolved with the right response.',
+                sections: [
+                    { type: 'p', text: "India's income tax system now uses the Faceless Assessment Scheme — all communication happens electronically through the e-filing portal. Time-bound responses are critical. Missing the deadline means the assessment proceeds ex-parte (without your representation)." },
+                    { type: 'h4', text: 'Common Types of Notices & Responses' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Section 143(1) — Intimation', text: 'Usually a mismatch between your ITR and Form 26AS. Respond with the corrected data or revised return within the stipulated time.' },
+                            { title: 'Section 143(2) — Scrutiny', text: 'Your return has been selected for detailed examination. Submit all supporting documents within 30 days. Do not ignore this notice.' },
+                            { title: 'Section 148 — Reassessment', text: 'If the Assessing Officer believes income has escaped assessment. Challenge with legal grounds and file a fresh return if required.' },
+                            { title: 'CIT(A) Appeal', text: 'If you disagree with an assessment order, file an appeal before the Commissioner of Income Tax (Appeals) within 30 days of the order. Success rate with professional representation is high.' },
+                            { title: 'GST Demand Notice (DRC-01)', text: 'Respond within 30 days with a detailed reply and supporting invoices. Pay under protest if needed to avoid interest and penalty accrual.' }
+                        ]
+                    }
+                ]
+            },
+            ipo: {
+                badge: 'Capital Markets (IPO & FPO)',
+                readTime: '12 Min Read',
+                title: 'Taking Your Company Public: The Complete IPO Readiness Roadmap',
+                intro: 'An Initial Public Offering (IPO) is the most complex corporate transaction a company can undertake. It requires two to three years of preparation, a team of advisors, and pristine financial records.',
+                sections: [
+                    { type: 'p', text: "SEBI's ICDR (Issue of Capital and Disclosure Requirements) Regulations govern the entire IPO process in India. The key requirement: 3 years of audited financial statements, an auditor's certificate on financials, and no material regulatory violations." },
+                    { type: 'h4', text: 'Three Phases of an IPO' },
+                    {
+                        type: 'points', items: [
+                            { title: 'Phase 1 — IPO Readiness (12–18 months)', text: 'Restructure the company if needed, ensure 3 years of clean audited accounts, appoint a lead manager (investment bank), resolve all pending litigation, and clean up related-party transactions.' },
+                            { title: 'Phase 2 — DRHP Filing (6–12 months)', text: 'Draft the Red Herring Prospectus with complete financial disclosures, risk factors, and business description. File with SEBI for observations. Respond to SEBI queries.' },
+                            { title: 'Phase 3 — IPO Execution (3–6 months)', text: 'Roadshows with institutional investors, price band determination, book building, allotment, and listing on NSE/BSE. Post-listing, SEBI LODR compliance begins.' },
+                            { title: 'SME IPO (NSE Emerge / BSE SME)', text: 'For companies with post-issue paid-up capital < ₹25 crore. Simpler process, faster execution, but still requires clean financials and CA certification.' }
+                        ]
+                    },
+                    { type: 'p', text: "JYJ & CO.'s Capital Markets Desk has the expertise to guide your company from IPO readiness assessment through to post-listing compliance, serving as your primary CA firm throughout the process." }
+                ]
+            }
+        };
+
+        function renderArticle() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const art = articles[id];
+
+            if (!art) {
+                document.getElementById('article-hero').style.display = 'none';
+                document.getElementById('art-body').style.display = 'none';
+                document.getElementById('article-footer').style.display = 'none';
+                document.getElementById('not-found').style.display = 'block';
+                document.title = 'Article Not Found | JYJ & CO.';
+                return;
+            }
+
+            // Update page title
+            document.title = art.title + ' | JYJ & CO. Chartered Accountants';
+
+            // Populate hero
+            document.getElementById('art-badge').textContent = art.badge;
+            document.getElementById('art-time').textContent = art.readTime;
+            document.getElementById('art-title').textContent = art.title;
+            document.getElementById('art-intro').textContent = art.intro;
+
+            // Build body
+            const body = document.getElementById('art-body');
+            body.innerHTML = '';
+
+            art.sections.forEach(function (sec) {
+                if (sec.type === 'p') {
+                    const p = document.createElement('p');
+                    p.textContent = sec.text;
+                    body.appendChild(p);
+                } else if (sec.type === 'h4') {
+                    const h = document.createElement('h4');
+                    h.textContent = sec.text;
+                    body.appendChild(h);
+                } else if (sec.type === 'points') {
+                    const ul = document.createElement('ul');
+                    ul.className = 'point-list';
+                    sec.items.forEach(function (item) {
+                        const li = document.createElement('li');
+                        li.innerHTML = '<span class="arrow">▶</span><span><strong>' + item.title + ':</strong> ' + item.text + '</span>';
+                        ul.appendChild(li);
+                    });
+                    body.appendChild(ul);
+                }
+            });
+        }
+
+        renderArticle();
+    </script>
+</body>
+
+</html>
