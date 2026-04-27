@@ -115,15 +115,11 @@
                         navy: {
                             800: '#1d4e89',
                             900: '#113a69',
-                            950: '#0a2342', // Royal Blue base
+                            950: '#0a2342', // Classic Navy
                         },
                         gold: {
-                            500: '#f6921e', // Orange from CA icon
-                            600: '#d97d19',
-                        },
-                        emerald: {
-                            500: '#00a651', // Green from CA icon
-                            600: '#008542',
+                            500: '#c5a059', // Champagne Gold
+                            600: '#af8c4a',
                         }
                     },
                     fontFamily: {
@@ -136,13 +132,65 @@
 
     <style>
         .glass-nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+            background: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
 
         .hero-gradient {
             background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.6)), url('hero_bg.jpg') center/cover no-repeat;
+        }
+
+        /* Premium Gradient Animation */
+        @keyframes gradient-x {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-gradient-x {
+            background-size: 200% 200%;
+            animation: gradient-x 5s ease infinite;
+        }
+
+        .gold-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 0%,
+                    rgba(197, 160, 89, 0.1) 45%,
+                    rgba(197, 160, 89, 0.4) 50%,
+                    rgba(197, 160, 89, 0.1) 55%,
+                    transparent 100%);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
         }
 
         /* Flip Card Styles */
@@ -680,56 +728,97 @@
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center logo-shimmer">
-                    <a href="/" class="block">
-                        <img src="logo.png" alt="JYJ & CO. Chartered Accountant Logo"
-                            class="h-16 w-auto mix-blend-multiply">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo"
+                            loading="eager">
                     </a>
                 </div>
-                <div class="hidden md:ml-6 md:flex md:space-x-8">
-                    <a href="/"
-                        class="nav-link text-navy-900 hover:text-gold-600 px-3 py-2 text-sm font-medium transition-colors relative">Home</a>
-                    <a href="/#services"
-                        class="nav-link text-navy-900 hover:text-gold-600 px-3 py-2 text-sm font-medium transition-colors relative">Services</a>
-                    <a href="/#about"
-                        class="nav-link text-navy-900 hover:text-gold-600 px-3 py-2 text-sm font-medium transition-colors relative">About
-                        Us</a>
-                    <a href="/#leadership"
-                        class="nav-link text-navy-900 hover:text-gold-600 px-3 py-2 text-sm font-medium transition-colors relative">Leadership</a>
-                    <a href="/#contact"
-                        class="nav-link text-navy-900 hover:text-gold-600 px-3 py-2 text-sm font-medium transition-colors relative">Contact</a>
+
+                <!-- Navigation Links (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="index.html#home"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#services"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#about"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="knowledge.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Knowledge
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="calculators.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Calculators
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="careers.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Careers
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
                 </div>
-                <div class="flex items-center space-x-4">
 
-                    <a href="https://wa.me/918758792708?text=Hi%20JYJ%20%26%20CO%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
-                        target="_blank"
-                        class="bg-navy-950 text-white hover:bg-gold-600 px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg hover:shadow-gold-500/20">Free
-                        Consultation</a>
+                <!-- CTA Button (Right) -->
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#contact"
+                        class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl hover:shadow-gold-500/20 active:scale-95 gold-shimmer border border-navy-800">
+                        Contact Us
+                    </a>
+                </div>
 
-                    <!-- Mobile menu button -->
-                    <button type="button" class="md:hidden ml-4 text-navy-900 focus:outline-none"
+                <!-- Mobile Menu Toggle -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-navy-900 focus:outline-none"
                         id="mobile-menu-button">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div class="md:hidden hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-xl"
+        <div class="md:hidden hidden bg-white border-t border-gray-100 flex flex-col divide-y divide-gray-50 shadow-xl"
             id="mobile-menu">
-            <a href="/" class="block text-navy-900 hover:text-gold-600 px-3 py-2 text-base font-medium">Home</a>
-            <a href="/#services"
-                class="block text-navy-900 hover:text-gold-600 px-3 py-2 text-base font-medium">Services</a>
-            <a href="/#about" class="block text-navy-900 hover:text-gold-600 px-3 py-2 text-base font-medium">About
+            <a href="index.html#home"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Home</a>
+            <a href="index.html#services"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Services</a>
+            <a href="index.html#about"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">About
                 Us</a>
-            <a href="/#leadership"
-                class="block text-navy-900 hover:text-gold-600 px-3 py-2 text-base font-medium">Leadership</a>
-            <a href="/#contact"
-                class="block text-navy-900 hover:text-gold-600 px-3 py-2 text-base font-medium">Contact</a>
+            <a href="index.html#leadership"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Leadership</a>
+            <a href="knowledge.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Knowledge
+                Center</a>
+            <a href="calculators.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Calculators</a>
+            <a href="careers.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Careers</a>
+            <a href="index.html#contact"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Contact</a>
         </div>
     </nav>
 
@@ -737,9 +826,11 @@
     <section id="home" class="relative pt-32 pb-24 md:pt-48 md:pb-32 hero-gradient overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 hero-heading">
-                    <span class="gold-animate">JYJ & CO. Chartered Accountant</span> - Your Trusted Partner for Audit,
-                    Taxation & Accounting
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-8 hero-heading tracking-tight">
+                    <span
+                        class="bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300 bg-clip-text text-transparent animate-gradient-x">JYJ
+                        & CO. Chartered Accountant</span><br>
+                    <span class="text-white">Your Trusted Partner for Audit, Taxation & Accounting</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed hero-text">
                     Expert chartered accounting services designed to let you focus on your business while we handle the
@@ -803,9 +894,15 @@
                     </div>
                 </div>
                 <div>
-                    <h6 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">About Us</h6>
-                    <h3 class="text-3xl md:text-4xl font-bold text-navy-950 mb-8">Expert Chartered Accountancy Services
-                        - Professional Integrity Meets Strategic Vision</h3>
+                    <span
+                        class="text-[12px] font-black text-gold-600 uppercase tracking-[0.3em] mb-4 block opacity-80">About
+                        Us</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-black text-navy-950 mb-8 tracking-tighter leading-none border-l-8 border-gold-500 pl-6">
+                        Expert Chartered Accountancy Services
+                    </h2>
+                    <h3 class="text-xl font-medium text-navy-800 mb-6 italic">Professional Integrity Meets Strategic
+                        Vision</h3>
                     <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
                         <p>
                             Chartered accountancy services provide comprehensive financial management solutions,
@@ -828,9 +925,11 @@
     <section id="services" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h6 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Our Expertise</h6>
-                <h3 class="text-3xl md:text-5xl font-bold text-navy-950">Delivering World-Class Chartered Accounting
-                    Services</h3>
+                <span class="text-[12px] font-black text-gold-600 uppercase tracking-[0.3em] mb-4 block opacity-80">Our
+                    Expertise</span>
+                <h2 class="text-4xl md:text-6xl font-black text-navy-950 tracking-tighter">Delivering World-Class
+                    <br>Chartered Accounting Services
+                </h2>
                 <p class="text-gray-600 mt-4 text-lg">Delivering world-class chartered accounting services, including
                     audit & assurance, international taxation, and specialized IPO/FPO advisory to guide businesses
                     through global capital markets and regulatory compliance</p>
@@ -839,7 +938,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Audit & Assurance -->
                 <div id="service-audit"
-                    class="bg-white p-8 rounded-2xl service-card transition-all group cursor-pointer"
+                    class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl service-card transition-all group cursor-pointer border border-gray-100 hover:border-gold-500/30"
                     onclick="openModal('Audit & Assurance', 'We offer statutory audits, internal audits, and risk-based assurance services to ensure financial accuracy, compliance with regulations, and process improvement.', '918758792708')">
                     <div
                         class="bg-navy-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-950 transition-colors">
@@ -1072,10 +1171,9 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20 reveal">
-                <h6
+                <span
                     class="inline-block bg-gold-500/10 text-gold-600 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 border border-gold-500/20">
-                    Deep
-                    Sector Knowledge</h6>
+                    Deep Sector Knowledge</span>
                 <h2 class="text-4xl md:text-6xl font-bold text-navy-950 mb-6">Industries We <span
                         class="text-gold-500">Specialize</span> In</h2>
                 <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">Providing world-class financial
@@ -1267,8 +1365,8 @@
     <section id="leadership" class="py-24 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h6 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Management</h6>
-                <h3 class="text-3xl md:text-5xl font-bold text-navy-950 uppercase">Our Partners</h3>
+                <span class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4 block">Management</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-navy-950 uppercase">Our Partners</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -1277,11 +1375,12 @@
                     <div class="flip-card-inner">
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
-                            <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
+                            <div
+                                class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6 relative group/img">
                                 <img src="jaykishan.webp"
                                     alt="CA Jaykishan Sondarva - Partner at JYJ & CO. Chartered Accountant"
-                                    alt="CA Jaykishan Jagad - Partner at JYJ & CO, Expert in Business Valuation and IPO Advisory"
-                                    class="w-full h-full object-cover">
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                    loading="lazy" decoding="async">
                             </div>
                             <h4 class="text-2xl font-bold text-navy-950 mb-2">CA JAYKISHAN JAGAD</h4>
                             <p class="text-sm font-bold text-gold-600 uppercase tracking-widest">Partner - Finance</p>
@@ -1311,10 +1410,11 @@
                     <div class="flip-card-inner">
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
-                            <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
+                            <div
+                                class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6 relative group/img">
                                 <img src="jaimin.webp" alt="CA Jaimin Kanzariya - Partner at JYJ & CO."
-                                    alt="CA Jaimin Gajera - Partner at JYJ & CO, Specialist in Audit and Taxation"
-                                    class="w-full h-full object-cover">
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                    loading="lazy" decoding="async">
                             </div>
                             <h4 class="text-2xl font-bold text-navy-950 mb-2">CA JAIMIN GAJERA</h4>
                             <p class="text-sm font-bold text-gold-600 uppercase tracking-widest">Partner - Audit</p>
@@ -1345,10 +1445,11 @@
                     <div class="flip-card-inner">
                         <div
                             class="flip-card-front bg-gray-50 p-8 text-center shadow-xl border border-gray-100 flex flex-col justify-center items-center">
-                            <div class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6">
+                            <div
+                                class="w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl mb-6 relative group/img">
                                 <img src="yash.webp" alt="CA Yash Vaghadia - Partner at JYJ & CO."
-                                    alt="CA Yash Ramani - Partner at JYJ & CO, Expert in Compliance and ROC Advisory"
-                                    class="w-full h-full object-cover">
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                    loading="lazy" decoding="async">
                             </div>
                             <h4 class="text-2xl font-bold text-navy-950 mb-2">CA YASH RAMANI</h4>
                             <p class="text-sm font-bold text-gold-600 uppercase tracking-widest">Partner - Compliance
@@ -1383,8 +1484,8 @@
     <section id="reviews" class="py-24 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h6 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Testimonials</h6>
-                <h3 class="text-3xl md:text-5xl font-bold text-navy-950 mb-4">What Our Clients Say</h3>
+                <span class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4 block">Testimonials</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-navy-950 mb-4">What Our Clients Say</h2>
                 <div class="flex items-center justify-center space-x-2">
                     <div class="flex text-gold-500">
                         <i class="fa-solid fa-star"></i>
@@ -1908,8 +2009,8 @@
     <section id="location" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h6 class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4">Visit Us</h6>
-                <h3 class="text-3xl md:text-5xl font-bold text-navy-950">Our Official Presence</h3>
+                <span class="text-sm font-bold text-gold-600 uppercase tracking-widest mb-4 block">Visit Us</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-navy-950">Our Official Presence</h2>
             </div>
 
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white group">
@@ -1943,10 +2044,16 @@
         <div class="h-1 bg-gold-500 w-16 mb-8"></div>
         <p class="text-gray-600 leading-relaxed mb-8 service-details-text whitespace-pre-wrap" id="serviceDetails">
         </p>
-        <a href="https://wa.me/918758792708" target="_blank"
-            class="inline-block bg-navy-950 text-white px-8 py-3 rounded-xl font-bold hover:bg-gold-500 transition-all">
-            Inquire Now
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/918758792708" target="_blank"
+                class="flex-1 text-center bg-navy-950 text-white px-8 py-3 rounded-xl font-bold hover:bg-gold-500 transition-all">
+                Inquire Now
+            </a>
+            <a id="modalReadMore" href="knowledge.html"
+                class="flex-1 text-center border-2 border-navy-950 text-navy-950 px-8 py-3 rounded-xl font-bold hover:bg-navy-950 hover:text-white transition-all">
+                Read Full Article
+            </a>
+        </div>
     </div>
 
     <!-- FAQ Section for SEO -->
@@ -2457,9 +2564,16 @@
                             class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
                             Quick Links</h4>
                         <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="/" class="hover:text-gold-500 transition-colors">Home</a></li>
-                            <li><a href="/#services" class="hover:text-gold-500 transition-colors">Services</a></li>
-                            <li><a href="/#about" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                            <li><a href="index.html#home" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold-500 transition-colors">Services</a>
+                            </li>
+                            <li><a href="index.html#about" class="hover:text-gold-500 transition-colors">About Us</a>
+                            </li>
+                            <li><a href="knowledge.html" class="hover:text-gold-500 transition-colors">Knowledge</a>
+                            </li>
+                            <li><a href="calculators.html" class="hover:text-gold-500 transition-colors">Calculators</a>
+                            </li>
+                            <li><a href="careers.html" class="hover:text-gold-500 transition-colors">Careers</a></li>
                         </ul>
                     </div>
                     <!-- Our Presence -->
@@ -2656,28 +2770,26 @@
     </div>
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-xl');
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
             } else {
-                navbar.classList.remove('shadow-xl');
+                icon.classList.replace('fa-bars', 'fa-xmark');
             }
-        });
+        }
 
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
         // Close mobile menu on link click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+                const menu = document.getElementById('mobile-menu');
+                const icon = document.getElementById('menu-icon');
+                menu.classList.add('hidden');
+                icon.classList.replace('fa-xmark', 'fa-bars');
             });
         });
 
@@ -2768,6 +2880,29 @@
                 inquireBtn.href = whatsappLink;
             }
 
+            // Update the Read More button with dynamic article link
+            const readMoreBtn = document.getElementById('modalReadMore');
+            if (readMoreBtn) {
+                // Map titles to existing article IDs
+                const titleToId = {
+                    'Audit & Assurance': 'audit',
+                    'Taxation': 'taxation',
+                    'Accounting & Bookkeeping': 'accounting',
+                    'Business Advisory': 'advisory',
+                    'Corporate Finance': 'corporate_finance',
+                    'Compliance & Regulatory Services': 'compliance',
+                    'Internal Controls & Risk Management': 'internal_audit',
+                    'NBFC Consultancy Services': 'nbfc',
+                    'ISO Certification Assistance': 'iso',
+                    'NRI Tax Advisory Services': 'nri',
+                    'Cost Consultancy & Management': 'cost',
+                    'Appeals & Litigations Support': 'appeals',
+                    'Capital Market Services (IPO & FPO)': 'ipo'
+                };
+                const serviceId = titleToId[title] || 'taxation'; // fallback
+                readMoreBtn.href = `article.html?id=${serviceId}`;
+            }
+
             document.body.classList.add('modal-open', 'modal-active');
         }
 
@@ -2811,7 +2946,7 @@
 
 
 
-        revea
+        reveal();
     </script>
 </body>
 

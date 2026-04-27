@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators Hub | GST, Income Tax, SIP, HRA | JYJ & CO.</title>
+    <meta name="description"
+        content="Access professional financial calculators for GST, Income Tax, SIP, and HRA. Expert tools designed by JYJ & CO. Chartered Accountants.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#113a69', 950: '#0a2342' },
+                        gold: { 500: '#f6921e', 600: '#d97d19' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --navy-950: #0a2342;
+            --navy-900: #113a69;
+            --gold-500: #f6921e;
+            --off-white: #f8fafc;
+            --border-light: #e2e8f0;
+            --text-muted: #64748b;
+        }
+
+        /* Typography Hierarchy */
+        .hdr-prestige {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .hdr-insight {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        /* Authoritative Hero */
+        .hero-advisory {
+            background: var(--navy-950);
+            border-bottom: 4px solid var(--gold-500);
+            position: relative;
+        }
+
+        .hero-advisory::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(246, 146, 30, 0.05), transparent 40%);
+            pointer-events: none;
+        }
+
+        /* Journal-Style Hub Cards */
+        .hub-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 0;
+            /* Clean, structured corners */
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+        }
+
+        .hub-card:hover {
+            border-color: var(--gold-500);
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Integrated Search Component */
+        .search-container {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .search-container:focus-within {
+            background: #ffffff;
+            border-color: var(--gold-500);
+        }
+
+        .search-container input {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        .search-container:focus-within input {
+            color: var(--navy-950);
+        }
+
+        /* Tabs-style Filters */
+        .filter-tab {
+            position: relative;
+            padding: 1rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold-500);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .filter-tab.active {
+            color: var(--navy-950);
+        }
+
+        .filter-tab.active::after {
+            width: 80%;
+        }
+
+        .filter-tab:hover:not(.active) {
+            color: var(--navy-950);
+        }
+
+        .category-label {
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--gold-500);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--gold-500);
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        /* Expert Snippet Badge */
+        .expert-tag {
+            background: rgba(246, 146, 30, 0.1);
+            color: var(--gold-500);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-navy-900 font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo"
+                            loading="eager">
+                    </a>
+                </div>
+
+                <!-- Navigation Links (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="index.html#home"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#services"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#about"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="knowledge.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Knowledge
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="calculators.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Calculators
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="careers.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Careers
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button (Right) -->
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#contact"
+                        class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl hover:shadow-gold-500/20 active:scale-95 gold-shimmer border border-navy-800">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-navy-900 focus:outline-none"
+                        id="mobile-menu-button">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100 flex flex-col divide-y divide-gray-50 shadow-xl"
+            id="mobile-menu">
+            <a href="index.html#home"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Home</a>
+            <a href="index.html#services"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Services</a>
+            <a href="index.html#about"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">About
+                Us</a>
+            <a href="index.html#leadership"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Leadership</a>
+            <a href="knowledge.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Knowledge
+                Center</a>
+            <a href="calculators.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Calculators</a>
+            <a href="careers.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Careers</a>
+            <a href="index.html#contact"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-44 pb-32 overflow-hidden hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+                <div class="reveal">
+                    <span class="text-xs font-black text-gold-500 uppercase tracking-[0.4em] mb-6 block">
+                        Decision Engineering
+                    </span>
+                    <h1 class="text-6xl md:text-8xl font-black text-white leading-[0.9] hdr-prestige mb-8">
+                        The Compliance <br> <span class="text-white/40">Hub.</span>
+                    </h1>
+                    <p class="text-gray-400 text-xl max-w-xl leading-relaxed font-medium">
+                        Professional-grade financial tools designed for enterprise precision. Calibrated to the latest
+                        regulatory frameworks.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="search-container p-2 rounded-xl flex items-center shadow-2xl">
+                        <div class="pl-6 text-gray-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" id="toolSearch" placeholder="Type to search tools (GST, Tax, HRA...)"
+                            class="w-full px-6 py-4 focus:outline-none text-lg font-medium">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Category Filters (Tabs) -->
+            <div class="flex flex-wrap gap-4 mb-20 border-b border-gray-200 justify-center lg:justify-start">
+                <button class="filter-tab active" data-category="all">All Protocols</button>
+                <button class="filter-tab" data-category="gst">Indirect Tax</button>
+                <button class="filter-tab" data-category="tax">Direct Tax</button>
+                <button class="filter-tab" data-category="investment">Wealth Strategy</button>
+                <button class="filter-tab" data-category="industrial">Industrial</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="toolGrid">
+                <!-- GST Calculator Card -->
+                <article class="hub-card reveal group" data-category="gst">
+                    <span class="category-label">Indirect Taxation</span>
+                    <div class="expert-tag">SEC 7-10 compliance</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">GST <br> Calculator
+                    </h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Enterprise-grade calculation of GST inclusive and exclusive components. Decodes CGST,
+                        SGST, and
+                        IGST splits across all 5-28% tax verticals.
+                    </p>
+                    <a href="calculators/gst.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- Income Tax Optimizer -->
+                <article class="hub-card reveal" data-category="tax">
+                    <span class="category-label">Direct Taxation</span>
+                    <div class="expert-tag">FY 2024-25 Slates</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">Income Tax <br> Calculator
+                    </h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Comparative analysis engine for Old vs New Tax Regimes. Integrated with standard
+                        deduction
+                        updates and Section 80C–80U ceiling checks.
+                    </p>
+                    <a href="calculators/income-tax.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- HRA Exemption Calculator -->
+                <article class="hub-card reveal" data-category="tax">
+                    <span class="category-label">Employee Benefits</span>
+                    <div class="expert-tag">SEC 10(13A) READY</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">HRA <br> Calculator
+                    </h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Precise calculation of tax-exempt House Rent Allowance based on salary structures for
+                        Metro and
+                        Non-Metro zones.
+                    </p>
+                    <a href="calculators/hra.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- SIP Planner -->
+                <article class="hub-card reveal" data-category="investment">
+                    <span class="category-label">Wealth Strategy</span>
+                    <div class="expert-tag">Compounding Engine</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">SIP <br>
+                        Calculator</h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Actuarial-grade simulation of future wealth creation. Visualizes the power of
+                        compounding over
+                        extended investment horizons.
+                    </p>
+                    <a href="calculators/sip.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- Salary Hike Estimator -->
+                <article class="hub-card reveal" data-category="payroll">
+                    <span class="category-label">Compensation Hub</span>
+                    <div class="expert-tag">Net Take-Home</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">Salary Hike <br>
+                        Calculator</h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Deep-dive analysis of adjusted CTC. Estimates net monthly take-home after statutory
+                        deductions
+                        and professional taxes.
+                    </p>
+                    <a href="calculators/salary-hike.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- Late Fee Utility -->
+                <article class="hub-card reveal" data-category="gst">
+                    <span class="category-label">Compliance Risk</span>
+                    <div class="expert-tag">PUNITIVE CALC</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">Late Fee <br>
+                        Calculator</h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Mitigate risk with instant penalty calculation for GSTR-1 and GSTR-3B defaults. Aligned
+                        with
+                        current turnover caps.
+                    </p>
+                    <a href="calculators/late-fee.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- MSME Samadhaan -->
+                <article class="hub-card reveal border-gold-500/30 bg-gold-50/5" data-category="industrial">
+                    <span class="category-label">Industrial Recovery</span>
+                    <div class="expert-tag">MSMED ACT 2006</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">MSME Interest <br>
+                        Calculator</h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Strategic tool for Rajkot industrial clusters. Calculate 3x RBI interest on delayed
+                        payments for
+                        Metoda and Shapar units.
+                    </p>
+                    <a href="calculators/msme-interest.html"
+                        class="px-10 py-5 bg-navy-950 text-white text-[10px] font-black uppercase tracking-[0.2em] w-fit hover:bg-gold-500 hover:text-navy-950 transition-all">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- GST Interest Sec 50 -->
+                <article class="hub-card reveal" data-category="gst">
+                    <span class="category-label">Tax Liability</span>
+                    <div class="expert-tag">SEC 50 READY</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">GST Interest <br> Calculator
+                    </h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Accurate 18% p.a. interest calculation on Net Tax Liability. Designed to prevent
+                        overpayment
+                        during delayed filings.
+                    </p>
+                    <a href="calculators/gst-interest.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+
+                <!-- IT Interest 234 -->
+                <article class="hub-card reveal" data-category="tax">
+                    <span class="category-label">Regulatory Penalty</span>
+                    <div class="expert-tag">SEC 234 A/B/C</div>
+                    <h3 class="text-3xl hdr-prestige text-navy-950 mb-6 leading-tight">Tax Interest <br>
+                        Calculator</h3>
+                    <p class="text-gray-500 text-base leading-relaxed mb-10 flex-grow">
+                        Detailed penalty estimation for advanced tax defaults and ITR filing delays. Essential
+                        for
+                        annual corporate closing.
+                    </p>
+                    <a href="calculators/it-interest.html"
+                        class="text-navy-950 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-gold-500 pb-1 hover:border-navy-950 transition-all w-fit">
+                        Calculate Now →
+                    </a>
+                </article>
+            </div>
+
+            <!-- No Results Placeholder -->
+            <div id="no-results" class="hidden py-40 text-center">
+                <i class="fa-solid fa-folder-open text-6xl text-gray-200 mb-6"></i>
+                <p class="text-xl font-bold text-navy-950">No tools match your criteria.</p>
+                <p class="text-gray-500">Try adjusting your technical search terms.</p>
+            </div>
+
+            <!-- Rajkot Industrial Specialization Section -->
+            <section class="mt-32 border-t border-gray-100 pt-32 pb-16">
+                <div class="max-w-5xl mx-auto reveal">
+                    <div class="mb-20">
+                        <span class="text-gold-500 font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">
+                            Regional Specialization
+                        </span>
+                        <h2 class="text-5xl md:text-7xl font-black text-navy-950 mb-8 hdr-prestige tracking-tighter">
+                            Compliance for <br> <span class="text-gold-500">Rajkot Industrial</span> Clusters
+                        </h2>
+                        <p class="text-gray-500 leading-relaxed text-xl max-w-3xl font-medium">
+                            As a premier **Chartered Accountant in Rajkot**, JYJ & CO. provides specialized regulatory
+                            engineering for high-intent manufacturing growth.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                        <!-- MSME Card -->
+                        <div class="p-12 bg-navy-950 text-white shadow-2xl relative overflow-hidden group reveal">
+                            <div
+                                class="absolute -right-20 -bottom-20 text-white/5 text-[200px] transition-transform group-hover:scale-110 duration-700">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-gold-500 text-navy-950 flex items-center justify-center text-2xl mb-10 shadow-xl">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="text-2xl font-black mb-6 text-gold-500 hdr-prestige">MSME Samadhaan <br> Recovery
+                                System</h4>
+                            <p class="text-gray-400 leading-relaxed mb-10 text-lg">
+                                Facilitating recovery of delayed payments via the **MSMED Council**. We engineer your
+                                filings to secure 3x RBI interest mandates.
+                            </p>
+                            <a href="https://wa.me/918758792708"
+                                class="inline-flex items-center text-xs font-black uppercase tracking-[0.25em] text-gold-500 hover:text-white transition-colors">
+                                Consultation Protocol →
+                            </a>
+                        </div>
+
+                        <!-- 43B(h) Card -->
+                        <div
+                            class="p-12 bg-white border border-gray-200 shadow-xl hover:shadow-2xl transition-all reveal">
+                            <div
+                                class="w-16 h-16 bg-navy-50 text-navy-950 flex items-center justify-center text-2xl mb-10 border border-navy-100">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="text-2xl font-black mb-6 text-navy-950 hdr-prestige">Section 43B(h) <br> Advisory
+                            </h4>
+                            <p class="text-gray-500 leading-relaxed mb-10 text-lg">
+                                Strategic alignment for Rajkot OEMs. We audit your payment cycles to prevent massive tax
+                                disallowances under the 45-day MSME mandate.
+                            </p>
+                            <a href="https://wa.me/918758792708"
+                                class="inline-flex items-center text-xs font-black uppercase tracking-[0.25em] text-navy-950 hover:text-gold-500 transition-colors">
+                                Audit Status →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <!-- High-Impact Advisory CTA -->
+    <section class="py-40 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-8 text-left">
+                    <span class="text-gold-500 font-black uppercase tracking-[0.4em] text-[10px] mb-8 block">
+                        Direct Advisory Protocol
+                    </span>
+                    <h2
+                        class="text-5xl md:text-[100px] font-black text-navy-950 hdr-prestige leading-[0.85] tracking-tighter mb-10">
+                        COMPLEX <br>
+                        <span class="bg-navy-950 text-white px-6 inline-block py-2 mt-4">FINANCIAL ENGINEERING?</span>
+                    </h2>
+                    <p class="text-gray-500 text-2xl font-medium max-w-2xl leading-relaxed">
+                        Our technical compliance architects provide specialized advisory for corporate tax engineering
+                        and project viability protocols.
+                    </p>
+                </div>
+                <div class="lg:col-span-4">
+                    <div class="flex flex-col gap-4">
+                        <a href="https://wa.me/918758792708"
+                            class="bg-navy-950 text-white px-12 py-8 text-[11px] font-black uppercase tracking-[0.3em] flex items-center justify-center gap-4 hover:bg-gold-500 hover:text-navy-950 transition-all shadow-2xl">
+                            <span>Direct Advisory</span>
+                            <i class="fa-solid fa-arrow-right-long text-[14px]"></i>
+                        </a>
+                        <a href="tel:+918758792708"
+                            class="border-2 border-navy-950 text-navy-950 px-12 py-8 text-[11px] font-black uppercase tracking-[0.3em] flex items-center justify-center gap-4 hover:bg-navy-950 hover:text-white transition-all">
+                            <span>Request Callback</span>
+                            <i class="fa-solid fa-phone-volume text-[12px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Grid: 4 Balanced Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+                <!-- Col 1: Identity & Brand (Span 3) -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div>
+                        <a href="index.html" class="block group">
+                            <h4
+                                class="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-gold-500 transition-colors">
+                                JYJ & CO.</h4>
+                            <p class="text-gold-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-6">Chartered
+                                Accountant</p>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Excellence in financial management through integrity, expertise, and innovation. Established
+                            2024.
+                        </p>
+                    </div>
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/ca.jyj_co/" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://in.linkedin.com/company/jyj-co" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Info & Presence (Span 3) -->
+                <div class="lg:col-span-3 grid grid-cols-1 gap-12">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Quick Links</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="index.html#home" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="index.html#services" class="hover:text-gold-500 transition-colors">Services</a>
+                            </li>
+                            <li><a href="index.html#about" class="hover:text-gold-500 transition-colors">About Us</a>
+                            </li>
+                            <li><a href="knowledge.html" class="hover:text-gold-500 transition-colors">Knowledge</a>
+                            </li>
+                            <li><a href="calculators.html"
+                                    class="hover:text-gold-500 transition-colors font-bold text-white">Calculators</a>
+                            </li>
+                            <li><a href="careers.html" class="hover:text-gold-500 transition-colors">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Presence -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Our Presence</h4>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="text-sm text-gray-400">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">
+                                    Office Address</p>
+                                <p class="leading-relaxed text-[13px]">309, 3rd Floor, Nakshatra VI,<br>Opp.
+                                    Pinevinta hotel, Gondal Road,<br>Rajkot, Gujarat 360002, IN.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Government Portals (Span 3) -->
+                <div class="lg:col-span-3">
+                    <h4
+                        class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                        Government Portals</h4>
+                    <ul class="grid grid-cols-1 gap-y-4 text-gray-400 text-[12px]">
+                        <li><a href="https://www.incometax.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-landmark mr-3 text-gold-500/80 w-5"></i>Income Tax Portal</a>
+                        </li>
+                        <li><a href="https://www.gst.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-file-invoice mr-3 text-gold-500/80 w-5"></i>GST Portal</a>
+                        </li>
+                        <li><a href="https://www.mca.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>MCA Portal</a>
+                        </li>
+                        <li><a href="https://www.icai.org/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-graduation-cap mr-3 text-gold-500/80 w-5"></i>ICAI Website</a>
+                        </li>
+                        <li><a href="https://www.epfindia.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-piggy-bank mr-3 text-gold-500/80 w-5"></i>EPF India</a>
+                        </li>
+                        <li><a href="https://www.esic.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hospital-user mr-3 text-gold-500/80 w-5"></i>ESIC Portal</a>
+                        </li>
+                        <li><a href="https://www.tin-nsdl.com/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-address-card mr-3 text-gold-500/80 w-5"></i>TIN-NSDL</a>
+                        </li>
+                        <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-chart-line mr-3 text-gold-500/80 w-5"></i>SEBI Portal</a>
+                        </li>
+                        <li><a href="https://scores.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-circle-exclamation mr-3 text-gold-500/80 w-5"></i>SEBI SCORES</a>
+                        </li>
+                        <li><a href="https://www.rbi.org.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>RBI Website</a>
+                        </li>
+                        <li><a href="https://samadhaan.msme.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hand-holding-dollar mr-3 text-gold-500/80 w-5"></i>MSME
+                                Samadhaan</a>
+                        </li>
+                        <li><a href="https://www.dgft.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-ship mr-3 text-gold-500/80 w-5"></i>DGFT Portal</a>
+                        </li>
+                        <li><a href="https://www.tdscpc.gov.in/app/login.xhtml" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-magnifying-glass-dollar mr-3 text-gold-500/80 w-5"></i>TRACES
+                                (TDS)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Col 4: Contacts & Experts (Span 3) -->
+                <div class="lg:col-span-3">
+                    <div class="space-y-8">
+                        <!-- General Inquiries -->
+                        <div>
+                            <h4
+                                class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                General Inquiries</h4>
+                            <div class="flex items-start group/contact">
+                                <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div>
+                                    <a href="mailto:office.jyjco@gmail.com"
+                                        class="hover:text-gold-500 transition-colors text-[14px] font-medium text-gray-300">office.jyjco@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expert Contacts -->
+                        <div class="flex items-start group/contact pt-2">
+                            <i class="fa-solid fa-phone text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="w-full">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-[0.2em] mb-5 opacity-90">
+                                    Call Experts</p>
+                                <ul class="space-y-5">
+                                    <li>
+                                        <a href="tel:+918758792708"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaimin Gajera</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                87587 92708</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+917600359457"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaykishan Jagad</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                76003 59457</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+918980692738"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Yash Ramani</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                89806 92738</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-navy-900 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+                <p>&copy; 2026 JYJ & CO. Chartered Accountant. All Rights Reserved.</p>
+                <div class="flex space-x-10 mt-6 md:mt-0">
+                    <p class="text-gray-500">Financial tools are for informational purpose only. Consult a professional
+                        before financial decisions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                const icon = document.getElementById('menu-icon');
+                menu.classList.add('hidden');
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        }
+        // Integrated Search & Filter Logic
+        const searchInput = document.getElementById('toolSearch');
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const toolCards = document.querySelectorAll('.hub-card');
+        const noResults = document.getElementById('no-results');
+
+        function performSearchAndFilter() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-tab.active').dataset.category;
+            let visibleCount = 0;
+
+            toolCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const category = card.dataset.category;
+
+                const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                    setTimeout(() => card.classList.add('active'), 10);
+                } else {
+                    card.classList.remove('active');
+                    card.style.display = 'none';
+                }
+            });
+
+            if (noResults) {
+                noResults.classList.toggle('hidden', visibleCount > 0);
+            }
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', performSearchAndFilter);
+        }
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                performSearchAndFilter();
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            reveal();
+        });
+
+        // Reveal Animation Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        reveal(); // Initial check
+    </script>
+</body>
+
+</html>

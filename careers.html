@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://jyjco.in/careers.html">
+    <title>Careers at JYJ & CO. | Join Our Elite Chartered Accountancy Firm</title>
+    <meta name="description"
+        content="Explore rewarding career opportunities in audit, taxation, and advisory at JYJ & CO. Join a team of dedicated professionals committed to excellence and integrity.">
+    <meta name="keywords"
+        content="CA jobs Rajkot, Audit associate careers, GST expert opportunities, CA Articleship Rajkot, accounting careers Gujarat">
+
+    <!-- Same styles and config as knowledge.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#113a69', 950: '#0a2342' },
+                        gold: { 400: '#fbbf24', 500: '#f6921e', 600: '#d97d19' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        :root {
+            --navy-950: #0a2342;
+            --gold-500: #f6921e;
+        }
+
+        .hero-advisory {
+            background: radial-gradient(circle at top right, rgba(16, 45, 84, 1) 0%, rgba(10, 35, 66, 1) 100%);
+        }
+
+        .hdr-prestige {
+            letter-spacing: -0.04em;
+        }
+
+        .gold-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 0%, rgba(246, 146, 30, 0.1) 45%, rgba(246, 146, 30, 0.2) 50%, rgba(246, 146, 30, 0.1) 55%, transparent 100%);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold-500);
+            z-index: 100;
+            transition: width 0.2s;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .job-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-500);
+            box-shadow: 0 20px 40px -20px rgba(10, 35, 66, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-navy-900 font-sans overflow-x-hidden">
+
+
+    <div class="progress-bar" id="myBar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo"
+                            loading="eager">
+                    </a>
+                </div>
+
+                <!-- Navigation Links (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="index.html#home"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#services"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#about"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="knowledge.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Knowledge
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="calculators.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Calculators
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="careers.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Careers
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"
+                            style="width: 100%"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button (Right) -->
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#contact"
+                        class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl hover:shadow-gold-500/20 active:scale-95 gold-shimmer border border-navy-800">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-navy-900 focus:outline-none"
+                        id="mobile-menu-button">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100 flex flex-col divide-y divide-gray-50 shadow-xl"
+            id="mobile-menu">
+            <a href="index.html#home"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Home</a>
+            <a href="index.html#services"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Services</a>
+            <a href="index.html#about"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">About
+                Us</a>
+            <a href="knowledge.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Knowledge
+                Center</a>
+            <a href="calculators.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Calculators</a>
+            <a href="careers.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Careers</a>
+            <a href="index.html#contact"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-52 pb-32 overflow-hidden hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <nav
+                class="flex justify-center lg:justify-start space-x-2 text-[11px] uppercase tracking-widest font-black text-gold-500 mb-10">
+                <a href="index.html" class="hover:text-white transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Return to Home
+                </a>
+                <span class="text-white/20 mx-2">/</span>
+                <span class="text-white">Join Our Elite Team</span>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-[100px] font-black text-white leading-[0.85] hdr-prestige mb-10">
+                        Career <br> <span class="text-white/40">Opportunities.</span>
+                    </h1>
+                    <p class="text-gray-400 text-2xl max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
+                        Architect your professional legacy with Rajkot's premier financial advisors. We value integrity,
+                        continuous growth, and strategic excellence.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div class="p-10 border border-white/10 bg-white/5 backdrop-blur-md">
+                        <span class="text-[11px] font-black text-gold-500 block mb-4 uppercase tracking-[0.3em]">TALENT
+                            ACQUISITION</span>
+                        <p class="text-white font-black text-2xl leading-tight hdr-prestige">Strategic <br> Growth Hub
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 400 400" class="w-full h-full text-white">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <div class="flex items-center space-x-3 text-gold-500 mb-4">
+                        <div class="w-8 h-[1px] bg-gold-500"></div>
+                        <span class="text-[11px] font-black uppercase tracking-[0.3em]">Current Vacancies</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-navy-950 hdr-prestige">Open Roles for <br> <span
+                            class="text-navy-950/40">Elite Professionals.</span></h2>
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-500 font-medium italic text-sm mb-2">Can't find your match?</p>
+                    <a href="mailto:office.jyjco@gmail.com?subject=General Career Inquiry"
+                        class="text-navy-950 font-black text-[13px] uppercase tracking-widest border-b-2 border-gold-500 pb-1 hover:text-gold-600 transition-colors">Send
+                        CV for future roles →</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Job Card 1 -->
+                <div
+                    class="job-card bg-white p-10 border border-gray-100 flex flex-col justify-between h-full reveal active">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <span
+                                class="bg-navy-50 text-navy-900 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Full-time</span>
+                            <span class="text-gold-500 text-xs font-bold">Rajkot, GJ</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-navy-950 hdr-prestige mb-4 leading-tight">Senior Audit <br>
+                            Associate</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-10">Lead high-impact statutory audits and
+                            ensure rigorous compliance standards for our elite clientele.</p>
+                    </div>
+                    <div class="pt-8 border-t border-gray-100 flex items-center justify-between">
+                        <a href="mailto:office.jyjco@gmail.com?subject=Application for Senior Audit Associate"
+                            class="text-navy-950 font-black text-[11px] uppercase tracking-[0.2em] hover:text-gold-500 transition-colors group">
+                            Apply Now <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                        <i class="fa-solid fa-file-invoice text-navy-100 text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card bg-white p-10 border border-gray-100 flex flex-col justify-between h-full reveal">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <span
+                                class="bg-navy-50 text-navy-900 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Hybrid</span>
+                            <span class="text-gold-500 text-xs font-bold">Remote Option</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-navy-950 hdr-prestige mb-4 leading-tight">GST Compliance
+                            <br> Expert
+                        </h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-10">Drive strategic tax excellence and
+                            navigate complex GST frameworks with precision and authority.</p>
+                    </div>
+                    <div class="pt-8 border-t border-gray-100 flex items-center justify-between">
+                        <a href="mailto:office.jyjco@gmail.com?subject=Application for GST Expert"
+                            class="text-navy-950 font-black text-[11px] uppercase tracking-[0.2em] hover:text-gold-500 transition-colors group">
+                            Apply Now <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                        <i class="fa-solid fa-scale-balanced text-navy-100 text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card bg-white p-10 border border-gray-100 flex flex-col justify-between h-full reveal">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <span
+                                class="bg-navy-50 text-navy-900 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Internship</span>
+                            <span class="text-gold-500 text-xs font-bold">Rajkot, GJ</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-navy-950 hdr-prestige mb-4 leading-tight">Article Assistant
+                            <br> (CA Articleship)
+                        </h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-10">Begin your professional legacy with
+                            hands-on exposure to diverse portfolios and expert mentorship.</p>
+                    </div>
+                    <div class="pt-8 border-t border-gray-100 flex items-center justify-between">
+                        <a href="mailto:office.jyjco@gmail.com?subject=Application for Articleship"
+                            class="text-navy-950 font-black text-[11px] uppercase tracking-[0.2em] hover:text-gold-500 transition-colors group">
+                            Apply Now <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+                        <i class="fa-solid fa-user-graduate text-navy-100 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="py-24 bg-navy-950 relative overflow-hidden">
+        <!-- Background accents -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-white">
+                <circle cx="0" cy="0" r="40" fill="currentColor" />
+                <circle cx="100" cy="100" r="30" fill="currentColor" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-black text-[11px] uppercase tracking-[0.4em] block mb-4">OUR DNA</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white hdr-prestige">The Advisory <br> <span
+                        class="text-white/30">Culture.</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 bg-white/5 border border-white/10 backdrop-blur-md reveal">
+                    <div class="w-16 h-16 bg-gold-500/10 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-gold-500"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-white hdr-prestige mb-4 uppercase tracking-wider">Continuous
+                        Mastery</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">We invest in your expertise through advanced
+                        training protocols, industry certifications, and strategic leadership development.</p>
+                </div>
+
+                <div class="p-10 bg-white/5 border border-white/10 backdrop-blur-md reveal">
+                    <div class="w-16 h-16 bg-gold-500/10 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-users text-3xl text-gold-500"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-white hdr-prestige mb-4 uppercase tracking-wider">Elite
+                        Collaboration</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Synergize with Rajkot's finest financial minds in
+                        an environment built on mutual respect, integrity, and shared vision.</p>
+                </div>
+
+                <div class="p-10 bg-white/5 border border-white/10 backdrop-blur-md reveal">
+                    <div class="w-16 h-16 bg-gold-500/10 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-award text-3xl text-gold-500"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-white hdr-prestige mb-4 uppercase tracking-wider">Impactful Merit
+                    </h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Your professional contributions are recognized
+                        through authoritative performance frameworks and strategic career scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Grid: 4 Balanced Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+                <!-- Col 1: Identity & Brand (Span 3) -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div>
+                        <a href="/" class="block group">
+                            <h4
+                                class="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-gold-500 transition-colors">
+                                JYJ & CO.</h4>
+                            <p class="text-gold-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-6">Chartered
+                                Accountant</p>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Excellence in financial management through integrity, expertise, and innovation. Established
+                            2024.
+                        </p>
+                    </div>
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/ca.jyj_co/" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://in.linkedin.com/company/jyj-co" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Info & Presence (Span 3) -->
+                <div class="lg:col-span-3 grid grid-cols-1 gap-12">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Quick Links</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="/" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="/#services" class="hover:text-gold-500 transition-colors">Services</a></li>
+                            <li><a href="/#about" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                            <li><a href="knowledge.html" class="hover:text-gold-500 transition-colors">Knowledge</a>
+                            </li>
+                            <li><a href="calculators.html" class="hover:text-gold-500 transition-colors">Calculators</a>
+                            </li>
+                            <li><a href="careers.html" class="hover:text-gold-500 transition-colors">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Presence -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Our Presence</h4>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="text-sm text-gray-400">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">
+                                    Office Address</p>
+                                <p class="leading-relaxed text-[13px]">309, 3rd Floor, Nakshatra VI,<br>Opp.
+                                    Pinevinta hotel, Gondal Road,<br>Rajkot, Gujarat 360002, IN.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Government Portals (Span 3) -->
+                <div class="lg:col-span-3">
+                    <h4
+                        class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                        Government Portals</h4>
+                    <ul class="grid grid-cols-1 gap-y-4 text-gray-400 text-[12px]">
+                        <li><a href="https://www.incometax.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-landmark mr-3 text-gold-500/80 w-5"></i>Income Tax Portal</a>
+                        </li>
+                        <li><a href="https://www.gst.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-file-invoice mr-3 text-gold-500/80 w-5"></i>GST Portal</a>
+                        </li>
+                        <li><a href="https://www.mca.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>MCA Portal</a>
+                        </li>
+                        <li><a href="https://www.icai.org/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-graduation-cap mr-3 text-gold-500/80 w-5"></i>ICAI Website</a>
+                        </li>
+                        <li><a href="https://www.epfindia.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-piggy-bank mr-3 text-gold-500/80 w-5"></i>EPF India</a>
+                        </li>
+                        <li><a href="https://www.esic.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hospital-user mr-3 text-gold-500/80 w-5"></i>ESIC Portal</a>
+                        </li>
+                        <li><a href="https://www.tin-nsdl.com/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-address-card mr-3 text-gold-500/80 w-5"></i>TIN-NSDL</a>
+                        </li>
+                        <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-chart-line mr-3 text-gold-500/80 w-5"></i>SEBI Portal</a>
+                        </li>
+                        <li><a href="https://scores.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-circle-exclamation mr-3 text-gold-500/80 w-5"></i>SEBI SCORES</a>
+                        </li>
+                        <li><a href="https://www.rbi.org.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>RBI Website</a>
+                        </li>
+                        <li><a href="https://samadhaan.msme.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hand-holding-dollar mr-3 text-gold-500/80 w-5"></i>MSME
+                                Samadhaan</a>
+                        </li>
+                        <li><a href="https://www.dgft.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-ship mr-3 text-gold-500/80 w-5"></i>DGFT Portal</a>
+                        </li>
+                        <li><a href="https://www.tdscpc.gov.in/app/login.xhtml" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-magnifying-glass-dollar mr-3 text-gold-500/80 w-5"></i>TRACES
+                                (TDS)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Col 4: Contacts & Experts (Span 3) -->
+                <div class="lg:col-span-3">
+                    <div class="space-y-8">
+                        <!-- General Inquiries -->
+                        <div>
+                            <h4
+                                class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                General Inquiries</h4>
+                            <div class="flex items-start group/contact">
+                                <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div>
+                                    <a href="mailto:office.jyjco@gmail.com"
+                                        class="hover:text-gold-500 transition-colors text-[14px] font-medium text-gray-300">office.jyjco@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expert Contacts -->
+                        <div class="flex items-start group/contact pt-2">
+                            <i class="fa-solid fa-phone text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="w-full">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-[0.2em] mb-5 opacity-90">
+                                    Call Experts</p>
+                                <ul class="space-y-5">
+                                    <li>
+                                        <a href="tel:+918758792708"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaimin Gajera</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                87587 92708</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+917600359457"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaykishan Jagad</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                76003 59457</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+918980692738"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Yash Ramani</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                89806 92738</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Digital Contact Card -->
+                        <div
+                            class="bg-navy-900/50 p-6 rounded-2xl border border-navy-800/80 flex flex-col items-center mt-8">
+                            <h5
+                                class="text-[10px] font-bold text-gold-500 mb-5 uppercase tracking-[0.25em] text-center">
+                                Digital Contact Card</h5>
+                            <div class="bg-white p-2.5 rounded-xl mb-4 shadow-lg relative group">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AJYJ%20%26%20CO.%0AORG%3AJYJ%20%26%20CO.%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918758792708%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B917600359457%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B918980692738%0AEMAIL%3Aoffice.jyjco%40gmail.com%0AURL%3Ahttps%3A%2F%2Fjyjco.in%0AEND%3AVCARD"
+                                    alt="QR Code - Save JYJ & CO. Contact"
+                                    class="w-24 h-24 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <p class="text-[8px] text-gray-500 uppercase tracking-[0.15em] leading-relaxed text-center">
+                                Scan to save all contacts<br>directly to your phone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Legal Bar -->
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-navy-900 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+            <p>&copy; 2026 JYJ & CO. Chartered Accountant. All Rights Reserved.</p>
+            <div class="flex space-x-10 mt-6 md:mt-0">
+                <button onclick="document.getElementById('privacyPolicyModal').classList.remove('hidden')"
+                    class="hover:text-white transition-colors">Privacy</button>
+                <button onclick="document.getElementById('termsModal').classList.remove('hidden')"
+                    class="hover:text-white transition-colors">Terms</button>
+                <button onclick="document.getElementById('disclaimerModal').classList.remove('hidden')"
+                    class="hover:text-white transition-colors">Disclaimer</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-4">
+        <!-- Scroll to Top -->
+        <button id="scrollToTop"
+            class="w-12 h-12 bg-white text-navy-950 rounded-full shadow-2xl flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all transform translate-y-20 opacity-0">
+            <i class="fa-solid fa-arrow-up text-xl"></i>
+        </button>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/918758792708?text=Hi%20JYJ%20%26%20CO%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
+            target="_blank"
+            class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all animate-bounce">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        }
+
+        // Navbar scroll effect
+
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll to Top & FAB Visibility
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                scrollToTopBtn.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            reveal();
+            updateScrollProgress();
+        });
+
+        function updateScrollProgress() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            const scrollBar = document.getElementById("myBar");
+            if (scrollBar) scrollBar.style.width = scrolled + "%";
+        }
+
+        reveal();
+    </script>
+    <!-- Privacy Policy Modal -->
+    <div id="privacyPolicyModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-[200] flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full my-8 shadow-2xl">
+            <div class="bg-navy-950 text-white px-8 py-6 rounded-t-2xl flex justify-between items-center sticky top-0">
+                <h2 class="text-2xl font-bold">Privacy Policy</h2>
+                <button onclick="document.getElementById('privacyPolicyModal').classList.add('hidden')"
+                    class="text-2xl hover:text-gold-500">&times;</button>
+            </div>
+            <div class="px-8 py-8 text-gray-700 space-y-6 overflow-y-auto max-h-[70vh]">
+                <p class="text-sm text-gray-500"><strong>Last Updated:</strong> April 2026</p>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">1. Information We Collect</h3>
+                    <p>JYJ & CO. collects information you provide directly, including your name, email address, phone
+                        number, business details, and any documents shared during consultations. We also collect
+                        information automatically through website analytics and cookies to improve your experience.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">2. How We Use Your Information</h3>
+                    <p>We use your information to provide professional accounting services, communicate about your
+                        account, send updates and newsletters, comply with legal requirements, and improve our
+                        services.
+                        Your data is never shared with third parties without your consent, except where required by law.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">3. Data Security</h3>
+                    <p>We implement industry-standard security measures including encryption, secure servers, and access
+                        controls to protect your personal and financial information. All sensitive data is stored
+                        securely and accessed only by authorized personnel.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">4. Cookies and Tracking</h3>
+                    <p>Our website uses cookies to enhance functionality and analyze site performance. You can control
+                        cookie settings through your browser preferences. We use Google Analytics to understand user
+                        behavior and improve our website.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">5. Your Rights</h3>
+                    <p>You have the right to access, correct, or delete your personal information. To exercise these
+                        rights, contact us at office.jyjco@gmail.com. We comply with data protection regulations
+                        including GDPR and India's Digital Personal Data Protection Act.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">6. Third-Party Links</h3>
+                    <p>Our website contains links to external websites and government portals. We are not responsible
+                        for the privacy practices of these third-party sites. Please review their privacy policies
+                        separately.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">7. Contact Us</h3>
+                    <p>If you have questions about this Privacy Policy, contact us at:<br>
+                        <strong>Email:</strong> office.jyjco@gmail.com<br>
+                        <strong>Phone:</strong> +91 87587 92708
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-[200] flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full my-8 shadow-2xl">
+            <div class="bg-navy-950 text-white px-8 py-6 rounded-t-2xl flex justify-between items-center sticky top-0">
+                <h2 class="text-2xl font-bold">Terms of Service</h2>
+                <button onclick="document.getElementById('termsModal').classList.add('hidden')"
+                    class="text-2xl hover:text-gold-500">&times;</button>
+            </div>
+            <div class="px-8 py-8 text-gray-700 space-y-6 overflow-y-auto max-h-[70vh]">
+                <p class="text-sm text-gray-500"><strong>Effective Date:</strong> April 2026</p>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">1. Agreement to Terms</h3>
+                    <p>By accessing and using this website and services, you agree to be bound by these Terms of
+                        Service. If you disagree with any part, please do not use our services. JYJ & CO. reserves the
+                        right to modify these terms at any time.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">2. Services Description</h3>
+                    <p>JYJ & CO. provides professional chartered accounting services including audit & assurance,
+                        taxation, accounting, ISO certification, and IPO/FPO advisory. Services are provided based on
+                        engagement letters and mutually agreed terms.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">3. Professional Standards</h3>
+                    <p>All services are provided in accordance with Chartered Accountants Act, 1949, and professional
+                        standards issued by ICAI (Institute of Chartered Accountants of India). We follow applicable
+                        laws and regulations of India.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">4. Confidentiality</h3>
+                    <p>We maintain strict confidentiality of all client information and documents shared during
+                        engagements. Information is disclosed only with client consent or when required by law,
+                        regulatory authorities, or court orders.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">5. Limitation of Liability</h3>
+                    <p>JYJ & CO. shall not be liable for any indirect, incidental, special, or consequential damages
+                        arising from your use or inability to use our services. Our total liability is limited to the
+                        fees paid for the specific service in question.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">6. Client Responsibilities</h3>
+                    <p>Clients must provide accurate, complete information and maintain organized financial records.
+                        Clients are responsible for the accuracy of information provided and compliance with applicable
+                        laws and regulations.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">7. Fees and Payment</h3>
+                    <p>Service fees are as quoted in the engagement letter. Payment terms are 30 days from invoice date
+                        unless otherwise agreed. Late payments may incur interest charges as per engagement letter
+                        provisions.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">8. Dispute Resolution</h3>
+                    <p>Any disputes shall be governed by the laws of India. Disputes will be resolved through
+                        negotiation, and if necessary, through arbitration under the Arbitration and Conciliation Act,
+                        1996.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-[200] flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full my-8 shadow-2xl">
+            <div class="bg-navy-950 text-white px-8 py-6 rounded-t-2xl flex justify-between items-center sticky top-0">
+                <h2 class="text-2xl font-bold">Disclaimer</h2>
+                <button onclick="document.getElementById('disclaimerModal').classList.add('hidden')"
+                    class="text-2xl hover:text-gold-500">&times;</button>
+            </div>
+            <div class="px-8 py-8 text-gray-700 space-y-6 overflow-y-auto max-h-[70vh]">
+                <p class="text-sm text-gray-500"><strong>Last Updated:</strong> April 2026</p>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <p class="font-bold text-yellow-800">IMPORTANT: This website is for informational purposes only and
+                        does not constitute professional advice.</p>
+                </div>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">1. Acceptance of Terms & Access Agreement</h3>
+                    <p class="font-semibold mb-2">Your access to this website constitutes your agreement to be bound by
+                        all terms and conditions listed herein. If you do not agree to this, you may not access or
+                        otherwise use the website.</p>
+                    <p>By visiting, accessing, or using this website, you confirm your acceptance of these terms and
+                        conditions. Any continued use of the website following any amendments to these terms will
+                        constitute your acceptance of such revisions.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">2. Content Download & Distribution Restrictions
+                    </h3>
+                    <p class="font-semibold mb-2">Material displayed on this website may be downloaded for
+                        non-commercial, personal use only.</p>
+                    <p>Distribution, modification, transmission, use or reuse of the content and various facilities
+                        available on this website without written permission is not permissible. You may not:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li>Reproduce, distribute, or transmit any content</li>
+                        <li>Modify or adapt the content</li>
+                        <li>Use content for commercial purposes</li>
+                        <li>Remove or alter any proprietary notices or labels</li>
+                        <li>Reverse engineer or decode any software</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">3. Right to Terminate or Modify</h3>
+                    <p class="font-semibold mb-2">JYJ & CO. reserves the right, for any reason, in its sole discretion,
+                        to terminate, change or suspend any aspect of this website, including, but not limited to,
+                        content or features.</p>
+                    <p>We may terminate, suspend, or restrict your access to any part of the website at any time,
+                        without notice or liability. Such action may be taken to protect the security, integrity, or
+                        functionality of the website or in compliance with legal obligations.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">4. Information Accuracy & Completeness</h3>
+                    <p class="font-semibold mb-2">All reasonable efforts shall be made to ensure that the information
+                        contained on this website is updated, accurate and complete.</p>
+                    <p>However, no representations or warranties are made (express or implied) as to the reliability,
+                        accuracy or completeness of such information. Information may contain technical inaccuracies or
+                        typographical errors. JYJ & CO. assumes no responsibility for:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li>Errors or omissions in website content</li>
+                        <li>Outdated information or delayed updates</li>
+                        <li>Completeness of service descriptions</li>
+                        <li>Applicability to specific situations</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">5. Third-Party Links & External Resources</h3>
+                    <p class="font-semibold mb-2">The site provides links to websites or resources operated by others
+                        over which we do not have any control.</p>
+                    <p>We do not undertake any responsibility for the availability of such external resources. We shall
+                        not be liable for any content, advertising, products, services or other materials on or
+                        available from such sites or resources. The inclusion of hyperlinks to such sites does not imply
+                        any endorsement of the material on such websites or any association with their operators.</p>
+                    <p class="mt-3">We shall not be responsible or liable, directly or indirectly, for any damage or
+                        loss caused or alleged to be caused by or in connection with use of or reliance on any such
+                        content or service available on or through any such site or resource.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">6. "AS-IS" Basis & No Warranties</h3>
+                    <p class="font-semibold mb-2">The site, including all content, functions, and information made
+                        available on or accessed through the site, is provided on an "AS-IS" and "AS-AVAILABLE" basis
+                        without representations or warranties of any kind whatsoever, express or implied.</p>
+                    <p>This includes but is not limited to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li>Non-infringement of third-party rights</li>
+                        <li>Merchantability or fitness for a particular purpose</li>
+                        <li>Title or accuracy of content</li>
+                        <li>Compatibility with your system</li>
+                        <li>Freedom from viruses or harmful code</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">7. Limitation of Liability & Damages</h3>
+                    <p class="font-semibold mb-2">IN NO EVENT SHALL JYJ & CO. BE LIABLE FOR ANY SPECIAL, INCIDENTAL OR
+                        CONSEQUENTIAL DAMAGES that are directly or indirectly related to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li>The use of, or the inability to use this website</li>
+                        <li>The content, materials and functions related thereto</li>
+                        <li>Loss of revenue or anticipated profits</li>
+                        <li>Lost business or lost sales</li>
+                        <li>Loss of data or business interruption</li>
+                        <li>Personal injury or property damage</li>
+                        <li>Any other claim arising from use of the website or services</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">8. Indemnification</h3>
+                    <p>You agree to defend, indemnify, and hold harmless JYJ & CO., its partners, employees, and
+                        associates from any and all claims, damages, liabilities, costs, and expenses (including
+                        reasonable attorneys' fees) arising from your use of this website, violation of these terms, or
+                        infringement of any laws or third-party rights.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">9. Regulatory Compliance Notice</h3>
+                    <p>This website and all services are subject to applicable laws and regulations of India,
+                        particularly:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li>Chartered Accountants Act, 1949</li>
+                        <li>Income Tax Act, 1961</li>
+                        <li>Goods and Services Tax Act, 2017</li>
+                        <li>Digital Personal Data Protection Act, 2023</li>
+                        <li>Information Technology Act, 2000</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">10. Contact for Legal Matters</h3>
+                    <p>For any legal inquiries, clarifications on this disclaimer, or complaints regarding website
+                        content, please contact:</p>
+                    <div class="bg-gray-100 p-4 rounded-lg mt-2">
+                        <p><strong>JYJ & CO. - Chartered Accountants</strong></p>
+                        <p>309, 3rd Floor, Nakshatra VI, Opp. Pinevinta Hotel,<br>Gondal Road, Rajkot, Gujarat 360002,
+                            India</p>
+                        <p class="mt-2"><strong>Email:</strong> office.jyjco@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 87587 92708</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator 2025 | CGST & SGST Calculator India | JYJ & CO. </title>
+    <meta name="description"
+        content="Free Online GST Calculator for India (2024-2025). Calculate CGST, SGST, IGST with Add/Remove GST options. Expert guidance on GST slabs and compliance.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#113a69', 950: '#0a2342' },
+                        gold: { 500: '#f6921e', 600: '#d97d19' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --navy-950: #0a2342;
+            --navy-900: #113a69;
+            --gold-500: #f6921e;
+            --off-white: #f8fafc;
+            --border-light: #e2e8f0;
+            --text-muted: #64748b;
+        }
+
+        /* Typography Hierarchy */
+        .hdr-prestige {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        /* Authoritative Hero */
+        .hero-advisory {
+            background: var(--navy-950);
+            border-bottom: 4px solid var(--gold-500);
+            position: relative;
+        }
+
+        .hero-advisory::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(246, 146, 30, 0.05), transparent 40%);
+            pointer-events: none;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--gold-500);
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .expert-tag {
+            background: rgba(246, 146, 30, 0.1);
+            color: var(--gold-500);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .calc-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .input-focus:focus {
+            outline: none;
+            border-color: var(--gold-500);
+            box-shadow: 0 0 0 3px rgba(246, 146, 30, 0.05);
+        }
+
+        @media print {
+
+            nav,
+            header,
+            footer,
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <!-- SEO JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GST Calculator India 2025",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "description": "Calculate GST-inclusive and exclusive amounts with precise CGST/SGST breakdowns as per Indian Law.",
+      "author": {
+        "@type": "Organization",
+        "name": "JYJ & CO."
+      }
+    }
+    </script>
+    <style>
+        /* Premium Gradient Animation */
+        @keyframes gradient-x {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-gradient-x {
+            background-size: 200% 200%;
+            animation: gradient-x 5s ease infinite;
+        }
+
+        .gold-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 0%,
+                    rgba(197, 160, 89, 0.1) 45%,
+                    rgba(197, 160, 89, 0.4) 50%,
+                    rgba(197, 160, 89, 0.1) 55%,
+                    transparent 100%);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-navy-950 font-body">
+
+    <div class="progress-bar" id="myBar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html"
+                        class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="../logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo"
+                            loading="eager">
+                    </a>
+                </div>
+
+                <!-- Navigation Links (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="../index.html#home"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../index.html#services"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../index.html#about"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../knowledge.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Knowledge
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../calculators.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Calculators
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../careers.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Careers
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button (Right) -->
+                <div class="hidden md:flex items-center">
+                    <a href="../index.html#contact"
+                        class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl hover:shadow-gold-500/20 active:scale-95 gold-shimmer border border-navy-800">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-navy-900 focus:outline-none"
+                        id="mobile-menu-button">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100 flex flex-col divide-y divide-gray-50 shadow-xl"
+            id="mobile-menu">
+            <a href="../index.html#home"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Home</a>
+            <a href="../index.html#services"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Services</a>
+            <a href="../index.html#about"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">About
+                Us</a>
+            <a href="../knowledge.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Knowledge
+                Center</a>
+            <a href="../calculators.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Calculators</a>
+            <a href="../careers.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Careers</a>
+            <a href="../index.html#contact"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-52 pb-32 overflow-hidden hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <nav
+                class="flex justify-center lg:justify-start space-x-2 text-[11px] uppercase tracking-widest font-black text-gold-500 mb-10">
+                <a href="../calculators.html" class="hover:text-white transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Return to Calculators
+                </a>
+                <span class="text-white/20 mx-2">/</span>
+                <span class="text-white">GST Optimizer</span>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-[100px] font-black text-white leading-[0.85] hdr-prestige mb-10">
+                        GST <br> <span class="text-white/40">Calculator.</span>
+                    </h1>
+                    <p class="text-gray-400 text-2xl max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
+                        Enterprise-grade taxation tools. Calculate CGST, SGST, and IGST components with real-time
+                        compliance mapping for Indian regulatory slates.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div class="p-10 border border-white/10 bg-white/5 backdrop-blur-md">
+                        <span class="text-[11px] font-black text-gold-500 block mb-4 uppercase tracking-[0.3em]">SEC
+                            7-10 READY</span>
+                        <p class="text-white font-black text-2xl leading-tight hdr-prestige">Regulatory Grade <br>
+                            Computation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hidden Report Header -->
+    <div id="report-header" class="hidden py-8 border-b-4 border-navy-950 space-y-4 text-center">
+        <img src="../logo.png" alt="JYJ & CO." class="h-16 mx-auto mb-2">
+        <h2 class="text-2xl font-black text-navy-950 uppercase tracking-tighter">GST Computation Report</h2>
+        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Official Estimate by JYJ & CO.
+            Chartered Accountants</p>
+    </div>
+
+    <main class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="calc-card p-10 lg:p-16 shadow-2xl">
+                <!-- Expert Tag -->
+                <div class="expert-tag mb-12">Indirect Taxation Protocol</div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Net
+                                Amount (₹)</label>
+                            <input type="number" id="gst-amount" placeholder="Enter Amount"
+                                class="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-xl font-bold text-navy-950 input-focus transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">GST
+                                Rate (%)</label>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button
+                                    class="gst-rate-btn py-3 rounded-xl border border-gray-200 font-bold text-sm bg-white"
+                                    data-rate="5">5%</button>
+                                <button
+                                    class="gst-rate-btn py-3 rounded-xl border border-gray-200 font-bold text-sm bg-white"
+                                    data-rate="12">12%</button>
+                                <button
+                                    class="gst-rate-btn active py-3 rounded-xl border border-navy-950 bg-navy-950 text-white font-bold text-sm"
+                                    data-rate="18">18%</button>
+                                <button
+                                    class="gst-rate-btn py-3 rounded-xl border border-gray-200 font-bold text-sm bg-white"
+                                    data-rate="28">28%</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl">
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="radio" name="gst-type" value="exclusive" checked class="hidden peer">
+                                <div
+                                    class="px-4 py-2 rounded-lg text-xs font-bold peer-checked:bg-gold-500 peer-checked:text-navy-950 transition-all bg-white border border-gray-200">
+                                    Add GST</div>
+                            </label>
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="radio" name="gst-type" value="inclusive" class="hidden peer">
+                                <div
+                                    class="px-4 py-2 rounded-lg text-xs font-bold peer-checked:bg-gold-500 peer-checked:text-navy-950 transition-all bg-white border border-gray-200">
+                                    Remove GST</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Results Card -->
+                    <div
+                        class="bg-navy-950 rounded-2xl p-8 text-white flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <p class="text-[10px] font-bold text-gold-500 uppercase mb-2">Net Amount</p>
+                                <h3 class="text-3xl font-extrabold" id="gst-net-display">₹ 0.00</h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1" id="cgst-label">CGST
+                                        (9%)</p>
+                                    <p class="text-lg font-bold" id="gst-cgst-display">₹ 0.00</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1" id="sgst-label">SGST
+                                        (9%)</p>
+                                    <p class="text-lg font-bold" id="gst-sgst-display">₹ 0.00</p>
+                                </div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Total Invoice Value</p>
+                                <h4 class="text-4xl font-black text-gold-500" id="gst-total-display">₹ 0.00</h4>
+                            </div>
+                        </div>
+
+                        <!-- Lead Gen Button -->
+                        <button id="whatsapp-btn"
+                            class="mt-8 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all transform group-hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            Share with Expert
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expert Guidance - SEO Wrapped Content -->
+            <article
+                class="mt-20 prose prose-navy lg:prose-lg max-w-none bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+                <h2 class="text-3xl font-black text-navy-950 mb-6">How to use the Professional GST Calculator?</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Calculating the Goods and Services Tax (GST) is essential for any business operating in India. Our
+                    professional-grade GST calculator is designed per the latest guidelines from the <strong>GST Council
+                        of India</strong>. Whether you are an entrepreneur, accountant, or consumer, understanding how
+                    to calculate GST-exclusive and inclusive amounts is vital for accurate invoicing and expense
+                    management.
+                </p>
+
+                <h3 class="text-xl font-bold text-navy-950 mt-10 mb-4">GST Components in India: CGST, SGST, IGST</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                        <strong class="text-navy-950 block mb-2">CGST</strong>
+                        <p class="text-xs text-gray-500">Central GST collected by the Central Government on intra-state
+                            supplies.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                        <strong class="text-navy-950 block mb-2">SGST</strong>
+                        <p class="text-xs text-gray-500">State GST collected by the State Government for transactions
+                            within the state.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                        <strong class="text-navy-950 block mb-2">IGST</strong>
+                        <p class="text-xs text-gray-500">Integrated GST collected for inter-state supplies (outside your
+                            registered state).</p>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-navy-950 mb-4 uppercase tracking-wider text-sm">GST Calculation
+                    Formula</h3>
+                <div class="bg-navy-950 text-white p-6 rounded-2xl font-mono text-sm mb-10">
+                    <p class="mb-2">// Adding GST (Exclusive)</p>
+                    <p class="text-gold-500">GST Amount = (Net Amount * GST Rate) / 100</p>
+                    <p class="mt-4 mb-2">// Removing GST (Inclusive)</p>
+                    <p class="text-gold-500">GST Amount = Net Amount - (Net Amount * (100 / (100 + GST Rate)))</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-navy-950 mb-4">Current GST Slabs for 2024-2025</h3>
+                <p class="text-gray-600 mb-6 font-medium">India currently uses a multi-tier tax structure:</p>
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-start"><i
+                            class="fa-solid fa-check text-green-500 mt-1 mr-3"></i><span><strong>5%
+                                Rate:</strong>
+                            Applied to essential items like sugar, oil, spices, and coffee.</span></li>
+                    <li class="flex items-start"><i
+                            class="fa-solid fa-check text-green-500 mt-1 mr-3"></i><span><strong>12%
+                                Rate:</strong>
+                            Standard rate for computers, processed food, and business services.</span></li>
+                    <li class="flex items-start"><i
+                            class="fa-solid fa-check text-green-500 mt-1 mr-3"></i><span><strong>18%
+                                Rate:</strong> Most
+                            common rate for services, telecom, and branded clothing.</span></li>
+                    <li class="flex items-start"><i
+                            class="fa-solid fa-check text-green-500 mt-1 mr-3"></i><span><strong>28%
+                                Rate:</strong>
+                            Luxury items and demerit goods like high-end cars and tobacco.</span></li>
+                </ul>
+            </article>
+
+            <!-- Final Lead CTA -->
+            <section class="mt-16 bg-navy-950 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-black mb-4">Need help with GST Compliance?</h2>
+                    <p class="text-gray-400 mb-8 max-w-xl mx-auto">Get expert assistance with GST registration, monthly
+                        filing, and audit reconciliation.</p>
+                    <a href="https://wa.me/918758792708?text=I%20need%20help%20with%20GST%20Compliance."
+                        class="inline-block bg-gold-500 text-navy-950 font-black px-10 py-4 rounded-full hover:bg-white transition-all">Speak
+                        to a Chartered Accountant</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Master Footer -->
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Grid: 4 Balanced Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+                <!-- Col 1: Identity & Brand (Span 3) -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div>
+                        <a href="../index.html" class="block group">
+                            <h4
+                                class="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-gold-500 transition-colors">
+                                JYJ & CO.</h4>
+                            <p class="text-gold-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-6">Chartered
+                                Accountant</p>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Excellence in financial management through integrity, expertise, and innovation. Established
+                            2024.
+                        </p>
+                    </div>
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/ca.jyj_co/" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://in.linkedin.com/company/jyj-co" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Info & Presence (Span 3) -->
+                <div class="lg:col-span-3 grid grid-cols-1 gap-12">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Quick Links</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="../index.html#home" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="../index.html#services"
+                                    class="hover:text-gold-500 transition-colors">Services</a></li>
+                            <li><a href="../index.html#about" class="hover:text-gold-500 transition-colors">About Us</a>
+                            </li>
+                            <li><a href="../knowledge.html" class="hover:text-gold-500 transition-colors">Knowledge</a>
+                            </li>
+                            <li><a href="../calculators.html"
+                                    class="hover:text-gold-500 transition-colors font-bold text-white">Calculators</a>
+                            </li>
+                            <li><a href="../careers.html" class="hover:text-gold-500 transition-colors">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Presence -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Our Presence</h4>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="text-sm text-gray-400">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">
+                                    Office Address</p>
+                                <p class="leading-relaxed text-[13px]">309, 3rd Floor, Nakshatra VI,<br>Opp.
+                                    Pinevinta hotel, Gondal Road,<br>Rajkot, Gujarat 360002, IN.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Government Portals (Span 3) -->
+                <div class="lg:col-span-3">
+                    <h4
+                        class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                        Government Portals</h4>
+                    <ul class="grid grid-cols-1 gap-y-4 text-gray-400 text-[12px]">
+                        <li><a href="https://www.incometax.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-landmark mr-3 text-gold-500/80 w-5"></i>Income Tax Portal</a>
+                        </li>
+                        <li><a href="https://www.gst.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-file-invoice mr-3 text-gold-500/80 w-5"></i>GST Portal</a>
+                        </li>
+                        <li><a href="https://www.mca.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>MCA Portal</a>
+                        </li>
+                        <li><a href="https://www.icai.org/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-graduation-cap mr-3 text-gold-500/80 w-5"></i>ICAI Website</a>
+                        </li>
+                        <li><a href="https://www.epfindia.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-piggy-bank mr-3 text-gold-500/80 w-5"></i>EPF India</a>
+                        </li>
+                        <li><a href="https://www.esic.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hospital-user mr-3 text-gold-500/80 w-5"></i>ESIC Portal</a>
+                        </li>
+                        <li><a href="https://www.tin-nsdl.com/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-address-card mr-3 text-gold-500/80 w-5"></i>TIN-NSDL</a>
+                        </li>
+                        <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-chart-line mr-3 text-gold-500/80 w-5"></i>SEBI Portal</a>
+                        </li>
+                        <li><a href="https://scores.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-circle-exclamation mr-3 text-gold-500/80 w-5"></i>SEBI SCORES</a>
+                        </li>
+                        <li><a href="https://www.rbi.org.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>RBI Website</a>
+                        </li>
+                        <li><a href="https://samadhaan.msme.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hand-holding-dollar mr-3 text-gold-500/80 w-5"></i>MSME
+                                Samadhaan</a>
+                        </li>
+                        <li><a href="https://www.dgft.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-ship mr-3 text-gold-500/80 w-5"></i>DGFT Portal</a>
+                        </li>
+                        <li><a href="https://www.tdscpc.gov.in/app/login.xhtml" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-magnifying-glass-dollar mr-3 text-gold-500/80 w-5"></i>TRACES
+                                (TDS)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Col 4: Contacts & Experts (Span 3) -->
+                <div class="lg:col-span-3">
+                    <div class="space-y-8">
+                        <!-- General Inquiries -->
+                        <div>
+                            <h4
+                                class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                General Inquiries</h4>
+                            <div class="flex items-start group/contact">
+                                <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div>
+                                    <a href="mailto:office.jyjco@gmail.com"
+                                        class="hover:text-gold-500 transition-colors text-[14px] font-medium text-gray-300">office.jyjco@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expert Contacts -->
+                        <div class="flex items-start group/contact pt-2">
+                            <i class="fa-solid fa-phone text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="w-full">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-[0.2em] mb-5 opacity-90">
+                                    Call Experts</p>
+                                <ul class="space-y-5">
+                                    <li>
+                                        <a href="tel:+918758792708"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaimin Gajera</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                87587 92708</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+917600359457"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaykishan Jagad</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                76003 59457</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+918980692738"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Yash Ramani</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                89806 92738</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-navy-900 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+                <p>&copy; 2026 JYJ & CO. Chartered Accountant. All Rights Reserved.</p>
+                <div class="flex space-x-10 mt-6 md:mt-0">
+                    <p class="text-gray-500">Financial tools are for informational purpose only. Consult a professional
+                        before financial decisions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Progress
+        window.onscroll = function () {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+
+        const amountIn = document.getElementById('gst-amount');
+        const rateBtns = document.querySelectorAll('.gst-rate-btn');
+        const typeRadios = document.querySelectorAll('input[name="gst-type"]');
+        let activeRate = 18;
+
+        if (amountIn) {
+            rateBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    rateBtns.forEach(b => b.className = 'gst-rate-btn py-3 rounded-xl border border-gray-200 font-bold text-sm bg-white');
+                    btn.className = 'gst-rate-btn active py-3 rounded-xl border border-navy-950 bg-navy-950 text-white font-bold text-sm';
+                    activeRate = parseInt(btn.dataset.rate);
+                    calculate();
+                });
+            });
+
+            [amountIn, ...typeRadios].forEach(el => el.addEventListener('input', calculate));
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        }
+
+        function calculate() {
+            const amount = parseFloat(amountIn.value) || 0;
+            const typeValue = document.querySelector('input[name="gst-type"]:checked');
+            if (!typeValue) return;
+            const type = typeValue.value;
+            let net, total, gst;
+
+            if (type === 'exclusive') {
+                gst = (amount * activeRate) / 100;
+                net = amount;
+                total = amount + gst;
+            } else {
+                total = amount;
+                gst = amount - (amount * (100 / (100 + activeRate)));
+                net = amount - gst;
+            }
+
+            const netEl = document.getElementById('gst-net-display');
+            const cgstEl = document.getElementById('gst-cgst-display');
+            const sgstEl = document.getElementById('gst-sgst-display');
+            const totalEl = document.getElementById('gst-total-display');
+            const cgstLabel = document.getElementById('cgst-label');
+            const sgstLabel = document.getElementById('sgst-label');
+
+            if (netEl) netEl.innerText = `₹ ${net.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+            if (cgstEl) cgstEl.innerText = `₹ ${(gst / 2).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+            if (sgstEl) sgstEl.innerText = `₹ ${(gst / 2).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+            if (totalEl) totalEl.innerText = `₹ ${total.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+            if (cgstLabel) cgstLabel.innerText = `CGST (${activeRate / 2}%)`;
+            if (sgstLabel) sgstLabel.innerText = `SGST (${activeRate / 2}%)`;
+        }
+
+        // WhatsApp Sharing Logic
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', () => {
+                const amount = amountIn.value || 0;
+                const total = document.getElementById('gst-total-display').innerText;
+                const msg = `Hi JYJ %26 CO., I used your GST Calculator. %0A%0AAmount: ₹${amount}%0AGST Rate: ${activeRate}%%0AFinal Total: ${total}%0A%0AI need expert help regarding this calculation.`;
+                window.open(`https://wa.me/918758792708?text=${msg}`, '_blank');
+            });
+        }
+    </script>
+</body>
+
+</html>

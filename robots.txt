@@ -10,7 +10,7 @@ Allow: /
 Disallow: 
 
 # Sitemap location
-Sitemap: https://djnakum07.github.io/JYJCO/sitemap.xml
+Sitemap: https://jyjco.in/sitemap.xml
 
 # Crawl delay in seconds (helps reduce server load)
 Crawl-delay: 1

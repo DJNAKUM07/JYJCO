@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSME Interest Calculator 2025 | Samadhaan Rajkot | JYJ & CO.</title>
+    <meta name="description"
+        content="Calculate 3x interest on delayed MSME payments as per Samadhaan rules. Specialized for Rajkot industrial hubs like Metoda and Shapar GIDC. Understand Section 43B(h) with JYJ & CO.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 950: '#0a2342' },
+                        gold: { 500: '#f6921e' }
+                    },
+                    fontFamily: {
+                        hdr: ['Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        .hdr-prestige {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-advisory {
+            background-color: var(--navy-950, #0a2342);
+            position: relative;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            height: 4px;
+            background: #f3f4f6;
+        }
+
+        #myBar {
+            height: 4px;
+            background: #f6921e;
+            width: 0%;
+        }
+
+        .input-advisory {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .input-advisory:focus {
+            background: white;
+            border-color: #f6921e;
+            box-shadow: 0 0 0 4px rgba(246, 146, 30, 0.1);
+            outline: none;
+        }
+
+        .result-card {
+            border-left: 4px solid #f6921e;
+        }
+
+        .gold-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 0%,
+                    rgba(197, 160, 89, 0.1) 45%,
+                    rgba(197, 160, 89, 0.4) 50%,
+                    rgba(197, 160, 89, 0.1) 55%,
+                    transparent 100%);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-navy-950 font-body">
+
+    <div class="progress-bar" id="myBar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html"
+                        class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="../logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo"
+                            loading="eager">
+                    </a>
+                </div>
+
+                <!-- Navigation Links (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="../index.html#home"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../index.html#services"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../index.html#about"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        About Us
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../knowledge.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Knowledge
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../calculators.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Calculators
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="../careers.html"
+                        class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">
+                        Careers
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button (Right) -->
+                <div class="hidden md:flex items-center">
+                    <a href="../index.html#contact"
+                        class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl hover:shadow-gold-500/20 active:scale-95 gold-shimmer border border-navy-800">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-navy-900 focus:outline-none"
+                        id="mobile-menu-button">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100 flex flex-col divide-y divide-gray-50 shadow-xl"
+            id="mobile-menu">
+            <a href="../index.html#home"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Home</a>
+            <a href="../index.html#services"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Services</a>
+            <a href="../index.html#about"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">About
+                Us</a>
+            <a href="../knowledge.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Knowledge
+                Center</a>
+            <a href="../calculators.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Calculators</a>
+            <a href="../careers.html"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Careers</a>
+            <a href="../index.html#contact"
+                class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-navy-900 hover:bg-gray-50 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-52 pb-32 overflow-hidden hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <nav
+                class="flex justify-center lg:justify-start space-x-2 text-[11px] uppercase tracking-widest font-black text-gold-500 mb-10">
+                <a href="../calculators.html" class="hover:text-white transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Return to Calculators
+                </a>
+                <span class="text-white/20 mx-2">/</span>
+                <span class="text-white">MSME Interest Calculator</span>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-[100px] font-black text-white leading-[0.85] hdr-prestige mb-10">
+                        MSME <br> <span class="text-white/40">Interest.</span>
+                    </h1>
+                    <p class="text-gray-400 text-2xl max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
+                        Strategic tool for Rajkot industrial clusters. Calculate 3x RBI interest on delayed
+                        payments for Metoda, Shapar, and Lodhika units under the MSMED Act.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div class="p-10 border border-white/10 bg-white/5 backdrop-blur-md">
+                        <span
+                            class="text-[11px] font-black text-gold-500 block mb-4 uppercase tracking-[0.3em]">INDUSTRIAL
+                            RECOVERY</span>
+                        <p class="text-white font-black text-2xl leading-tight hdr-prestige">MSMED ACT <br> 2006
+                            compliance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 400 400" class="w-full h-full text-white">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                <!-- Calculator Area -->
+                <div class="lg:col-span-7">
+                    <div class="space-y-12">
+                        <!-- Input Section -->
+                        <section class="space-y-10">
+                            <div>
+                                <label
+                                    class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-6">
+                                    Principal Outstanding (₹)
+                                </label>
+                                <input type="number" id="msme-principal" placeholder="Enter amount"
+                                    class="w-full input-advisory px-6 py-6 text-2xl font-black text-navy-950">
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-6">
+                                        Delay Period (Months)
+                                    </label>
+                                    <input type="number" id="msme-months" placeholder="Months delayed"
+                                        class="w-full input-advisory px-6 py-4 text-sm font-bold text-navy-950">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-6">
+                                        Current Bank Rate (%)
+                                    </label>
+                                    <input type="number" id="msme-bank-rate" value="5.50" step="0.01"
+                                        class="w-full input-advisory px-6 py-4 text-sm font-bold text-navy-950">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Results -->
+                        <section id="results" class="space-y-8 pt-8 border-t border-gray-100">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-gray-50 p-8 result-card">
+                                    <span
+                                        class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4 block">Claimable
+                                        Interest</span>
+                                    <h3 class="text-3xl font-black text-navy-950 hdr-prestige"
+                                        id="msme-interest-display">₹ 0</h3>
+                                </div>
+                                <div class="bg-navy-950 p-8 text-white relative overflow-hidden group">
+                                    <div
+                                        class="absolute -right-4 -bottom-4 text-white/5 text-8xl group-hover:scale-110 transition-transform">
+                                        <i class="fa-solid fa-stamp"></i>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-black text-gold-500 uppercase tracking-widest mb-4 block">Total
+                                        Receivable</span>
+                                    <h3 class="text-3xl font-black hdr-prestige" id="msme-total-display">₹ 0</h3>
+                                </div>
+                            </div>
+
+                            <button id="whatsapp-btn"
+                                class="w-full bg-navy-950 text-white py-6 text-[10px] font-black uppercase tracking-[0.25em] hover:bg-gold-500 hover:text-navy-950 transition-all gold-shimmer">
+                                Protect Your Claims Protocol →
+                            </button>
+                        </section>
+                    </div>
+
+                    <!-- SEO Content -->
+                    <div class="mt-24 prose prose-navy">
+                        <h2 class="text-4xl font-black text-navy-950 mb-10 hdr-prestige">Samadhaan & <br> Recovery
+                            Rights</h2>
+                        <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                            Under Section 16 of the MSMED Act, buyers are legally obligated to pay 3x the RBI bank rate
+                            as interest on delayed payments beyond 45 days.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sidebar Advisory -->
+                <div class="lg:col-span-5">
+                    <div class="sticky top-40 space-y-12">
+                        <div class="bg-gray-50 p-12 border border-gray-100 reveal">
+                            <span
+                                class="text-[10px] font-black text-gold-500 uppercase tracking-widest block mb-10">Legal
+                                Shield</span>
+                            <h3 class="text-3xl font-black text-navy-950 mb-6 hdr-prestige">Section 43B(h) <br>
+                                Enforcement</h3>
+                            <p class="text-gray-500 leading-relaxed mb-10 text-sm">
+                                Effective April 2024, buyers risk losing significant tax deductions if MSME dues aren't
+                                cleared within statutory limits. Use this audit tool to verify your leverage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Master Footer -->
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Grid: 4 Balanced Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+                <!-- Col 1: Identity & Brand (Span 3) -->
+                <div class="lg:col-span-3 space-y-8">
+                    <div>
+                        <a href="../index.html" class="block group">
+                            <h4
+                                class="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-gold-500 transition-colors">
+                                JYJ & CO.</h4>
+                            <p class="text-gold-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-6">Chartered
+                                Accountant</p>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Excellence in financial management through integrity, expertise, and innovation. Established
+                            2024.
+                        </p>
+                    </div>
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/ca.jyj_co/" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://in.linkedin.com/company/jyj-co" target="_blank"
+                            class="w-11 h-11 rounded-full bg-navy-900/50 flex items-center justify-center hover:bg-gold-500 transition-all border border-navy-800 backdrop-blur-sm"><i
+                                class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Info & Presence (Span 3) -->
+                <div class="lg:col-span-3 grid grid-cols-1 gap-12">
+                    <!-- Quick Links -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Quick Links</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="../index.html#home" class="hover:text-gold-500 transition-colors">Home</a></li>
+                            <li><a href="../index.html#services"
+                                    class="hover:text-gold-500 transition-colors">Services</a></li>
+                            <li><a href="../index.html#about" class="hover:text-gold-500 transition-colors">About Us</a>
+                            </li>
+                            <li><a href="../knowledge.html" class="hover:text-gold-500 transition-colors">Knowledge</a>
+                            </li>
+                            <li><a href="../calculators.html"
+                                    class="hover:text-gold-500 transition-colors font-bold text-white">Calculators</a>
+                            </li>
+                            <li><a href="../careers.html" class="hover:text-gold-500 transition-colors">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Presence -->
+                    <div>
+                        <h4
+                            class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            Our Presence</h4>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="text-sm text-gray-400">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-widest mb-2">
+                                    Office Address</p>
+                                <p class="leading-relaxed text-[13px]">309, 3rd Floor, Nakshatra VI,<br>Opp.
+                                    Pinevinta hotel, Gondal Road,<br>Rajkot, Gujarat 360002, IN.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Government Portals (Span 3) -->
+                <div class="lg:col-span-3">
+                    <h4
+                        class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                        Government Portals</h4>
+                    <ul class="grid grid-cols-1 gap-y-4 text-gray-400 text-[12px]">
+                        <li><a href="https://www.incometax.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-landmark mr-3 text-gold-500/80 w-5"></i>Income Tax Portal</a>
+                        </li>
+                        <li><a href="https://www.gst.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-file-invoice mr-3 text-gold-500/80 w-5"></i>GST Portal</a>
+                        </li>
+                        <li><a href="https://www.mca.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>MCA Portal</a>
+                        </li>
+                        <li><a href="https://www.icai.org/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-graduation-cap mr-3 text-gold-500/80 w-5"></i>ICAI Website</a>
+                        </li>
+                        <li><a href="https://www.epfindia.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-piggy-bank mr-3 text-gold-500/80 w-5"></i>EPF India</a>
+                        </li>
+                        <li><a href="https://www.esic.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hospital-user mr-3 text-gold-500/80 w-5"></i>ESIC Portal</a>
+                        </li>
+                        <li><a href="https://www.tin-nsdl.com/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-address-card mr-3 text-gold-500/80 w-5"></i>TIN-NSDL</a>
+                        </li>
+                        <li><a href="https://www.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-chart-line mr-3 text-gold-500/80 w-5"></i>SEBI Portal</a>
+                        </li>
+                        <li><a href="https://scores.sebi.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-circle-exclamation mr-3 text-gold-500/80 w-5"></i>SEBI SCORES</a>
+                        </li>
+                        <li><a href="https://www.rbi.org.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-building-columns mr-3 text-gold-500/80 w-5"></i>RBI Website</a>
+                        </li>
+                        <li><a href="https://samadhaan.msme.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-hand-holding-dollar mr-3 text-gold-500/80 w-5"></i>MSME
+                                Samadhaan</a>
+                        </li>
+                        <li><a href="https://www.dgft.gov.in/" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-ship mr-3 text-gold-500/80 w-5"></i>DGFT Portal</a>
+                        </li>
+                        <li><a href="https://www.tdscpc.gov.in/app/login.xhtml" target="_blank"
+                                class="hover:text-gold-500 transition-colors flex items-center"><i
+                                    class="fa-solid fa-magnifying-glass-dollar mr-3 text-gold-500/80 w-5"></i>TRACES
+                                (TDS)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Col 4: Contacts & Experts (Span 3) -->
+                <div class="lg:col-span-3">
+                    <div class="space-y-8">
+                        <!-- General Inquiries -->
+                        <div>
+                            <h4
+                                class="text-lg font-bold mb-8 border-b border-navy-800 pb-4 uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                General Inquiries</h4>
+                            <div class="flex items-start group/contact">
+                                <i class="fa-solid fa-envelope text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                                <div>
+                                    <a href="mailto:office.jyjco@gmail.com"
+                                        class="hover:text-gold-500 transition-colors text-[14px] font-medium text-gray-300">office.jyjco@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expert Contacts -->
+                        <div class="flex items-start group/contact pt-2">
+                            <i class="fa-solid fa-phone text-gold-500 mt-1 mr-4 text-lg flex-shrink-0"></i>
+                            <div class="w-full">
+                                <p class="font-bold text-white uppercase text-[10px] tracking-[0.2em] mb-5 opacity-90">
+                                    Call Experts</p>
+                                <ul class="space-y-5">
+                                    <li>
+                                        <a href="tel:+918758792708"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaimin Gajera</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                87587 92708</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+917600359457"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Jaykishan Jagad</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                76003 59457</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+918980692738"
+                                            class="hover:text-gold-500 transition-all text-[13px] flex items-center justify-between group/line">
+                                            <span
+                                                class="text-gray-400 group-hover/line:text-gold-500 transition-colors font-medium whitespace-nowrap">CA
+                                                Yash Ramani</span>
+                                            <span
+                                                class="text-white font-bold tracking-wider ml-4 whitespace-nowrap text-[13px]">+91
+                                                89806 92738</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-navy-900 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] text-center md:text-left">
+                <p>&copy; 2026 JYJ & CO. Chartered Accountant. All Rights Reserved.</p>
+                <div class="flex space-x-10 mt-6 md:mt-0">
+                    <p class="text-gray-500">Financial tools are for informational purpose only. Consult a professional
+                        before financial decisions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const principalIn = document.getElementById('msme-principal');
+        const monthsIn = document.getElementById('msme-months');
+        const rateIn = document.getElementById('msme-bank-rate');
+
+        [principalIn, monthsIn, rateIn].forEach(el => el.addEventListener('input', calculateMSME));
+
+        function calculateMSME() {
+            const P = parseFloat(principalIn.value) || 0;
+            const bankRate = parseFloat(rateIn.value) || 5.50;
+            const n = parseFloat(monthsIn.value) || 0;
+
+            const annualRate = (3 * bankRate) / 100;
+            const monthlyRate = annualRate / 12;
+
+            const A = P * Math.pow(1 + monthlyRate, n);
+            const interest = A - P;
+
+            document.getElementById('msme-interest-display').innerText = `₹ ${Math.round(interest).toLocaleString('en-IN')}`;
+            document.getElementById('msme-total-display').innerText = `₹ ${Math.round(A).toLocaleString('en-IN')}`;
+        }
+
+        const waBtn = document.getElementById('whatsapp-btn');
+        if (waBtn) {
+            waBtn.addEventListener('click', () => {
+                const interest = document.getElementById('msme-interest-display').innerText;
+                const P = principalIn.value || 0;
+                const n = monthsIn.value || 0;
+                const msg = `Hi JYJ %26 CO., I used your MSME Interest Tool. %0A%0APrincipal: ₹${P}%0ADelay: ${n} Months%0AClaimable Interest: ${interest}%0A%0AI need help with my MSME recovery and Section 43B(h) compliance.`;
+                window.open(`https://wa.me/918758792708?text=${msg}`, '_blank');
+            });
+        }
+
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            if (document.getElementById("myBar")) document.getElementById("myBar").style.width = scrolled + "%";
+        };
+
+        calculateMSME();
+    </script>
+</body>
+
+</html>
