@@ -1,0 +1,6 @@
+Contact: mailto:office.jyjco@gmail.com
+Preferred-Languages: en
+Canonical: https://jyjco.in/.well-known/security.txt
+Policy: https://jyjco.in/privacy.html
+Hiring: https://jyjco.in/careers.html
+Expires: 2027-04-29T16:00:00.000Z
