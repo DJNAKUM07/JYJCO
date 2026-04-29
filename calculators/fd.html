@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Deposit (FD) Calculator | Savings Maturity Planner | JYJ & CO.</title>
+    <meta name="description"
+        content="Estimate your Fixed Deposit (FD) maturity amounts and interest earnings. Professional savings growth calculator by JYJ & CO.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#113a69', 950: '#0a2342' },
+                        gold: { 500: '#f6921e', 600: '#d97d19' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --navy-950: #0a2342;
+            --navy-900: #113a69;
+            --gold-500: #f6921e;
+            --off-white: #f8fafc;
+            --border-light: #e2e8f0;
+            --text-muted: #64748b;
+        }
+
+        .hdr-prestige {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-advisory {
+            background: var(--navy-950);
+            border-bottom: 4px solid var(--gold-500);
+            position: relative;
+        }
+
+        .hero-advisory::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(246, 146, 30, 0.05), transparent 40%);
+            pointer-events: none;
+        }
+
+        .expert-tag {
+            background: rgba(246, 146, 30, 0.1);
+            color: var(--gold-500);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .calc-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .input-focus:focus {
+            outline: none;
+            border-color: var(--gold-500);
+            box-shadow: 0 0 0 3px rgba(246, 146, 30, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-navy-950 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28" id="nav-container">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="bg-white/50 backdrop-blur-sm p-2 rounded-xl border border-white/20 shadow-sm hover:shadow-md transition-all group">
+                        <img src="../logo.ico" alt="JYJ & CO." class="h-20 w-auto mix-blend-multiply" id="nav-logo" loading="eager">
+                    </a>
+                </div>
+                <div class="hidden md:flex flex-grow justify-center space-x-8 lg:space-x-12">
+                    <a href="../index.html#home" class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">Home<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                    <a href="../index.html#services" class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">Services<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                    <a href="../calculators.html" class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">Calculators<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full" style="width: 100%"></span></a>
+                    <a href="../index.html#contact" class="text-[13px] font-semibold uppercase tracking-[0.25em] text-navy-900 hover:text-gold-600 transition-all relative group">Contact<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="../index.html#contact" class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-gold-500 hover:text-navy-950 transition-all shadow-xl">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-52 pb-32 overflow-hidden hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <nav class="flex justify-center lg:justify-start space-x-2 text-[11px] uppercase tracking-widest font-black text-gold-500 mb-10">
+                <a href="../calculators.html" class="hover:text-white transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Return to Calculators
+                </a>
+                <span class="text-white/20 mx-2">/</span>
+                <span class="text-white">FD Calculator</span>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-[100px] font-black text-white leading-[0.85] hdr-prestige mb-10">
+                        FD <br> <span class="text-white/40">Calculator.</span>
+                    </h1>
+                    <p class="text-gray-400 text-2xl max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
+                        Strategic savings planning. Calculate your Fixed Deposit maturity amounts with quarterly compounding precision.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Input Section -->
+                <div class="lg:col-span-5">
+                    <div class="calc-card p-10 shadow-2xl">
+                        <div class="expert-tag">Deposit Parameters</div>
+                        <div class="space-y-8">
+                            <div>
+                                <label class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-4">Investment Amount (₹)</label>
+                                <input type="number" id="deposit" value="100000" class="w-full bg-gray-50 border border-gray-200 px-6 py-4 text-lg font-bold text-navy-950 input-focus">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-4">Interest Rate (% p.a.)</label>
+                                <input type="number" id="fd-rate" value="7.1" step="0.1" class="w-full bg-gray-50 border border-gray-200 px-6 py-4 text-lg font-bold text-navy-950 input-focus">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-black uppercase tracking-[0.2em] text-navy-950 mb-4">Tenure (Years)</label>
+                                <input type="number" id="fd-years" value="5" class="w-full bg-gray-50 border border-gray-200 px-6 py-4 text-lg font-bold text-navy-950 input-focus">
+                            </div>
+                            <button onclick="calculateFD()" class="w-full bg-navy-950 text-white py-6 text-[12px] font-black uppercase tracking-[0.3em] hover:bg-gold-500 transition-all mt-8">
+                                Estimate Maturity →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Section -->
+                <div class="lg:col-span-7">
+                    <div class="calc-card p-12 bg-navy-950 text-white border-navy-900 shadow-2xl h-full flex flex-col">
+                        <div class="expert-tag !bg-white/10 !text-white">Wealth Projection</div>
+                        <div class="flex-grow flex flex-col justify-center text-center">
+                            <p class="text-gray-400 text-sm uppercase tracking-[0.3em] mb-4">Estimated Maturity Value</p>
+                            <h2 class="text-7xl md:text-8xl font-black text-gold-500 hdr-prestige mb-12">
+                                ₹<span id="fd-result">0</span>
+                            </h2>
+                            <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-12">
+                                <div class="text-left">
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Total Wealth Gained</p>
+                                    <p class="text-2xl font-bold text-white">₹<span id="fd-interest">0</span></p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Principal Invested</p>
+                                    <p class="text-2xl font-bold text-white">₹<span id="fd-principal-view">0</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Master Footer -->
+    <footer id="contact" class="bg-navy-950 text-white pt-24 pb-12 border-t border-navy-900 font-inter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-navy-900 pt-10 text-center">
+                <p class="text-gray-500 text-[10px] uppercase tracking-[0.2em]">&copy; 2026 JYJ & CO. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateFD() {
+            const p = parseFloat(document.getElementById('deposit').value);
+            const r = parseFloat(document.getElementById('fd-rate').value) / 100;
+            const t = parseFloat(document.getElementById('fd-years').value);
+            const n = 4; // Quarterly compounding
+
+            if (p && r && t) {
+                const maturity = p * Math.pow((1 + r/n), (n * t));
+                const interest = maturity - p;
+
+                document.getElementById('fd-result').innerText = Math.round(maturity).toLocaleString('en-IN');
+                document.getElementById('fd-interest').innerText = Math.round(interest).toLocaleString('en-IN');
+                document.getElementById('fd-principal-view').innerText = Math.round(p).toLocaleString('en-IN');
+            }
+        }
+        window.onload = calculateFD;
+    </script>
+</body>
+</html>

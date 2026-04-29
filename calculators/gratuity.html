@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratuity Calculator | Employee Benefit Estimator | JYJ & CO.</title>
+    <meta name="description" content="Calculate your legal gratuity entitlement under the Payment of Gratuity Act. Professional payroll tools by JYJ & CO.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: { 900: '#113a69', 950: '#0a2342' }, gold: { 500: '#f6921e', 600: '#d97d19' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --navy-950: #0a2342; --navy-900: #113a69; --gold-500: #f6921e; --border-light: #e2e8f0; }
+        .hdr-prestige { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+        .hero-advisory { background: var(--navy-950); border-bottom: 4px solid var(--gold-500); position: relative; }
+        .hero-advisory::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(246, 146, 30, 0.05), transparent 40%); pointer-events: none; }
+        .expert-tag { background: rgba(246, 146, 30, 0.1); color: var(--gold-500); padding: 0.25rem 0.75rem; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 1rem; }
+        .calc-card { background: #ffffff; border: 1px solid var(--border-light); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .input-focus:focus { outline: none; border-color: var(--gold-500); box-shadow: 0 0 0 3px rgba(246, 146, 30, 0.05); }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-navy-950 font-sans">
+    <nav class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100 h-28 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+            <a href="../index.html" class="p-2 border rounded-xl shadow-sm hover:shadow-md transition-all">
+                <img src="../logo.ico" alt="Logo" class="h-16 mix-blend-multiply">
+            </a>
+            <div class="hidden md:flex space-x-12">
+                <a href="../calculators.html" class="text-[13px] font-semibold uppercase tracking-widest text-navy-900 hover:text-gold-600">Calculators</a>
+            </div>
+            <a href="../index.html#contact" class="bg-navy-900 text-white px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-widest hover:bg-gold-500 transition-all">Contact Us</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-52 pb-32 hero-advisory">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <nav class="flex space-x-2 text-[11px] uppercase tracking-widest font-black text-gold-500 mb-10">
+                <a href="../calculators.html" class="hover:text-white transition-all">← Return to Calculators</a>
+                <span class="text-white/20">/</span>
+                <span class="text-white">Gratuity Calculator</span>
+            </nav>
+            <h1 class="text-6xl md:text-[100px] font-black text-white leading-[0.85] hdr-prestige mb-10">
+                Gratuity <br> <span class="text-white/40">Calculator.</span>
+            </h1>
+            <p class="text-gray-400 text-2xl max-w-2xl font-medium">Verify your legal entitlement under the Payment of Gratuity Act 1972 with professional precision.</p>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5">
+                    <div class="calc-card p-10 shadow-2xl">
+                        <div class="expert-tag">Service Parameters</div>
+                        <div class="space-y-8">
+                            <div>
+                                <label class="block text-[11px] font-black uppercase tracking-widest text-navy-950 mb-4">Last Drawn Salary (Basic + DA) (₹)</label>
+                                <input type="number" id="salary" value="50000" class="w-full bg-gray-50 border border-gray-200 px-6 py-4 text-lg font-bold input-focus">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-black uppercase tracking-widest text-navy-950 mb-4">Years of Service</label>
+                                <input type="number" id="tenure" value="10" class="w-full bg-gray-50 border border-gray-200 px-6 py-4 text-lg font-bold input-focus">
+                            </div>
+                            <button onclick="calculateGratuity()" class="w-full bg-navy-950 text-white py-6 text-[12px] font-black uppercase tracking-widest hover:bg-gold-500 transition-all mt-8">Calculate Entitlement →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="calc-card p-12 bg-navy-950 text-white border-navy-900 shadow-2xl h-full flex flex-col items-center justify-center text-center">
+                        <div class="expert-tag !bg-white/10 !text-white">Estimated Gratuity</div>
+                        <h2 class="text-7xl md:text-8xl font-black text-gold-500 hdr-prestige mb-8">₹<span id="gratuity-result">0</span></h2>
+                        <div id="notice" class="hidden text-xs text-gold-400 uppercase tracking-widest font-bold">Note: Minimum 5 years of service required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function calculateGratuity() {
+            const salary = parseFloat(document.getElementById('salary').value);
+            const tenure = parseFloat(document.getElementById('tenure').value);
+            const notice = document.getElementById('notice');
+
+            if (tenure < 4.5) {
+                notice.classList.remove('hidden');
+                document.getElementById('gratuity-result').innerText = '0';
+                return;
+            } else {
+                notice.classList.add('hidden');
+            }
+
+            if (salary && tenure) {
+                const gratuity = (15 * salary * Math.round(tenure)) / 26;
+                document.getElementById('gratuity-result').innerText = Math.round(gratuity).toLocaleString('en-IN');
+            }
+        }
+        window.onload = calculateGratuity;
+    </script>
+</body>
+</html>
