@@ -45,7 +45,22 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Block problematic scrapers (optional)
+# Block problematic scrapers
 User-agent: AhrefsBot
 User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: Rogerbot
+User-agent: Exabot
+User-agent: Pinterestbot
+User-agent: BLEXBot
+User-agent: MegaIndex.ru
+User-agent: ZoominfoBot
+User-agent: Mail.RU_Bot
+User-agent: SeznamBot
+User-agent: CCBot
+User-agent: Centuro.io
+User-agent: Diffbot
+User-agent: GrapeshotCrawler
+User-agent: MauiBot
 Disallow: /
