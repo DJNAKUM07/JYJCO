@@ -1,0 +1,25 @@
+# JYJ & CO. Chartered Accountants
+
+> Expert chartered accounting firm based in Rajkot, Gujarat. We provide comprehensive financial services designed to help businesses optimize performance, ensure compliance, and achieve strategic growth.
+
+## Services Offered
+- **Audit & Assurance**: Statutory audits, internal audits, and risk-based assurance.
+- **Taxation Services**: Direct and indirect tax planning, GST compliance, and tax advisory.
+- **Accounting & Bookkeeping**: Financial record-keeping, payroll management, and financial statement preparation.
+- **Business Advisory**: Growth strategies, financial modeling, valuation, and M&A advisory.
+- **Corporate Finance**: Capital structure, fund raising, and investment appraisal.
+- **Financial Compliance**: Regulatory compliance, corporate governance, and statutory filings.
+- **Capital Market Services**: IPO/FPO structuring, readiness, and compliance.
+
+## Key Pages
+- [Home](https://jyjco.in/)
+- [Services](https://jyjco.in/#services)
+- [About Us](https://jyjco.in/#about)
+- [Knowledge Center](https://jyjco.in/knowledge.html)
+- [Calculators](https://jyjco.in/calculators.html)
+- [Careers](https://jyjco.in/careers.html)
+
+## Contact Information
+- **Phone**: +91-87587-92708
+- **Email**: office.jyjco@gmail.com
+- **Address**: 309, 3rd Floor, Nakshatra VI, Opp. Pinevinta hotel, Gondal Road, Rajkot, Gujarat 360002, India

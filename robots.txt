@@ -1,0 +1,51 @@
+# Robots.txt for JYJ & Co - GitHub Pages
+# Professional Chartered Accounting Services
+# Last Updated: April 29, 2026
+
+# Allow all robots - everything is public and indexable
+User-agent: *
+Allow: /
+Disallow: 
+
+# Comprehensive AI Bot Permissions
+# Allowing major AI crawlers to access financial knowledge and tools
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+User-agent: ImagesiftBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://jyjco.in/sitemap.xml
+
+# Crawl delay in seconds
+Crawl-delay: 1
+
+# Specific crawler rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block problematic scrapers (optional)
+User-agent: AhrefsBot
+User-agent: SemrushBot
+Disallow: /
