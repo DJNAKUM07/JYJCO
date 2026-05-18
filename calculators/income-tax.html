@@ -6,9 +6,9 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://api.qrserver.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; frame-src 'self' https://www.google.com https://www.youtube.com; upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Income Tax Calculator FY 2024-25 | Old vs New Regime Optimizer | JYJ & CO.</title>
+    <title>Income Tax Calculator FY 2025-26 (Budget 2025) | Old vs New Regime Optimizer | JYJ & CO.</title>
     <meta name="description"
-        content="Free Income Tax Calculator for FY 2024-25 (AY 2025-26). Compare Old vs New Tax Regimes, calculate deductions, and optimize your tax savings with JYJ & CO.">
+        content="Free Income Tax Calculator for FY 2025-26 (AY 2026-27). Compare Old vs New Tax Regimes, calculate deductions, and optimize your tax savings with JYJ & CO.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -110,7 +110,7 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Income Tax Optimizer 2025",
+      "name": "Income Tax Optimizer 2026",
       "operatingSystem": "Web",
       "applicationCategory": "FinanceApplication",
       "offers": {
@@ -118,7 +118,7 @@
         "price": "0",
         "priceCurrency": "INR"
       },
-      "description": "Compare and optimize your Indian Income Tax between the Old and New tax regimes for FY 2024-25.",
+      "description": "Compare and optimize your Indian Income Tax between the Old and New tax regimes for FY 2025-26.",
       "author": {
         "@type": "Organization",
         "name": "JYJ & CO."
@@ -304,14 +304,14 @@
                         Income Tax <br> <span class="text-white/40">Calculator.</span>
                     </h1>
                     <p class="text-gray-400 text-2xl max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
-                        Enterprise-grade tax modeling. Compare Old vs. New regimental slates for AY 2025-26 with
-                        integrated deduction mapping and budget 2024 protocols.
+                        Enterprise-grade tax modeling. Compare Old vs. New regimental slates for AY 2026-27 with
+                        integrated deduction mapping and budget 2025 protocols.
                     </p>
                 </div>
                 <div class="lg:col-span-4 hidden lg:block">
                     <div class="p-10 border border-white/10 bg-white/5 backdrop-blur-md">
                         <span class="text-[11px] font-black text-gold-500 block mb-4 uppercase tracking-[0.3em]">BUDGET
-                            2024 UPDATED</span>
+                            2025 UPDATED</span>
                         <p class="text-white font-black text-2xl leading-tight hdr-prestige">Regime Optimization <br>
                             Strategy</p>
                     </div>
@@ -324,7 +324,7 @@
     <div id="report-header" class="hidden py-8 border-b-4 border-navy-950 space-y-4 text-center">
         <img src="../logo.ico" alt="JYJ & CO." class="h-16 mx-auto mb-2">
         <h2 class="text-2xl font-black text-navy-950 uppercase tracking-tighter">Income Tax Computation Report</h2>
-        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Official Estimate u/s Budget 2024</p>
+        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Official Estimate u/s Budget 2025</p>
     </div>
 
     <main class="py-24 bg-gray-50">
@@ -335,6 +335,19 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                     <!-- Inputs -->
                     <div class="lg:col-span-5 space-y-6">
+                        <!-- Financial Year Selector -->
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Select Financial Year</label>
+                            <div class="grid grid-cols-2 gap-2 bg-gray-100 p-1.5 rounded-2xl border border-gray-200">
+                                <button type="button" id="fy-25-26-btn" onclick="setFY('25-26')" class="py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all bg-navy-950 text-white shadow-md">
+                                    FY 2025-26 (Budget 2025)
+                                </button>
+                                <button type="button" id="fy-24-25-btn" onclick="setFY('24-25')" class="py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all text-navy-950 hover:bg-white/50">
+                                    FY 2024-25 (Budget 2024)
+                                </button>
+                            </div>
+                        </div>
+
                         <div>
                             <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Total
                                 Annual Income (₹)</label>
@@ -367,7 +380,7 @@
                         <div id="new-regime-card"
                             class="bg-navy-950 text-white rounded-3xl p-8 relative overflow-hidden transition-all duration-500 border-2 border-transparent">
                             <h4 class="font-bold text-gold-500 mb-4 uppercase tracking-widest text-xs">New Regime (FY
-                                24-25)</h4>
+                                25-26)</h4>
                             <span id="new-winner"
                                 class="hidden absolute top-4 right-4 bg-green-500 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">WINNER</span>
                             <div class="space-y-4">
@@ -432,80 +445,94 @@
             <!-- SEO Content Wrapping -->
             <article
                 class="mt-20 prose prose-navy max-w-none bg-white p-12 rounded-3xl border border-gray-100 shadow-sm">
-                <h2 class="text-3xl font-black text-navy-950 mb-8">Income Tax Guide FY 2024-25: Old vs New Regime</h2>
+                <h2 class="text-3xl font-black text-navy-950 mb-8">Income Tax Guide FY 2025-26: Old vs New Regime</h2>
 
                 <p class="text-gray-600 leading-relaxed mb-8">
-                    The Union Budget 2024 has brought significant changes to the personal income tax structure in India.
-                    Choosing between the <strong>Old Tax Regime</strong> and the <strong>New Tax Regime</strong> is no
-                    longer a simple choice. It requires careful calculation of your gross income, available deductions,
-                    and future financial goals. Our optimizer helps you make this decision with 100% accuracy based on
-                    the latest tax slabs.
+                    The Union Budget 2025 has brought highly beneficial changes to the personal income tax structure in India under the New Tax Regime.
+                    Choosing between the <strong>Old Tax Regime</strong> and the <strong>New Tax Regime</strong> is an important decision. It requires careful calculation of your gross income, standard deductions, and available investment-linked benefits. Our optimizer helps you make this decision with 100% accuracy based on the latest slabs.
                 </p>
 
-                <h3 class="text-xl font-bold text-navy-950 mb-6 border-l-4 border-gold-500 pl-4">Key Differences (Update
-                    2024)</h3>
+                <h3 class="text-xl font-bold text-navy-950 mb-6 border-l-4 border-gold-500 pl-4">Key Differences (Update 2025)</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                     <div class="p-6 bg-gray-50 rounded-2xl">
-                        <h4 class="font-bold text-navy-950 mb-3">New Tax Regime</h4>
+                        <h4 class="font-bold text-navy-950 mb-3">New Tax Regime (FY 2025-26)</h4>
                         <ul class="text-sm text-gray-500 space-y-2">
                             <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i>
-                                Lower tax rates across most slabs.</li>
+                                Lower tax rates and expanded brackets across all slabs.</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i>
-                                Increased standard deduction (₹75,000 for salaried).</li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> No
-                                deductions allowed (80C, 80D, HRA, etc.).</li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-star text-gold-500 mt-1"></i> Tax
-                                rebate up to ₹7 Lakhs basic income.</li>
+                                Increased standard deduction (₹75,000 for salaried individuals).</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> No exemptions or deductions allowed (80C, 80D, HRA, etc.).</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-star text-gold-500 mt-1"></i> Tax rebate up to ₹12 Lakhs taxable income (Zero tax up to ₹12.75 Lakhs for salaried).</li>
                         </ul>
                     </div>
                     <div class="p-6 bg-gray-50 rounded-2xl">
                         <h4 class="font-bold text-navy-950 mb-3">Old Tax Regime</h4>
                         <ul class="text-sm text-gray-500 space-y-2">
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i> High
-                                deductibility (Section 80C up to ₹1.5L).</li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i> Home
-                                loan interest & Health insurance benefits.</li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i>
-                                Higher marginal tax rates (up to 30%).</li>
-                            <li class="flex items-start gap-2"><i class="fa-solid fa-star text-gold-500 mt-1"></i>
-                                Standard deduction of ₹50,000 only.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i> High deductibility (Section 80C up to ₹1.5L).</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-green-500 mt-1"></i> Home loan interest & health insurance benefits.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> Higher marginal tax rates (up to 30%).</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-star text-gold-500 mt-1"></i> Standard deduction of ₹50,000 only.</li>
                         </ul>
                     </div>
                 </div>
 
-                <h3 class="text-xl font-bold text-navy-950 mb-4">New Tax Slabs (FY 2024-25 / AY 2025-26)</h3>
+                <h3 class="text-xl font-bold text-navy-950 mb-4">New Tax Regime Slabs Comparison (FY 2024-25 vs FY 2025-26)</h3>
                 <div class="overflow-x-auto mb-10">
-                    <table class="w-full text-left border-collapse">
+                    <table class="w-full text-left border-collapse border border-gray-200">
                         <thead>
                             <tr class="bg-navy-950 text-white">
-                                <th class="p-4 rounded-tl-xl">Income Range</th>
-                                <th class="p-4 rounded-tr-xl">Tax Rate</th>
+                                <th class="p-4 border-r border-navy-800 rounded-tl-xl text-center" colspan="2">FY 2024-25 (Budget 2024)</th>
+                                <th class="p-4 rounded-tr-xl text-center" colspan="2">FY 2025-26 (Budget 2025)</th>
+                            </tr>
+                            <tr class="bg-navy-900 text-white text-xs uppercase tracking-wider">
+                                <th class="p-3 border-r border-navy-800">Taxable Income Slab</th>
+                                <th class="p-3 border-r border-navy-800 text-center">Rate</th>
+                                <th class="p-3 border-r border-gray-700">Taxable Income Slab</th>
+                                <th class="p-3 text-center">Rate</th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm">
-                            <tr class="border-b">
-                                <td class="p-4">Up to ₹3,00,000</td>
-                                <td class="p-4 font-bold text-gray-400">NIL</td>
+                        <tbody class="text-sm text-gray-700">
+                            <tr class="border-b bg-gray-50/50">
+                                <td class="p-4 border-r border-gray-200">Up to ₹3,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold text-gray-400">0%</td>
+                                <td class="p-4 border-r border-gray-200">Up to ₹4,00,000</td>
+                                <td class="p-4 text-center font-bold text-gray-400">0%</td>
                             </tr>
                             <tr class="border-b">
-                                <td class="p-4">₹3,00,001 - ₹7,00,000</td>
-                                <td class="p-4 font-bold">5%</td>
+                                <td class="p-4 border-r border-gray-200">₹3,00,001 - ₹7,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold">5%</td>
+                                <td class="p-4 border-r border-gray-200">₹4,00,001 - ₹8,00,000</td>
+                                <td class="p-4 text-center font-bold">5%</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50/50">
+                                <td class="p-4 border-r border-gray-200">₹7,00,001 - ₹10,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold">10%</td>
+                                <td class="p-4 border-r border-gray-200">₹8,00,001 - ₹12,00,000</td>
+                                <td class="p-4 text-center font-bold">10%</td>
                             </tr>
                             <tr class="border-b">
-                                <td class="p-4">₹7,00,001 - ₹10,00,000</td>
-                                <td class="p-4 font-bold">10%</td>
+                                <td class="p-4 border-r border-gray-200">₹10,00,001 - ₹12,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold">15%</td>
+                                <td class="p-4 border-r border-gray-200">₹12,00,001 - ₹16,00,000</td>
+                                <td class="p-4 text-center font-bold">15%</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50/50">
+                                <td class="p-4 border-r border-gray-200">₹12,00,001 - ₹15,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold">20%</td>
+                                <td class="p-4 border-r border-gray-200">₹16,00,001 - ₹20,00,000</td>
+                                <td class="p-4 text-center font-bold">20%</td>
                             </tr>
                             <tr class="border-b">
-                                <td class="p-4">₹10,00,001 - ₹12,00,000</td>
-                                <td class="p-4 font-bold">15%</td>
+                                <td class="p-4 border-r border-gray-200">Above ₹15,00,000</td>
+                                <td class="p-4 border-r border-gray-200 text-center font-bold">30%</td>
+                                <td class="p-4 border-r border-gray-200">₹20,00,001 - ₹24,00,000</td>
+                                <td class="p-4 text-center font-bold">25%</td>
                             </tr>
-                            <tr class="border-b">
-                                <td class="p-4">₹12,00,001 - ₹15,00,000</td>
-                                <td class="p-4 font-bold">20%</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="p-4">Above ₹15,00,000</td>
-                                <td class="p-4 font-bold">30%</td>
+                            <tr class="border-b bg-gray-50/50">
+                                <td class="p-4 border-r border-gray-200 text-center text-gray-400">-</td>
+                                <td class="p-4 border-r border-gray-200 text-center text-gray-400">-</td>
+                                <td class="p-4 border-r border-gray-200">Above ₹24,00,000</td>
+                                <td class="p-4 text-center font-bold">30%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -752,11 +779,34 @@
             document.getElementById("myBar").style.width = scrolled + "%";
         };
 
+        let currentFY = '25-26'; // Default Financial Year
+
         const incomeIn = document.getElementById('tax-income');
         const deductIn = document.getElementById('tax-deductions');
 
         if (incomeIn && deductIn) {
             [incomeIn, deductIn].forEach(el => el.addEventListener('input', calculateTax));
+        }
+
+        function setFY(fy) {
+            currentFY = fy;
+            
+            // Toggle selector UI classes
+            const btn25 = document.getElementById('fy-25-26-btn');
+            const btn24 = document.getElementById('fy-24-25-btn');
+            const newRegimeHeader = document.querySelector('#new-regime-card h4');
+            
+            if (fy === '25-26') {
+                btn25.className = 'py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all bg-navy-950 text-white shadow-md';
+                btn24.className = 'py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all text-navy-950 hover:bg-white/50';
+                if (newRegimeHeader) newRegimeHeader.innerText = 'New Regime (FY 25-26)';
+            } else {
+                btn24.className = 'py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all bg-navy-950 text-white shadow-md';
+                btn25.className = 'py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all text-navy-950 hover:bg-white/50';
+                if (newRegimeHeader) newRegimeHeader.innerText = 'New Regime (FY 24-25)';
+            }
+            
+            calculateTax();
         }
 
         function toggleMenu() {
@@ -774,27 +824,62 @@
             const inc = parseFloat(incomeIn.value) || 0;
             const ded = parseFloat(deductIn.value) || 0;
 
-            // New Regime (FY 24-25 Budget 2024)
-            const nTaxable = Math.max(0, inc - 75000);
+            // New Regime Slabs & Rebate Calculations
+            const nTaxable = Math.max(0, inc - 75000); // Standard deduction of 75,000 for salaried
             let nTax = 0;
-            if (nTaxable > 1500000) nTax += (nTaxable - 1500000) * 0.3 + 140000;
-            else if (nTaxable > 1200000) nTax += (nTaxable - 1200000) * 0.2 + 80000;
-            else if (nTaxable > 1000000) nTax += (nTaxable - 1000000) * 0.15 + 50000;
-            else if (nTaxable > 700000) nTax += (nTaxable - 700000) * 0.1 + 20000;
-            else if (nTaxable > 300000) nTax += (nTaxable - 300000) * 0.05;
 
-            if (nTaxable <= 700000) nTax = 0;
-            const nTotal = nTax * 1.04;
+            if (currentFY === '25-26') {
+                // FY 2025-26 (Budget 2025 Proposals)
+                if (nTaxable > 2400000) nTax += (nTaxable - 2400000) * 0.30 + 300000;
+                else if (nTaxable > 2000000) nTax += (nTaxable - 2000000) * 0.25 + 200000;
+                else if (nTaxable > 1600000) nTax += (nTaxable - 1600000) * 0.20 + 120000;
+                else if (nTaxable > 1200000) nTax += (nTaxable - 1200000) * 0.15 + 60000;
+                else if (nTaxable > 800000) nTax += (nTaxable - 800000) * 0.10 + 20000;
+                else if (nTaxable > 400000) nTax += (nTaxable - 400000) * 0.05;
 
-            // Old Regime
+                // Rebate under section 87A: tax is 0 if taxable income <= 12,00,000
+                if (nTaxable <= 1200000) {
+                    nTax = 0;
+                } else {
+                    // Marginal Relief for New Regime in FY 25-26:
+                    // Excess income above 12,00,000 is capped.
+                    const excess = nTaxable - 1200000;
+                    if (nTax > excess) {
+                        nTax = excess;
+                    }
+                }
+            } else {
+                // FY 2024-25 (Budget 2024 Slabs)
+                if (nTaxable > 1500000) nTax += (nTaxable - 1500000) * 0.3 + 140000;
+                else if (nTaxable > 1200000) nTax += (nTaxable - 1200000) * 0.2 + 80000;
+                else if (nTaxable > 1000000) nTax += (nTaxable - 1000000) * 0.15 + 50000;
+                else if (nTaxable > 700000) nTax += (nTaxable - 700000) * 0.1 + 20000;
+                else if (nTaxable > 300000) nTax += (nTaxable - 300000) * 0.05;
+
+                // Rebate under section 87A: tax is 0 if taxable income <= 7,00,000
+                if (nTaxable <= 700000) {
+                    nTax = 0;
+                } else {
+                    // Marginal Relief for New Regime in FY 24-25:
+                    // Excess income above 7,00,000 is capped.
+                    const excess = nTaxable - 700000;
+                    if (nTax > excess) {
+                        nTax = excess;
+                    }
+                }
+            }
+            const nTotal = nTax * 1.04; // Plus 4% Cess
+
+            // Old Regime Slabs & Rebate (Same for both years)
             const oTaxable = Math.max(0, inc - 50000 - ded);
             let oTax = 0;
             if (oTaxable > 1000000) oTax += (oTaxable - 1000000) * 0.3 + 112500;
             else if (oTaxable > 500000) oTax += (oTaxable - 500000) * 0.2 + 12500;
             else if (oTaxable > 250000) oTax += (oTaxable - 250000) * 0.05;
 
+            // Rebate under section 87A for Old Regime: tax is 0 if taxable income <= 5,00,000
             if (oTaxable <= 500000) oTax = 0;
-            const oTotal = oTax * 1.04;
+            const oTotal = oTax * 1.04; // Plus 4% Cess
 
             document.getElementById('tax-new-taxable').innerText = `₹ ${nTaxable.toLocaleString('en-IN')}`;
             document.getElementById('tax-new-total').innerText = `₹ ${Math.round(nTotal).toLocaleString('en-IN')}`;
@@ -807,8 +892,8 @@
             const oWin = document.getElementById('old-winner');
             const advice = document.getElementById('tax-advice');
 
-            nCard.className = 'bg-navy-950 text-white rounded-3xl p-8 relative overflow-hidden border-2 transition-all';
-            oCard.className = 'bg-white border-2 border-gray-100 rounded-3xl p-8 relative transition-all';
+            nCard.className = 'bg-navy-950 text-white rounded-3xl p-8 relative overflow-hidden border-2 transition-all duration-300';
+            oCard.className = 'bg-white border-2 border-gray-100 rounded-3xl p-8 relative transition-all duration-300';
             nWin.classList.add('hidden');
             oWin.classList.add('hidden');
 
@@ -816,14 +901,16 @@
                 if (nTotal < oTotal) {
                     nCard.classList.add('border-gold-500', 'shadow-2xl', 'scale-105');
                     nWin.classList.remove('hidden');
-                    advice.innerHTML = `The <strong>New Tax Regime</strong> saves you <span class="text-gold-500">₹${Math.round(oTotal - nTotal).toLocaleString('en-IN')}</span> per year!`;
+                    advice.innerHTML = `The <strong>New Tax Regime</strong> saves you <span class="text-gold-500 font-bold">₹${Math.round(oTotal - nTotal).toLocaleString('en-IN')}</span> per year!`;
                 } else if (oTotal < nTotal) {
                     oCard.classList.add('border-gold-500', 'shadow-2xl', 'scale-105');
                     oWin.classList.remove('hidden');
-                    advice.innerHTML = `The <strong>Old Tax Regime</strong> saves you <span class="text-gold-500">₹${Math.round(nTotal - oTotal).toLocaleString('en-IN')}</span> per year!`;
+                    advice.innerHTML = `The <strong>Old Tax Regime</strong> saves you <span class="text-gold-500 font-bold">₹${Math.round(nTotal - oTotal).toLocaleString('en-IN')}</span> per year!`;
                 } else {
                     advice.innerText = "Both regimes are identical for your income level.";
                 }
+            } else {
+                advice.innerText = "Enter your income to see which regime saves you more tax.";
             }
         }
 
